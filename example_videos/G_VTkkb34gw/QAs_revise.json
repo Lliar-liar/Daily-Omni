@@ -1,0 +1,129 @@
+[
+    {
+        "Question": "Which audio event occurred simultaneously with the two female police officers engaging in target practice at the indoor shooting range?",
+        "Choice": [
+            "A. Sustained gunfire bursts",
+            "B. Numerical countdown sequence",
+            "C. Sharp aerodynamic swoosh",
+            "D. Foreign-language command phrases"
+        ],
+        "Answer": "A",
+        "Explanation": "This revision improves difficulty by 1) Using precise terminology ('sustained gunfire bursts' instead of generic 'gunshots'), 2) Enhancing distractors' plausibility through semantic specificity ('numerical countdown sequence' instead of basic 'countdown', 'foreign-language command phrases' instead of generic speech), and 3) Maintaining unambiguous correctness through strict alignment with the audio-visual synchronization data where only gunfire corresponds to the specified visual event.",
+        "video_id": "G_VTkkb34gw",
+        "Type": "AV Event Alignment",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    }
+][
+    {
+        "Question": "Which audio events correspond to the indoor shooting range activities shown in the video?",
+        "Choice": [
+            "A. Wind sounds followed by human speech",
+            "B. Electronic music overlapping with gunshots",
+            "C. Countdown sequence during target practice",
+            "D. Hip-hop music with whoosh sounds"
+        ],
+        "Answer": "B",
+        "Explanation": "The revision improves specificity by focusing on concurrent audio-visual relationships rather than temporal sequence. Choice B is correct because electronic music (0-10s) co-occurs with shooting visuals, and gunshots directly align with firearm use in the range. The original question's sequence framing was misleading as gunshots span both segments but only overlap with music in 0-10s. New distractors use plausible audio events from other training scenarios (countdown in self-defense, whoosh in driving) while maintaining one clear correct answer.",
+        "video_id": "G_VTkkb34gw",
+        "Type": "Event Sequence",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    }
+][
+    {
+        "Question": "During the police training exercises, what contextual clue confirms that the pepper spray incident was intentional?",
+        "Choice": [
+            "A. Gunshot sounds synchronized with target practice",
+            "B. Countdown audio during defensive tactics drill",
+            "C. 'Whoosh' effect during vehicle obstacle course",
+            "D. Command phrase 'Come on, let's go!' in sparring"
+        ],
+        "Answer": "B",
+        "Explanation": "The revision improves difficulty by requiring correlation between specific audio cues and training contexts. While the original choices focused on general possibilities, the new options reference actual concurrent events from different training segments (audio captions' countdown during self-defense practice vs visual pepper spray incident). Only choice B correctly ties the countdown (20-30s audio) to structured training scenarios, whereas A links to shooting practice, C to driving drills, and D to sparring context - all authentic elements from the video but unrelated to the pepper spray sequence.",
+        "video_id": "G_VTkkb34gw",
+        "Type": "Reasoning",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    }
+][
+    {
+        "Question": "What is the primary purpose of the white car maneuvering through the water-filled obstacle course with orange cones?",
+        "Choice": [
+            "A. Demonstrating vehicle water resistance capabilities",
+            "B. Simulating emergency response driving scenarios",
+            "C. Conducting routine vehicle safety inspections",
+            "D. Testing acceleration performance on wet surfaces"
+        ],
+        "Answer": "B",
+        "Explanation": "This revision improves difficulty by: (1) Making all choices vehicle-test related rather than mixing unrelated options (like original 'leisure driving'), (2) Using technical terms like 'simulating emergency response' instead of generic 'advanced training', (3) Adding specific course elements ('water-filled with orange cones') requiring visual context recall. The correct answer requires understanding that the complex obstacle course with safety markers and police training context (from other scenes) indicates emergency response simulation rather than basic water resistance tests or performance trials.",
+        "video_id": "G_VTkkb34gw",
+        "Type": "Inference",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    }
+][
+    {
+        "Question": "What distinguishes the self-defense training with the blue padded shield from the subsequent medical training activity?",
+        "Choice": [
+            "A. Focus on impact techniques vs. wound care application",
+            "B. Use of protective gear vs. emergency equipment",
+            "C. Conducted under time pressure vs. unpaced practice",
+            "D. Supervised demonstration vs. peer-led exercise"
+        ],
+        "Answer": "A",
+        "Explanation": "The revision improves upon the original by: 1) Using more precise terminology ('impact techniques' and 'wound care' instead of vague 'strikes/bandaging'); 2) Introducing plausible distractors based on other training elements (B references equipment seen in other segments, C uses the countdown audio cue, D leverages organizational aspects); 3) Eliminating the original's problematic observer distinction (D in original) that created multiple valid answers. The new version requires deeper analysis of activity purposes rather than surface-level observations.",
+        "video_id": "G_VTkkb34gw",
+        "Type": "Comparative",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    }
+][
+    {
+        "Question": "During which training activity does the countdown audio occur in the 20-30s segment?",
+        "Choice": [
+            "A. Pepper spray training",
+            "B. Indoor combat sparring",
+            "C. Medical bandaging exercise",
+            "D. Self-defense technique practice"
+        ],
+        "Answer": "D",
+        "Explanation": "This revision improves accuracy by aligning with the audio-visual pair (countdown with self-defense practice). The original answer was incorrect as indoor combat sparring was paired with foreign language speech. New choices focus on distinct activities from the same segment, eliminating the geographically ambiguous 'indoor combat facility' and adding medically plausible 'bandaging' as a distractor while maintaining only one valid answer.",
+        "video_id": "G_VTkkb34gw",
+        "Type": "Context understanding",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    }
+][
+    {
+        "Question": "Which audio events were present when the officers were driving on the rural highway?",
+        "Choice": [
+            "A. Wind sounds and excited human speech",
+            "B. Electronic music with gunshots",
+            "C. Non-English speech during sparring",
+            "D. Hip-hop music with a countdown"
+        ],
+        "Answer": "A",
+        "Explanation": "The revision adds specificity to the human speech ('excited' from the audio caption) and creates more temporally precise distractors. B incorrectly merges 0-10s gunshots with unrelated music, C references speech from 20-30s training, and D combines elements exclusive to 20-30s. This forces examinees to precisely map concurrent audio-visual pairs rather than relying on general associations.",
+        "video_id": "G_VTkkb34gw",
+        "Type": "AV Event Alignment",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    }
+][
+    {
+        "Question": "Which event occurred IMMEDIATELY AFTER the countdown sound in the 20-30s segment?",
+        "Choice": [
+            "A. Pepper spray training",
+            "B. Self-defense shield practice",
+            "C. Medical bandaging exercise",
+            "D. White car obstacle course"
+        ],
+        "Answer": "B",
+        "Explanation": "The original question had an incorrect answer (A) as pepper spray training wasn't the first event. By leveraging audio-visual synchronization (countdown from 3-1 occurs during self-defense practice), the revised question tests precise multimodal understanding. This increases difficulty by requiring temporal alignment of sound cues with visual events, while maintaining all original plausible choices with B being the correct synchronized event.",
+        "video_id": "G_VTkkb34gw",
+        "Type": "Event Sequence",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    }
+]

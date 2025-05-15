@@ -1,0 +1,3057 @@
+[
+    {
+        "Type": "Event Sequence",
+        "Question": "Which of the following sequences of visual and audio events accurately reflects the video?",
+        "Choice": [
+            "A. Person waking up -> Door closing -> Song starts -> Distressed speech.",
+            "B. Bell ringing -> iPad screen shown -> 'It's time to get to work' -> Black screen.",
+            "C. 'Alright, let's' said -> Pandora app shown -> Song starts -> 'What is this?'",
+            "D. People laying down -> 'are sleep' said -> Hand taps screen -> Bell ringing."
+        ],
+        "Answer": "B",
+        "Explaination": "The bell rings, then the iPad screen is shown, followed by the audio 'It's time to get to work', and subsequently the screen turns black.",
+        "video_id": "-oC3FVOx62g"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the likely context surrounding the question 'What is this?' in the video?",
+        "Choice": [
+            "A. It's a question about the closing door sound.",
+            "B. It's a reaction to the song that started playing after the app was opened.",
+            "C. It's a question about the person waking up abruptly.",
+            "D. It's a question about the image of the two young people on the iPad."
+        ],
+        "Answer": "B",
+        "Explaination": "The question 'What is this?' is immediately followed by the phrase 'Ice JJ fish?', which is the name of the artist whose song started playing on the Pandora app, making B the most likely context.",
+        "video_id": "-oC3FVOx62g"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action and sound occurred around the same time the iPad screen was shown?",
+        "Choice": [
+            "A. A bell ringing and someone touching the screen.",
+            "B. A door closing and someone saying 'Alright, let's'.",
+            "C. Someone waking up and a door closing.",
+            "D. Someone saying 'Alright, let's' and the start of a song."
+        ],
+        "Answer": "A",
+        "Explaination": "The iPad screen is shown after one person wakes up, and concurrently, a hand is seen touching the screen while a bell ringing sound is heard in the audio.",
+        "video_id": "-oC3FVOx62g"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the likely setting or environment based on the combined audio and visual elements?",
+        "Choice": [
+            "A. A construction site where gravel is being moved.",
+            "B. A mountain trail where someone has been walking for a long time.",
+            "C. A fishing trip on a boat in the ocean.",
+            "D. A quarry where rocks are being extracted."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual clearly shows someone fishing on a boat in the ocean. While the audio mentions sounds of gravel and quarrying, the dominant visual of fishing and the audio of someone potentially seeing something in the water strongly suggests a fishing trip on a boat.",
+        "video_id": "-q6f1XIGuL4"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the likely context of the man's speech in the middle(10-20s) of the video?",
+        "Choice": [
+            "A. He is providing instructions for playing the trombone.",
+            "B. He is concluding a video segment for his audience.",
+            "C. He is responding to someone off-screen about the beep sound.",
+            "D. He is describing the dark purple curtains in the background."
+        ],
+        "Answer": "B",
+        "Explaination": "Visually, the man is facing forward, suggesting he's addressing an audience. Audibly, his phrases 'I hope you enjoyed this week's video, I will see you next week' strongly indicate he is concluding a video for viewers.",
+        "video_id": "-rb6uia1wSo"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why did the character stop playing the clarinet around the middle of the video?",
+        "Choice": [
+            "A. Because the musical instrument is broken",
+            "B. To express his gratitude and bid farewell.",
+            "C. Due to a problem with the white lamp.",
+            "D. Because the melancholic tune was too difficult."
+        ],
+        "Answer": "B",
+        "Explaination": "Visually, the man stops playing and starts speaking. Audibly, he says phrases indicating the end of the video and expresses hope that the viewer enjoyed it. The transition from playing to speaking aligns with a purpose of communication.",
+        "video_id": "-rb6uia1wSo"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "Compare the audio during the initial skateboard demonstration with the audio during the outdoor skatepark scene.",
+        "Choice": [
+            "A. Both sections feature human speech, but the indoor segment includes background music, unlike the outdoor segment.",
+            "B. The first section has sounds related to a different activity being explained, while the outdoor segment features music.",
+            "C. Both sections have instructional speech, but the outdoor segment also includes sounds of skateboarding.",
+            "D. The first section has speech about skateboarding, whereas the outdoor section has speech about pogo sticks."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio in the initial indoor segment (0-10s) focuses on explaining how to use a pogo stick. In contrast, the audio in the outdoor skatepark scene (10-20s) features electronic dance music, indicating a difference in the activity being depicted and its associated sounds.",
+        "video_id": "-spqqACI6UQ"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual content between 20-30 seconds, what is the likely skill level of the person being addressed by the speaker?",
+        "Choice": [
+            "A. Highly skilled and experienced with advanced tricks, needing only verbal cues.",
+            "B. A beginner who requires detailed step-by-step instructions and visual demonstrations.",
+            "C. At an intermediate level, needing reminders on specific techniques like foot placement.",
+            "D. Someone already familiar with dropping in but seeking confirmation on their approach."
+        ],
+        "Answer": "B",
+        "Explaination": "Visually, the man demonstrates how to drop in, putting one foot on the tail. Audibly, the speaker provides instructional cues like 'Now we're gonna drop in' and 'So, you leave your foot on the tail. Leave it up,' suggesting he's teaching a beginner.",
+        "video_id": "-spqqACI6UQ"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why did the scene switch to the outdoor skatepark around the 10-second mark?",
+        "Choice": [
+            "A. To showcase the same skateboard trick being performed, accompanied by a change in background music.",
+            "B. Because the indoor demonstration of basic skateboard handling was complete, indicated by the end of the pogo stick explanation.",
+            "C. Due to the person finishing their skateboarding instructions indoors, signaled by the sound of a door closing.",
+            "D. To transition to a more advanced skateboarding segment, coinciding with the introduction of electronic dance music."
+        ],
+        "Answer": "A",
+        "Explaination": "The visual shifts to an outdoor skatepark where a person performs a trick. Simultaneously, the audio transitions from someone explaining a pogo stick to electronic dance music, indicating a shift in focus and activity.",
+        "video_id": "-spqqACI6UQ"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action and audio event occur concurrently between 0-10 seconds?",
+        "Choice": [
+            "A. Woman singing and orchestral music playing.",
+            "B. Woman sitting and a male voice singing.",
+            "C. Woman gesturing and the music ending.",
+            "D. Woman standing and a soaring vocal tone."
+        ],
+        "Answer": "A",
+        "Explaination": "Between 0-10 seconds, the visual description mentions a woman singing and the audio description mentions a female vocalist singing with an orchestral accompaniment.",
+        "video_id": "-w12aSkQ9No"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the primary focus of the video segment between 20-30 seconds?",
+        "Choice": [
+            "A. Showcasing a compilation of different skateboarding tricks performed by various individuals.",
+            "B. Providing instructions on how to perform a 'drop in' on a skateboard.",
+            "C. Highlighting the transition from indoor to outdoor skateboarding environments.",
+            "D. Demonstrating the basic movements involved in riding a skateboard on flat ground."
+        ],
+        "Answer": "B",
+        "Explaination": "Visually, the man demonstrates the 'drop in' technique. Audibly, the speaker explicitly states, \"Now we are going to drop in\" and provides further instructions on foot placement for this specific maneuver.",
+        "video_id": "-spqqACI6UQ"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happened visually before the electronic dance music started playing?",
+        "Choice": [
+            "A. The person landed a skateboard trick outdoors.",
+            "B. The camera focused on the skateboard wheels.",
+            "C. A door was heard slamming shut.",
+            "D. The person's feet were shown standing on the skateboard."
+        ],
+        "Answer": "A",
+        "Explaination": "According to the audio description, the sound of a door slamming occurred before the electronic dance music started. Visually, the shift to the outdoor skatepark happened around the time the music began.",
+        "video_id": "-spqqACI6UQ"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What was occurring visually when the fast-paced bluegrass music with a prominent banjo begins to play?",
+        "Choice": [
+            "A. A group of women in pink dresses were dancing on a set.",
+            "B. Men were striking poses on a green mat in front of a backdrop.",
+            "C. A man was explaining the production process to the camera.",
+            "D. People were arranging a woman in a pink wig on set."
+        ],
+        "Answer": "B",
+        "Explaination": "The fast-paced bluegrass music was playing during the 0-10s section where the visual description mentions 'two men are visible, one in a blue shirt and one in a yellow shirt with red shorts, striking poses on a green mat'.",
+        "video_id": "-uaTK8sa5Ms"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the order of events involving the woman and the music around the 10-20 second mark?",
+        "Choice": [
+            "A. Woman finishes singing, then orchestral music starts.",
+            "B. Orchestral music starts, then the woman starts singing.",
+            "C. Woman sings alone, then another person joins singing.",
+            "D. Another person sings, then the woman starts singing."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual caption from 10-20s describes the woman singing alone and then the audio caption mentions another person joining the singing at the end of the segment.",
+        "video_id": "-w12aSkQ9No"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "While the garage door was in motion, what auditory cue confirmed a specific visual detail about the opener?",
+        "Choice": [
+            "A. The sound of the door panels moving matched the light on the opener blinking.",
+            "B. The speaker's statement about the door going back up aligned with the blinking light.",
+            "C. The speaker mentioning the sensors coincided with the door fully opening.",
+            "D. The sound of the motor starting aligned with the initial movement of the door."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio mentions, \"the door gets back to the top, you'll notice that the opener light is blinking,\" which directly aligns with the visual description of the opener light blinking after the door goes up.",
+        "video_id": "-wQ8El8J_dE"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the text 'Said it's too late to apologize' transition to 'Too late...'?",
+        "Choice": [
+            "A. The music changed from a pop song to Indian folk music.",
+            "B. The black circle with the tree was replaced by a musical note.",
+            "C. The male vocalist started singing with a more emotional tone.",
+            "D. There was a shift in the accompanying instrumental music from keyboard to synthesizer."
+        ],
+        "Answer": "C",
+        "Explaination": "The change in text coincides with a shift in the audio from a generic pop song to one described as having a melancholic and emotional tone in the vocals, suggesting a thematic connection to the shortened, more impactful phrase 'Too late...'.",
+        "video_id": "-wymN80CiYU"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Considering both the visual and audio elements, what might be the overall mood or theme of the video?",
+        "Choice": [
+            "A. Celebratory and energetic, indicated by the upbeat music and floral borders.",
+            "B. Regretful and reflective, suggested by the apologetic text and melancholic vocals.",
+            "C. Mysterious and suspenseful, hinted at by the disappearing text and instrumental music.",
+            "D. Peaceful and serene, represented by the tree silhouette and calming synth sounds."
+        ],
+        "Answer": "B",
+        "Explaination": "The phrases 'too late to apologize' and the melancholic tone of the male vocalist strongly suggest a theme of regret. The visual elements, while decorative, do not contradict this sentiment.",
+        "video_id": "-wymN80CiYU"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What was the man out of view saying while the man in the white shirt and black sleeves was leaning into the car?",
+        "Choice": [
+            "A. He mentioned the car's self-retracting door handles.",
+            "B. He commented on the presence of a web browser and Google partnership.",
+            "C. He described a small LED light near the door handle.",
+            "D. He talked about the car's acceleration capabilities."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual shows the man leaning into the car (0-10s), and the audio during this time has him saying, \"Mhm. It's got a web browser, too. They're, uh, one of their business partners is Google. So it's got uh.\"",
+        "video_id": "-xfgovG6-KU"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which action immediately followed the camera zooming in on the car's interior and showing the touch screen?",
+        "Choice": [
+            "A. The man in the blue shirt and green jacket pointed at the door handle.",
+            "B. The door handle was shown in a protruding state.",
+            "C. The touch screen displayed a car graphic before turning black.",
+            "D. The man mentioned the self-retracting feature of the door handle."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual description states that after the zoom-in on the interior (0-10s), \"the camera focuses more on the touch screen, which displays a car graphic and then turns black.\"",
+        "video_id": "-xfgovG6-KU"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "Considering both the visual and audio information, what is the likely setting when the phrase 'Starting at Hooton Avenue and going all the way to State Avenue' is spoken?",
+        "Choice": [
+            "A. A live news broadcast in a studio.",
+            "B. A casual conversation between friends at home.",
+            "C. An noisy office with a map displayed.",
+            "D. An outdoor scene near the mentioned avenues."
+        ],
+        "Answer": "A",
+        "Explaination": "The audio involves an explanation of road construction. Simultaneously, the visual shows a woman pointing at a digital map on a monitor, fitting the context of an office or control room setting where such information might be discussed and displayed.",
+        "video_id": "-xQbyezhw_k"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Considering both the audio and visual elements, what is the most likely purpose of the text appearing on the screen?",
+        "Choice": [
+            "A. To display the tuning of the ukulele being played.",
+            "B. To show the lyrics of the song being played on the ukulele.",
+            "C. To indicate a change in the ukulele's chords.",
+            "D. To label the different parts of the ukulele."
+        ],
+        "Answer": "B",
+        "Explaination": "The repeated phrase 'Well I See Trees of Green...' appearing visually suggests lyrics. While the audio mentions chords, it doesn't directly correlate with this specific text. Therefore, it's most likely the lyrics being played on the ukulele.",
+        "video_id": "-z4OZ7ls5Bo"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which of the following sequences of events accurately combines both visual actions and audio cues?",
+        "Choice": [
+            "A. Viewing the dashboard -> Car door closing -> Speech about ventilated seats.",
+            "B. Car horn sound -> Opening the center console -> Engine running.",
+            "C. Speech about battery life -> Showing the steering wheel -> Car driving.",
+            "D. Showing the heated seat buttons -> Car horn sound -> Opening the armrest."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio description starts with the car horn, followed by the visual of opening the center console (implied by the hand action), and later the audio describes the engine running.",
+        "video_id": "-zI7FN8cMIE"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "Considering both the visual and audio information, what is the primary activity occurring in the first 10 seconds of the video?",
+        "Choice": [
+            "A. Inspecting the car's interior features.",
+            "B. Starting the car and preparing to drive.",
+            "C. Testing the car's horn and interior.",
+            "D. Demonstrating the storage capacity of the center console."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual focuses on the interior, including the steering wheel, and the audio confirms the car horn is being tested or used. This suggests an initial check of some basic functions.",
+        "video_id": "-zI7FN8cMIE"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What was the immediate context surrounding the first instance of laughter heard in the audio?",
+        "Choice": [
+            "A. The pigs were already playing outside.",
+            "B. The pigs were sitting at the table.",
+            "C. Peppa was throwing the ball to George.",
+            "D. The pigs were walking beside a yellow house."
+        ],
+        "Answer": "B",
+        "Explaination": "The first instance of laughter occurs when the visual shows the pigs sitting at the table with surprised expressions, before the camera zooms out to reveal more characters.",
+        "video_id": "0-2Onbywljo"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "After the laughter in the kitchen and the instruction to go play, what visual event immediately followed according to the video?",
+        "Choice": [
+            "A. Peppa threw the ball and it bounced.",
+            "B. The two pigs were rushing down a green hill.",
+            "C. The pig in the red dress held a spotted ball on a green field.",
+            "D. The pig in the blue shirt was walking on a grassy hill."
+        ],
+        "Answer": "B",
+        "Explaination": "Following the laughter and the instruction to play, the video shows two animated pig characters sliding down a green hill.",
+        "video_id": "0-2Onbywljo"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "Which audio event occurred while a person was visibly touching their chin?",
+        "Choice": [
+            "A. The electronic sound effect.",
+            "B. The male speaker talking about sounds.",
+            "C. The sound of someone sniffing.",
+            "D. The sound of someone sighing."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description mentions a person touching their chin at the beginning (0-10s), which aligns with the audio of a male speaker talking about sounds in the same time frame.",
+        "video_id": "00FBAdjlF4g"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What followed immediately after the man stated 'Pretty cool, huh?'?",
+        "Choice": [
+            "A. The pipes made a rattling sound.",
+            "B. He exited the frame to the right.",
+            "C. He raised a finger and said 'Now I'm back ...'",
+            "D. The background shelves became cluttered."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio caption shows the man saying 'Pretty cool, huh?' followed by 'Now I'm back to doing nothing. See you later.' The visual caption confirms he raises a finger while saying the latter phrase.",
+        "video_id": "00iiNF4tn4o"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "What likely prompted the initial metallic rattling sound?",
+        "Choice": [
+            "A. The man bumped into the blue frames.",
+            "B. The man interacted with the brown pipes by looking down.",
+            "C. The man spoke loudly.",
+            "D. Someone off-screen moved the shelves."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual caption indicates the pipes made noise while the man looked down at them. The audio confirms a metallic rattling sound occurred around the same time. This suggests his action of looking down at the pipes caused the sound.",
+        "video_id": "00iiNF4tn4o"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happened visually after the male speaker finished his sentence about having 'a good problem to have'?",
+        "Choice": [
+            "A. The silver line-based triangle emblem appeared.",
+            "B. The scene transitioned to a man with a beard in a studio.",
+            "C. The scene showed three people in a recording studio.",
+            "D. A black background was displayed."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio description indicates the male speaker finished talking within the 0-10s segment, followed by a sigh and sniffing. The visual description shows the initial scenes within 0-10s, and then the logo appears in the 10-20s section, which follows the speaker's dialogue in the timeline.",
+        "video_id": "00FBAdjlF4g"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the overall context of the man's actions and speech throughout the described video?",
+        "Choice": [
+            "A. He is demonstrating how to maintain kitchen appliances.",
+            "B. He is providing a tutorial on basic home repairs.",
+            "C. He is reviewing different types of cabinet hardware.",
+            "D. He is comparing the quality of different cabinet brands."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual shows him working on a cabinet hinge, and the audio explains the problem and how to fix it, indicating a basic home repair tutorial.",
+        "video_id": "02-0m4RbDUI"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Following the appearance of a snowy brick house with icicles, what auditory event happened next?",
+        "Choice": [
+            "A. A sheep bleating sound.",
+            "B. Cheerful instrumental music begins.",
+            "C. Upbeat flamenco guitar music continues.",
+            "D. A distinct coughing sound."
+        ],
+        "Answer": "C",
+        "Explaination": "The snowy brick house appears in the 10-20s visual section. The audio description for 10-20s indicates that upbeat flamenco guitar music is followed by a short, clear cough.",
+        "video_id": "02UvvE1oA1I"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Considering the audio and visual content in the 20-30s section, what might be the overall mood or atmosphere intended?",
+        "Choice": [
+            "A. Somber and reflective.",
+            "B. Playful and slightly humorous.",
+            "C. Mysterious and suspenseful.",
+            "D. Calm and peaceful."
+        ],
+        "Answer": "B",
+        "Explaination": "The cheerful and lively instrumental music, combined with the visual of a sheep rolling a wool ball and another rolling onto its side as a 'baa' sound plays, suggests a playful and slightly humorous atmosphere.",
+        "video_id": "02UvvE1oA1I"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual changes around the 10-second mark, what shift in the video's setting or style can be inferred?",
+        "Choice": [
+            "A. A shift from a realistic depiction to a more abstract one.",
+            "B. A transition from a summery scene to a wintery one.",
+            "C. A change in the type of animal being featured.",
+            "D. A move from a musical segment to a dialogue-driven one."
+        ],
+        "Answer": "B",
+        "Explaination": "Around the 10-second mark, the visual changes from abstract shapes with a sheep to a snowy brick house. This visual shift aligns with a change in audio from cheerful steel pan music to upbeat flamenco guitar music, suggesting a transition to a wintery scene.",
+        "video_id": "02UvvE1oA1I"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "Compare the sounds present during the initial workshop view with those when the man is working on the car wheel.",
+        "Choice": [
+            "A. Both sections feature loud machinery sounds.",
+            "B. The workshop has engine sounds and speech, while the car repair has engine sounds.",
+            "C. The workshop has engine sounds, while the car repair has engine sounds and speech.",
+            "D. Both sections primarily feature human speech."
+        ],
+        "Answer": "C",
+        "Explaination": "The 0-10s audio for the workshop view has helicopter sounds. The 10-20s audio, concurrent with the car repair, features engine sounds and human speech. This distinguishes the audio content of the two segments.",
+        "video_id": "02XbmweOzOY"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action was being performed when the narrator said, 'We got the control arm...'?",
+        "Choice": [
+            "A. Heating a bolt with a blowtorch.",
+            "B. Tapping a bolt with a hammer.",
+            "C. Focusing on the car's suspension.",
+            "D. Opening a drawer to get tools."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio indicates the speaker said 'We got the control' immediately after 'sounds of impact' which aligns with the visual of the person tapping the bolt with a hammer.",
+        "video_id": "03aJ_RcnBko"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the immediate context of the narrator saying 'and we're going to come straight off and onto my cooler...'?",
+        "Choice": [
+            "A. After opening a drawer and heating a bolt.",
+            "B. After removing a nut from the tire hub with a power tool.",
+            "C. After tapping a bolt with a hammer on the suspension system.",
+            "D. After a loud noise and the metallic part with studs appearing on the floor."
+        ],
+        "Answer": "D",
+        "Explaination": "The audio description places the phrase 'and we're going to come straight off and onto my coolers' after the loud noise and the visual shows the metallic part with studs on the floor near a cooler.",
+        "video_id": "03aJ_RcnBko"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happened visually before the narrator mentioned having a '13 mm on this hub'?",
+        "Choice": [
+            "A. The blowtorch was used, and a drawer opened.",
+            "B. The suspension system was focused on, and a hammer was used.",
+            "C. The car was lifted by a jack, and the tie rod end was mentioned as loose.",
+            "D. A metallic part with studs was shown, and a loud noise was heard."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio indicates the narrator said 'we're arm loose. We got the tie rod end loose' before mentioning the '13 mm on this hub'. Visually, this aligns with the camera focusing on the undercarriage elevated by a jack before showing the tire hub.",
+        "video_id": "03aJ_RcnBko"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the context surrounding the statement 'Release the break' considering both audio and visual information?",
+        "Choice": [
+            "A. It is an instruction given while showcasing the air compressor's features.",
+            "B. It is a statement about the man's next action during the process of removing the car's wheel.",
+            "C. It is a statement made while inspecting tools on the shelf.",
+            "D. It is a command given during the process of removing the car's wheel."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio of 'Release the break' occurs in the 10-20s segment, which visually shows the person working on the rear wheel of the car. This indicates the statement is related to the car repair process, specifically the brake mechanism.",
+        "video_id": "02XbmweOzOY"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "Which action and speech occurred simultaneously around the middle(10-20s) of the video?",
+        "Choice": [
+            "A. Picking up ice cream and asking 'What is it? A waffle?'",
+            "B. Broken ice cream and saying 'maybe a production fail, I don't know'.",
+            "C. Rotating ice cream and saying 'Um'.",
+            "D. Dropping ice cream and asking 'Is it just this ice cream?'"
+        ],
+        "Answer": "B",
+        "Explaination": "Around the middle of the video (10-20s), the visual shows a person breaking ice cream, and the corresponding audio has the person saying 'maybe a production fail, I don't know'.",
+        "video_id": "03IZHwOh2eQ"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the person have said 'maybe a production fail' ?",
+        "Choice": [
+            "A. Because the ice cream was completely melted and there was no sound.",
+            "B. Because the ice cream was broken into unusual pieces and they were actively chewing.",
+            "C. Because the wrapper was missing and they were talking about a waffle.",
+            "D. Because the ice cream looked perfectly fine and they were silent."
+        ],
+        "Answer": "B",
+        "Explaination": "The statement 'maybe a production fail' (audio) occurs while the person is breaking and examining oddly shaped pieces of ice cream (visual) and there's the sound of chewing, suggesting something is not right with the product.",
+        "video_id": "03IZHwOh2eQ"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Considering the audio and visual content, what is the likely setting of the 'very tiny leak' discussion?",
+        "Choice": [
+            "A. Inside the workshop with the red air compressor.",
+            "B. Outdoors, near the white car being repaired.",
+            "C. Inside the car's passenger compartment.",
+            "D. Near a plumbing system inside the garage."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio of the leak occurs in the 20-30s segment, which visually shows the man removing the car wheel drum and discussing the brake system. The 'very tiny leak' is described in the context of the hydraulic cylinder of the car's brake system.",
+        "video_id": "02XbmweOzOY"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What sound event aligns with the visual of the man in the white jersey being escorted away by security?",
+        "Choice": [
+            "A. The crowd chanting 'Jedinstvo! Jedinstvo!'",
+            "B. A high-pitched cheering sound.",
+            "C. A male voice shouting 'Hit him down!'",
+            "D. The crowd cheering loudly."
+        ],
+        "Answer": "D",
+        "Explaination": "The loud cheering sound in the audio (0-10s) occurs simultaneously with the visual of the man in the white jersey being escorted away by security (0-10s). The other audio events occur either before or after this specific visual event.",
+        "video_id": "03zeVlBWhdY"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action is being performed while the male speaker says, 'Instead, I want to let your card find me'?",
+        "Choice": [
+            "A. The cards are being placed on the table.",
+            "B. The cards are being spread out.",
+            "C. The cards are being shuffled.",
+            "D. A card is being revealed."
+        ],
+        "Answer": "A",
+        "Explaination": "The audio describes the male speaker saying, 'Instead, I want to let your card find me,' while the visual description notes the person is shuffling the cards.",
+        "video_id": "04ChQ0fqzxQ"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the likely context of the phrase 'there we go' spoken by the child?",
+        "Choice": [
+            "A. After successfully opening a difficult package.",
+            "B. After picking up a dropped toy during arrangement.",
+            "C. After finishing the description of a toy.",
+            "D. After putting the lid back on the blue can."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio mentions 'jelly beans fell down' and the sound of an object dropping, followed by 'oops, there we go', suggesting the child is referring to picking up a dropped toy while arranging them, as shown visually.",
+        "video_id": "04xLK7R5wNA"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which of the following happened immediately before the cheering sound ends?",
+        "Choice": [
+            "A. The woman in pink did a flip.",
+            "B. The promotional speech finished.",
+            "C. The man raised his arms.",
+            "D. The xylophone music played."
+        ],
+        "Answer": "B",
+        "Explaination": "According to the audio description, the female voice delivering the promotional speech ended right before the click sound. Visually, this happens before the final shot of the cameras.",
+        "video_id": "07rwFurzpw8"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "Compare the tone of the male speech when the keyboard is shown versus when the bellows are shown.",
+        "Choice": [
+            "A. Both are cheerful and inviting.",
+            "B. Both are tense.",
+            "C. The former is cheerful, the latter is normal.",
+            "D. Both are delivered in a whispering tone."
+        ],
+        "Answer": "C",
+        "Explaination": "When the keyboard is shown, the audio includes a cheerful tone ('How are you? I love you'). When the bellows are shown, the audio has a normal tone ('I do not understand words, but the words wait, but I read them').",
+        "video_id": "097K1uMIPyQ"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the black pony have looked annoyed when the fluffy creature appeared in the doorway around the time of the knocking sound?",
+        "Choice": [
+            "A. Because the door was already closed, indicated by the earlier 'door closing' sound.",
+            "B. Because the black pony was expecting someone else, indicated by the surprised 'oh' sound later.",
+            "C. Because the black pony was trying to be quiet, disrupted by the knocking sound.",
+            "D. Because the fluffy creature had food on its head, as commented by the 'hotdog unibrow' remark."
+        ],
+        "Answer": "C",
+        "Explaination": "The knocking sound (10-20s) suggests someone is trying to enter. The black pony's annoyed expression when the fluffy creature appears in the doorway around that time, combined with the knocking, suggests they might have been trying to maintain quiet.",
+        "video_id": "0ARh-9Amrv0"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the likely context of the phrase 'round three going to get you around' spoken while the rowing team is visible?",
+        "Choice": [
+            "A. It's an instruction to the rowers on how to navigate a specific turn.",
+            "B. It's a comment on the team's overall performance in a competition.",
+            "C. It's a remark about the number of people on the bicycle following them.",
+            "D. It's a warning about the narrow boats docked on the side of the river."
+        ],
+        "Answer": "A",
+        "Explaination": "The phrase 'round three' suggests a competitive context, fitting with the visual of a rowing team. It's likely a comment on their progress or standing in a race, rather than a specific navigational instruction related to the immediate surroundings.",
+        "video_id": "0aaLWD7TUSU"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which of the following describes the order of actions combined from both audio and visual information in the first 10 seconds?",
+        "Choice": [
+            "A. Holding fabric, speaking, clicker sound, rubbing fabric.",
+            "B. Speaking, holding fabric, rubbing fabric, clicker sound.",
+            "C. Holding fabric, clicker sound, speaking, rubbing fabric.",
+            "D. Speaking, clicker sound, holding fabric, rubbing fabric."
+        ],
+        "Answer": "A",
+        "Explaination": "The visual description shows the person holding fabric and then rubbing. The audio description mentions speaking first, followed by a clicker sound, and then more speaking.",
+        "video_id": "0AkRWunFZPk"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the sounds and actions in the 10-20 second mark, what is the likely purpose of the 'blade' sound following the speaker's words?",
+        "Choice": [
+            "A. To cut a loose thread on the jeans.",
+            "B. To further distress the zipper area.",
+            "C. To sharpen the yellow tool being used.",
+            "D. To separate a piece of fabric for removal."
+        ],
+        "Answer": "B",
+        "Explaination": "The speaker mentions taking a 'razor blade' and the visual shows the person tearing at the fabric, implying the blade sound is related to further distressing the jeans, particularly around the zipper as the speaker was mentioning it.",
+        "video_id": "0AkRWunFZPk"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happens visually after the narrator says 'and propellers of many shapes and sizes proliferated'?",
+        "Choice": [
+            "A. Three uniformed men stand around the front of the biplane.",
+            "B. The biplane is parked on a grass field.",
+            "C. The biplane takes off into the air.",
+            "D. A wider shot of the biplane and ground crew is shown."
+        ],
+        "Answer": "A",
+        "Explaination": "The audio clip 'and propellers of many shapes and sizes proliferated' falls within the 10-20s section. Visually, this is followed by the scene of three uniformed men standing around the front of the plane.",
+        "video_id": "0bP2MH3LqvI"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual content, what is the likely genre of the video?",
+        "Choice": [
+            "A. A documentary about urban development.",
+            "B. A music video with hip-hop as its main genre.",
+            "C. A short film depicting nightlife in a city.",
+            "D. A promotional video for tourism in Times Square."
+        ],
+        "Answer": "B",
+        "Explaination": "The consistent presence of hip-hop music in the audio, combined with visuals of people dancing, singing, and rapping, strongly suggests that the video's genre is a music video, with hip-hop being the primary musical style.",
+        "video_id": "0bRUkLsttto"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What visual event immediately precedes the close-up shot of a man holding a green bill?",
+        "Choice": [
+            "A. A man in a blue jacket moving his arm to the music.",
+            "B. Three men raising their index fingers on a street corner.",
+            "C. A man in a green jacket with yellow text.",
+            "D. Three people standing on a dark platform with a city skyline."
+        ],
+        "Answer": "A",
+        "Explaination": "According to the visual caption for the 20-30s section, the shot of a man in a blue jacket moving his arm to the music comes directly before the close-up of the man holding a green bill.",
+        "video_id": "0bRUkLsttto"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why does the figure in the black tuxedo appear surprised while looking at the screen?",
+        "Choice": [
+            "A. Because he hears a triumphant voice saying 'Defeated at last'.",
+            "B. Because a siren sound goes off inside the ice base.",
+            "C. Because the Bat-Signal flashes and he hears a bell ringing.",
+            "D. Because another character in red and green enters the scene."
+        ],
+        "Answer": "C",
+        "Explaination": "The tuxedo figure appears surprised after the screen flashes the Bat-Signal and the sound of a bell ringing is heard, implying the signal and sound are the cause of his surprise.",
+        "video_id": "0crG6jzAUpE"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Following the sound of a ringing bell, what visual event immediately occurs?",
+        "Choice": [
+            "A. The camera shows the full set of the toy base.",
+            "B. The tuxedo figure walks up to the flashing Bat-Signal screen.",
+            "C. The red and green suited figure enters on a platform.",
+            "D. The close-up of the yellow computer screen with the Bat-Signal is visible."
+        ],
+        "Answer": "D",
+        "Explaination": "After the first ringing bell, the video shows a close-up of the yellow computer screen with the black Bat-Signal before zooming out to show the tuxedo figure approaching the screen.",
+        "video_id": "0crG6jzAUpE"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What visual element is present when the first high-pitched whistle is heard?",
+        "Choice": [
+            "A. The yellow console with the light blue screen.",
+            "B. A close-up of the blue and tan toy figure with a cape.",
+            "C. The black toy figure holding a blue gun inside the ice base.",
+            "D. The full set of the toy base with cotton ball snow."
+        ],
+        "Answer": "B",
+        "Explaination": "The first high-pitched whistle occurs at the beginning of the video when the close-up of the blue and tan toy figure is shown.",
+        "video_id": "0crG6jzAUpE"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "What is the difference in the narrator's speech between showing the first key working and presenting the two keys?",
+        "Choice": [
+            "A. The tone changes from thankful to neutral.",
+            "B. The first instance includes sound of keys clicking, the second includes music.",
+            "C. The first instance focuses on programming, the second on gratitude.",
+            "D. The first instance is quieter than the second instance."
+        ],
+        "Answer": "C",
+        "Explaination": "In the first instance (0-10s, 10-20s), the speech focuses on the key being programmed. In the second instance (20-30s), the narrator says, 'Thank you for watching,' expressing gratitude. Visually, the first part shows the action of programming/using one key, while the second shows the result with two keys.",
+        "video_id": "0cZQm65sZjc"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "Compare the context of the two instances of siren sounds in the video.",
+        "Choice": [
+            "A. Both sirens occur while the figures are on the balcony.",
+            "B. The first siren is associated with the ice base, while the second is linked to the yellow console.",
+            "C. Both sirens occur after a voice says 'better call for some special backup'.",
+            "D. The first siren happens during the close-up of Robin, and the second when Batman is visible."
+        ],
+        "Answer": "B",
+        "Explaination": "The first siren is heard while the visuals focus on the ice base, and the second siren is heard when the camera shifts to the indoor location with the yellow console.",
+        "video_id": "0crG6jzAUpE"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happened visually before the male voice started rapping?",
+        "Choice": [
+            "A. The 'Download it now!' text appeared",
+            "B. A blurred image with a round shape was shown",
+            "C. The old online radio interface was displayed",
+            "D. The product box was shown"
+        ],
+        "Answer": "B",
+        "Explaination": "According to the descriptions, the male voice rapping begins in the 10-20s audio segment. Visually, during the 10-20s, a blurred image with a round shape appears before the subsequent events.",
+        "video_id": "0EvpBtracsk"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the context of the male voice rapping 'have you ever wanted something so bad?'?",
+        "Choice": [
+            "A. Emphasizing the user's desire for a specific radio station.",
+            "B. Highlighting a technical difficulty with the software.",
+            "C. Illustrating the variety of radio stations available.",
+            "D. Demonstrating a user reporting a problem."
+        ],
+        "Answer": "C",
+        "Explaination": "The male voice rapping appears in the 10-20s audio segment while the visual shows the user navigating through different radio categories, suggesting the rap lyric is contextually related to the desire to find desired music or stations.",
+        "video_id": "0EvpBtracsk"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "Compare the audio accompanying the initial product box with the audio accompanying the 'Download it now!' text.",
+        "Choice": [
+            "A. Both feature male vocals and guitars.",
+            "B. The first is calmer instrumental, the second is more energetic with male vocals.",
+            "C. Both are upbeat pop songs with female vocals.",
+            "D. The first is energetic with percussion, the second is a sad melody."
+        ],
+        "Answer": "B",
+        "Explaination": "The initial product box (0-10s) is accompanied by instrumental music, while the 'Download it now!' text (20-30s) is accompanied by a pop rock song with male vocals, showcasing a clear difference in audio styles.",
+        "video_id": "0EvpBtracsk"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the likely environment where the events in the video are taking place?",
+        "Choice": [
+            "A. A dog training facility with multiple trainers.",
+            "B. A quiet park with a single dog and owner.",
+            "C. A home environment with dogs and human.",
+            "D. A veterinary clinic during an examination."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual description shows elements of a home like wooden floors and furniture. The audio includes sounds of a baby crying, a child speaking, and dogs vocalizing, suggesting a home environment with both children and pets.",
+        "video_id": "0F04c_rY4aw"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Considering the audio and visual cues, what is the likely purpose of the individuals handling the white wired headphones?",
+        "Choice": [
+            "A. They are inspecting the headphones for damage.",
+            "B. They are preparing to listen to music.",
+            "C. They are demonstrating the convenience of the headphones.",
+            "D. They are putting the headphones away for storage."
+        ],
+        "Answer": "C",
+        "Explaination": "The combination of individuals handling headphones and the music playing suggests they are preparing to listen to music. The appearance of \"Put some music on\" further supports this inference.",
+        "video_id": "0FjrveIENzI"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the likely setting when someone says, 'Here we are at Calway, let's go'?",
+        "Choice": [
+            "A. Inside a candy store.",
+            "B. Approaching a roller coaster.",
+            "C. On a vintage-style train.",
+            "D. By a lake with paddle boats."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio of someone saying 'Here we are at Calway, let's go' is in the 20-30s section. The visual description shows a roller coaster track with the text 'CALAWAY PARK' in the 30-40s section, suggesting the audio precedes the visual confirmation of the location.",
+        "video_id": "0g-KosNgMYA"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "After someone said 'This might be our most solid board', what happened next visually?",
+        "Choice": [
+            "A. Drilling the skateboard.",
+            "B. Placing the book on the ground.",
+            "C. Inspecting the skateboard.",
+            "D. Changing the drill battery."
+        ],
+        "Answer": "B",
+        "Explaination": "In the 10-20s section, the audio has the statement 'This might be our most solid board', followed by the visual of the man crouching and placing the book on the ground.",
+        "video_id": "0GFtqzOWnWg"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual, what were they likely doing with the drill and the book titled 'Harry Potter'?",
+        "Choice": [
+            "A. Assembling a new skateboard.",
+            "B. Testing the drill's power.",
+            "C. Securing the book to the board.",
+            "D. Creating a decorative hole."
+        ],
+        "Answer": "A",
+        "Explaination": "The combination of drilling into the book and the comments about the board quality suggests they were testing the drill or making modifications to the book for an unknown purpose, potentially related to the 'best board' mentioned earlier.",
+        "video_id": "0GFtqzOWnWg"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why did the person express panic and say 'The battery's dying'?",
+        "Choice": [
+            "A. They finished assembling the skateboard.",
+            "B. They were drilling into a book.",
+            "C. They were standing and holding a book.",
+            "D. They were inspecting the skateboard."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio of 'The battery's dying' occurs in the 20-30s section, coinciding with the visual of a person drilling into a book.",
+        "video_id": "0GFtqzOWnWg"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What visual action was occurring when the male voice began singing the line 'As the day comes to a close and night'?",
+        "Choice": [
+            "A. The man was sitting outdoors looking at his phone.",
+            "B. The man was grimacing with his eyes closed.",
+            "C. The woman was taking a selfie with her phone.",
+            "D. The man was wearing a blue shirt and glasses."
+        ],
+        "Answer": "A",
+        "Explaination": "The audio description states the male voice starts singing after rock music plays in the 0-10s segment. Visually, during this time, the man is shown grimacing with his eyes closed before he opens them.",
+        "video_id": "0Gxn9FtaJFc"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Considering the audio and visual information, what is the likely relationship between the person assembling the skateboard and the person drilling the book?",
+        "Choice": [
+            "A. They are the same person.",
+            "B. They are showcasing different hobbies.",
+            "C. They are working on the same project.",
+            "D. They are unaware of each other's actions."
+        ],
+        "Answer": "A",
+        "Explaination": "The mention of 'our most solid board' and 'some of the ones we made have not really worked out so well' in the context of the book being drilled suggests they are working together on a project, potentially testing the durability of different materials or designs.",
+        "video_id": "0GFtqzOWnWg"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happened visually after the sound of someone saying 'No damage' and before the sound of someone saying 'Coming up'?",
+        "Choice": [
+            "A. The person in the purple shirt started scraping the tiles.",
+            "B. The person in the brown hoodie continued to detach the countertop edge with a hammer.",
+            "C. The man in the brown hoodie put down the hammer and picked up putty knives.",
+            "D. The man in the black jacket started watching the countertop removal."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio caption places 'No damage' and 'Coming up' within the 10-20s segment. The visual caption for 10-20s describes the man in the brown hoodie using a hammer to detach the countertop edge.",
+        "video_id": "0GNNFBrRz1E"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which of the following sequences of actions and sounds is accurate according to the video?",
+        "Choice": [
+            "A. Counting numbers - Opening a foil packet - Saying 'potion'.",
+            "B. Tearing a package - Saying 'stop at nine' - Counting numbers.",
+            "C. Spreading cards - Sound of water - Showing a box.",
+            "D. Saying 'electric energy' - Opening a box - Sound of rustling."
+        ],
+        "Answer": "B",
+        "Explaination": "The video starts with hands tearing a package, followed by the audio of 'stop at nine', and later the counting of numbers.",
+        "video_id": "0hUft9scxzY"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which of the following sequences of events accurately reflects the order presented in the video?",
+        "Choice": [
+            "A. The man in beige spoke, then the drill retracted, followed by the machine sound.",
+            "B. The sound of an object being moved occurred, then the lathe was shown working, followed by the man in brown speaking.",
+            "C. The drill drilled the cylinder, then the man in beige gestured, followed by the speaker mentioning \"Shargle Factory\".",
+            "D. The close-up of the red machine part happened before the \"piccolo flute\" comment."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual shows the cylinder being drilled first (0-10s), followed by the man in beige gesturing (10-20s), which aligns with the audio mentioning \"Shargle Factory\" later (20-30s).",
+        "video_id": "0HzbpwB3xDk"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the context surrounding the act of a hand spreading out four cards on the table?",
+        "Choice": [
+            "A. It happens while someone is saying 'stop at nine' and showing a plant character.",
+            "B. It occurs after a hand pulls a pack from a box and while someone is counting.",
+            "C. It happens during the reading of card names like 'Machete' and the sound of rustling.",
+            "D. It is followed by the tearing of a yellow package and the sound of water."
+        ],
+        "Answer": "B",
+        "Explaination": "Visually, the hand spreads out cards after taking them from the box, and audibly this coincides with someone counting.",
+        "video_id": "0hUft9scxzY"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action and sound event were occurring simultaneously in the initial part of the video?",
+        "Choice": [
+            "A. A golden cylinder was being drilled while a man said \"Okay\".",
+            "B. A person in red was near the machine while mentioned a \"piccolo flute\".",
+            "C. Metal shavings were visible on the lathe while a machine sound was present.",
+            "D. The bald man held a metal piece while saying \"Right here at the Shargle Factory\"."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description mentions a man in a beige blazer and a person in a red T-shirt near the machine in the initial section (0-10s), aligning with the audio where the first speaker mentions \"Here's the piccolo flute, maybe\" and the second speaker replies \"Right\".",
+        "video_id": "0HzbpwB3xDk"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why does the man look excited and point at the toy in the 10-20s section after the 'pop' sound?",
+        "Choice": [
+            "A. Because the toy car sound indicated an unexpected event.",
+            "B. Because the counting down 'one, two, three, go' led to the pig toy to pop.",
+            "C. Because the laughter indicated someone else caused the pig toy to pop.",
+            "D. Because the man clearing his throat was a signal for the pig toy to pop."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio description mentions someone counting down 'one, two, three, go' immediately before the 'pop' sound. The visual description states the man was pressing the pig toy's hat, and then it fell apart with a 'pop' sound, leading to his surprise. The countdown visually corresponds to the action of potentially preparing for the pig to pop.",
+        "video_id": "0izHOfrwPn4"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "While viewing the multi-story corner building with several storefronts and a yellow traffic light, what was a notable characteristic of the audio at that time?",
+        "Choice": [
+            "A. Silence, indicating a break in the music.",
+            "B. The distinct sound of car horns.",
+            "C. A male singer performing lyrics in a non-English language.",
+            "D. Upbeat instrumental music with acoustic guitar and percussion."
+        ],
+        "Answer": "C",
+        "Explaination": "The multi-story corner building is shown in the 10-20s section. The audio description for this section includes a male singer singing in a non-English language ('Ta ta takila ya, takila simana'). This connects the visual of the building with the specific audio characteristic.",
+        "video_id": "0JbGxIR8JTk"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What visual element is prominently present when the playful male voice says 'Let's roll!'?",
+        "Choice": [
+            "A. The toy pig with a chef's hat and red bib.",
+            "B. A collection of red, yellow, green, and purple circular pieces.",
+            "C. A man with dark hair and a blue t-shirt.",
+            "D. The word 'NEVER!' displayed over the pig toy."
+        ],
+        "Answer": "C",
+        "Explaination": "The description indicates that the man with dark hair and a blue t-shirt appears in the frame and speaks the words 'Let's roll!' simultaneously. The audio caption confirms a male voice saying 'Let's roll!' during this time.",
+        "video_id": "0izHOfrwPn4"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What item mentioned in the conversation at the beginning is visually present in the shopping cart?",
+        "Choice": [
+            "A. Canned peaches",
+            "B. Pure Cane Sugar",
+            "C. Almond milk",
+            "D. Packaged noodles"
+        ],
+        "Answer": "B",
+        "Explaination": "The audio mentions 'sugar' when the first speaker says, 'Uh-oh, I see the sugar there.' Visually, the shopping cart is shown to contain bags labeled 'Pure Cane Sugar'.",
+        "video_id": "0J3wJhQVOII"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What specific audio element was present when the camera initially focused on the graffiti art on the gray building?",
+        "Choice": [
+            "A. Rhythmic drumming",
+            "B. Male vocalist singing in a foreign language",
+            "C. Sound of construction",
+            "D. No prominent audio"
+        ],
+        "Answer": "B",
+        "Explaination": "The description states that during the initial view of the gray building with graffiti (0-10s), there's a male vocalist singing in a foreign language. This aligns with the visual of the graffiti being shown.",
+        "video_id": "0JbGxIR8JTk"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "In the third segment, the man's questions about 'sewing and school' are likely related to:",
+        "Choice": [
+            "A. A class the women are taking at the grocery store.",
+            "B. An interview about their hobbies and professions.",
+            "C. Their children's activities and their own teaching profession.",
+            "D. A debate competition they are preparing for."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio in the third segment (20-30s) mentions 'sewing and school', and the woman responds that they are 'getting ready to teach'. Visually, the setting is still a grocery store, but the conversation shifts, indicating they are discussing their lives beyond shopping, likely involving their profession and perhaps their children's school activities.",
+        "video_id": "0J3wJhQVOII"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Considering the audio and visual information, what is the most likely activity the players are engaged in?",
+        "Choice": [
+            "A. Exploring the environment to find resources like prime meat from trikes.",
+            "B. Building a base near the water where they can easily access fish.",
+            "C. Farming the green grass-like plants for crafting purposes.",
+            "D. Observing the different types of eggs to study dinosaur behavior."
+        ],
+        "Answer": "A",
+        "Explaination": "The audio mentions getting \"prime\" from a \"trike\" (0-10s), suggesting hunting. The visual shows the player exploring different areas (0-20s), supporting the idea of resource gathering and exploration.",
+        "video_id": "0K0pXiZrUJA"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the context surrounding the discussion about item counts ('I've got 30', 'I've got 17')?",
+        "Choice": [
+            "A. They are planning to hunt the plesiosaur seen attacking the fish underwater.",
+            "B. They are strategizing how to approach the 'brontos' mentioned earlier.",
+            "C. They are checking their resources, likely in preparation for an activity involving tranquilizer darts.",
+            "D. They are deciding who will collect the 'prime' from the 'trike' they spotted."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio at 20-30s begins with a player stating \"I'm down to 13 tranks,\" and the others respond with their counts. The visual context at this time shows the player with a spear, suggesting a need for such items for hunting or defense.",
+        "video_id": "0K0pXiZrUJA"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the player be looking at the shoreline while holding a spear, immediately before discussing item counts?",
+        "Choice": [
+            "A. Because they are preparing to hunt the fish they saw earlier, as discussed.",
+            "B. Because they are anticipating a potential threat from the dinosaurs they see there, as discussed.",
+            "C. Because they are trying to find the trike egg mentioned in the previous audio.",
+            "D. Because they are looking for more of the green grass-like plants they saw initially."
+        ],
+        "Answer": "B",
+        "Explaination": "Visually, at 20-30s, the player is looking at the shoreline where long-necked dinosaurs are present. Audibly, earlier in the video (0-10s), the player discusses seeing a \"trike\", indicating awareness of potentially dangerous dinosaurs.",
+        "video_id": "0K0pXiZrUJA"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action and sound event are occurring simultaneously around the beginning of the video?",
+        "Choice": [
+            "A. A man is speaking calmly while playing the drums.",
+            "B. A man is singing a rock song inside a car.",
+            "C. A woman is dancing silently in a dark room.",
+            "D. A car is driving by while classical music is playing."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description at 0-10s mentions a man singing inside a car, and the audio description at 0-10s mentions a male singing a rock song.",
+        "video_id": "0LE6Ll1rVlg"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why does the young man appear confused between 0-10 seconds?",
+        "Choice": [
+            "A. Because the woman starts singing loudly.",
+            "B. Because the woman is speaking in a questioning tone.",
+            "C. Because the woman is giggling after they both look up.",
+            "D. Because he does not recognize the song being hummed."
+        ],
+        "Answer": "D",
+        "Explaination": "The visual description states 'the young man seems confused as the young woman giggles' within the 0-10s timeframe. This aligns with the audio where humming sounds follow the initial statement.",
+        "video_id": "0jnvb2H25_Q"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "Which action and statement occurred concurrently?",
+        "Choice": [
+            "A. The woman tastes food while saying 'Next we have this tray'.",
+            "B. A can is opened while someone says 'Reminds me of blood sausage'.",
+            "C. The woman eats food while saying 'Mmm'.",
+            "D. The foil package is opened while someone says 'Maybe it's meat?'."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual description shows the woman eating a piece of food, and the audio caption indicates she says 'Mmm' at the same time.",
+        "video_id": "0lJyHuTVMNY"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What sound event is occurring when the company logo with the cityscape first appears?",
+        "Choice": [
+            "A. Melancholic electronic music and a passing train.",
+            "B. Upbeat hip-hop music and a male speaker singing 'It's just that I trust no one'.",
+            "C. A male speaker singing 'You know I love you baby' and the sound of a passing truck.",
+            "D. Only the sound of a passing truck."
+        ],
+        "Answer": "A",
+        "Explaination": ".",
+        "video_id": "0loP4WNnL2k"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happens visually immediately after the black and white company logo disappears around the 10-20s mark?",
+        "Choice": [
+            "A. The young man is walking alone in an outdoor environment while music plays.",
+            "B. The young man is sitting on a wooden bench while melancholic electronic music continues.",
+            "C. The young man is standing in front of a large arch while a male speaker sings 'It's just that I trust no one'.",
+            "D. The young man is standing with another person on a city street as melancholic music plays."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description states that after the black and white logo disappears (within 10-20s), the video shows the young man sitting on a wooden bench. The audio description indicates that melancholic electronic music is playing during the entire 0-10s timeframe",
+        "video_id": "0loP4WNnL2k"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action is being verbally described while a red and gray gear-shaped tool is first being shown?",
+        "Choice": [
+            "A. Describing the function of a black pipe while showing a hammer.",
+            "B. Explaining the need for an oil flapper while picking up the tool",
+            "C. Mentioning a small hole while pointing at a metallic stick-like tool.",
+            "D. Discussing JB weld application while displaying a bucket of nuts and bolts."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio mentions 'making an oil flapper' while the visual shows a hand picking up the red and gray gear-shaped oil flipper.",
+        "video_id": "0Mba3BS1oRM"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the visual shift from a close-up of the child's face to an outdoor audience overlay?",
+        "Choice": [
+            "A. To indicate a change of location for the performance.",
+            "B. To emphasize the child's emotional reaction to the audience.",
+            "C. To provide the audience's reaction to the ongoing children's song.",
+            "D. To signify a transition between different parts of the performance."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual transition coupled with the shift in the child's attire and the ongoing music suggests a change within the performance itself, possibly indicating different segments or songs.",
+        "video_id": "0m9-5BkL4Mc"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happens immediately after the sound of a door being moved or placed down?",
+        "Choice": [
+            "A. The woman begins removing the door from its hinges.",
+            "B. The close-up of the metal door hinge is shown.",
+            "C. The labels 'Top' and 'Bottom' appear on the door.",
+            "D. The dotted lines appear on the dog silhouette."
+        ],
+        "Answer": "C",
+        "Explaination": "Following the sound of the door being moved, the female speaker says 'Note the top and bottom of the door before cutting,' which coincides with the visual of the 'Top' and 'Bottom' labels appearing on the screen.",
+        "video_id": "0LTmV_dOmmo"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "During the initial segment of the video, what musical genre is being played while the child is holding a patterned instrument?",
+        "Choice": [
+            "A. Classical music",
+            "B. Country music",
+            "C. Pop music",
+            "D. Electronic music"
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description shows the child with a squeeze box/concertina, often associated with folk or country music, and the audio description explicitly mentions the music being an upbeat country genre with guitar and drums.",
+        "video_id": "0m9-5BkL4Mc"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action was being performed when the heavy breathing sound was first heard?",
+        "Choice": [
+            "A. A hand was petting the dog.",
+            "B. The dog's mouth was being opened.",
+            "C. The camera was panning across the dog's body.",
+            "D. Text was appearing on the screen."
+        ],
+        "Answer": "A",
+        "Explaination": "The heavy breathing is heard in the audio (0-10s) while visually a hand enters the frame and opens the dog's mouth (0-10s).",
+        "video_id": "0mZQ6Q-viPw"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which of the following sequences accurately reflects the order of events involving the person in the black shirt?",
+        "Choice": [
+            "A. Hits ball, laughs, puts hands on head.",
+            "B. Laughs, hits ball, moves away from table.",
+            "C. Puts hands on head, hits ball, laughs.",
+            "D. Moves away from table, puts hands on head, hits ball."
+        ],
+        "Answer": "A",
+        "Explaination": "Visually, the person in black hits the ball in the first segment and then, in the second segment, laughs and puts his hands on his head. The audio confirms the laughter occurs before the 'Oh my god' which is likely when he puts his hands on his head in disbelief.",
+        "video_id": "0NW8rsCj6xQ"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why does the person in the black shirt begin laughing?",
+        "Choice": [
+            "A. Because the other player complimented his shirt.",
+            "B. Because the ping pong ball hit the ceiling.",
+            "C. Because the other player hit the paddle into the air.",
+            "D. Because he won the ping pong match."
+        ],
+        "Answer": "B",
+        "Explaination": "Visually, the man in the white shirt hits the paddle into the air right before the laughter begins. The audio also confirms the laughter precedes the sounds of pain ('Oh my god'), suggesting the laughter is a reaction to the paddle incident.",
+        "video_id": "0NW8rsCj6xQ"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the men be observing the frog with such focus?",
+        "Choice": [
+            "A. They are scientists studying its unique vocal patterns.",
+            "B. Its presence reinforces their conversation about conservation.",
+            "C. They are trying to determine if it's poisonous or not.",
+            "D. Its vibrant colors are distracting them from their discussion."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual of them looking at the frog combined with the audio of the conversation about preserving the rainforest suggests the frog is relevant to their discussion and potentially symbolic of their conservation efforts.",
+        "video_id": "0onKcFY1Tu0"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happens immediately after the man on the left finishes speaking?",
+        "Choice": [
+            "A. The man on the right starts talking about the rainforest.",
+            "B. The frog makes a distinct croaking sound.",
+            "C. Both men simultaneously uncross their arms.",
+            "D. The outdoor scene through the doorway becomes clearer."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio description indicates that the guttural sound (frog croak) happens directly after the first instance of speech ('trying to preserve the rainforest'), spoken by the man on the left as indicated in the visual description.",
+        "video_id": "0onKcFY1Tu0"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the last tool mentioned verbally before the camera focuses on the bag of screws?",
+        "Choice": [
+            "A. The drill bit for concrete.",
+            "B. The Philips head screwdriver.",
+            "C. The security bit for the screwdriver.",
+            "D. The small orange level."
+        ],
+        "Answer": "C",
+        "Explaination": "The speaker lists tools, and the security bit is the last tool mentioned before the camera zooms in on the bag of screws. This is confirmed by both the audio and the visual sequence of the hand pointing.",
+        "video_id": "0oudYrPGNN8"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on their attire and the setting, what is a likely context for this interaction?",
+        "Choice": [
+            "A. They are zookeepers discussing the frog's habitat needs.",
+            "B. They are environmental activists at a fundraising event.",
+            "C. They are colleagues casually observing a found animal.",
+            "D. They are park rangers on a routine wildlife inspection."
+        ],
+        "Answer": "B",
+        "Explaination": "The serious tone of their voices and the topic of rainforest preservation, combined with their similar casual attire, suggests they are likely involved in some form of environmental activism, possibly a meeting or discussion.",
+        "video_id": "0onKcFY1Tu0"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which visual element was the focus when the speaker mentioned something going 'right back in the water'?",
+        "Choice": [
+            "A. The flame being directed onto the wall.",
+            "B. The transparent container filling with liquid.",
+            "C. The metallic pipe emitting a pink-red flame.",
+            "D. The black box with red lines."
+        ],
+        "Answer": "A",
+        "Explaination": "The audio 'right back in the water' occurs in the 10-20s segment when the visual shows the flame being directed onto the wall, although the audio about water doesn't directly correlate visually.",
+        "video_id": "0QdEYUt4LL8"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which visual happened immediately before the audio about NASA's Lewis Research Center?",
+        "Choice": [
+            "A. An aerial view of a multi-bladed propeller.",
+            "B. A man in a beige shirt adjusting a dial.",
+            "C. A plane parked on an unpaved surface.",
+            "D. A close-up of a propeller with red and blue stripes."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio about NASA's Lewis Research Center occurs in the 10-20s section. Immediately preceding this in the visual description is the man in the beige shirt adjusting a dial.",
+        "video_id": "0QqQ1j1vBgw"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happens visually right after the child says 'Are you farting?'?",
+        "Choice": [
+            "A. The dog stares directly at the camera.",
+            "B. The camera pans across the room.",
+            "C. The dog bends down suddenly.",
+            "D. The dog runs away and sits under the table."
+        ],
+        "Answer": "C",
+        "Explaination": "The child asks 'Are you farting?' around the same time the dog bends down suddenly, as if reacting to its own bodily function.",
+        "video_id": "0QYedLfOwcI"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What visual element is being shown around the time the speaker mentions 'NASA asked'?",
+        "Choice": [
+            "A. A close-up of a rotating propeller.",
+            "B. A man hand-starting an airplane propeller.",
+            "C. Workers in a control room.",
+            "D. An aerial view of a white plane."
+        ],
+        "Answer": "B",
+        "Explaination": "The speaker says 'That's the question NASA asked' during the 0-10s segment, which visually shows a man hand-starting the propeller of a plane.",
+        "video_id": "0QqQ1j1vBgw"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "What might be the reason for the dog's perplexed expression at the beginning of the video?",
+        "Choice": [
+            "A. The dog saw a Christmas stocking.",
+            "B. The dog heard someone sniffing and saying 'Huh?'",
+            "C. The dog was focused on its reflection.",
+            "D. The dog was looking at the red ornaments."
+        ],
+        "Answer": "B",
+        "Explaination": "The dog looks up and to the side, then stares ahead with a perplexed expression, which aligns with the audio of someone sniffing and saying 'Huh?'.",
+        "video_id": "0QYedLfOwcI"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why does the person tap the edge of the card deck on the green table while the speaker is talking about showing 'their card'?",
+        "Choice": [
+            "A. To demonstrate the color of the table.",
+            "B. To emphasize the sound of the cards.",
+            "C. To visually highlight the process of show the card.",
+            "D. To create a distraction before performing a move."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio suggests the speaker is leading up to a reveal or trick ('their card'), and the visual of tapping the deck could be a subtle action to divert attention or prepare for a card change, aligning with a distraction technique.",
+        "video_id": "0qZ54ovyEWQ"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the overall context of the video based on the combined audio and visual information?",
+        "Choice": [
+            "A. A tutorial on creating music using a specific set of drum samples.",
+            "B. A demonstration of the visual interface of the FL Studio software.",
+            "C. A troubleshooting guide for an audio output issue in FL Studio.",
+            "D. An overview of the different panels and features within FL Studio."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio repeatedly mentions issues with sound and an unavailable output device. Visually, the user navigates through audio settings and encounters error messages related to the audio interface. Both audio and visual elements point towards troubleshooting an audio output problem.",
+        "video_id": "0rzB4A1PjnA"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What was being displayed visually when the male voice stated, 'We're committed to investing in wind energy'?",
+        "Choice": [
+            "A. The ScottishPower logo.",
+            "B. A woman moving her head.",
+            "C. A child holding a black device.",
+            "D. Wind turbines at sea."
+        ],
+        "Answer": "C",
+        "Explaination": "The male voice speaks while the girl is visible holding a black device. The transition to the wind turbines happens later in the audio segment.",
+        "video_id": "0SLv6CmZas8"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What sound occurred when the woman with long wavy blonde hair clapped the top of the log?",
+        "Choice": [
+            "A. A female speaker saying 'Das wäre geschafft'.",
+            "B. A loud crash sound.",
+            "C. A smaller crash sound.",
+            "D. A sound of a heavy object falling or dropping."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description indicates the woman clapped the log when it broke, and the audio description mentions a loud crash sound occurring in the same time frame, aligning with the log breaking.",
+        "video_id": "0tgNg0MHgxc"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Considering both the visual and audio information in the 20-30 second segment, what can be inferred about the player's current objective?",
+        "Choice": [
+            "A. The player intends to interact with the sheep based on the calm tone.",
+            "B. The player is hunting the pigs, indicated by the gun and calm speech.",
+            "C. The player is cautious and moving away, as suggested by the speech and movement away.",
+            "D. The player is preparing to fight the animals, as suggested by the gun and the 'REC' overlay."
+        ],
+        "Answer": "C",
+        "Explaination": "Visually, the player is walking away from the animals. Audibly, the narrator says 'Don't let him get you' and expresses uncertainty about hostility, suggesting caution and an intention to avoid confrontation. The calm tone supports the idea of moving away rather than engaging.",
+        "video_id": "0rz3h0ghprk"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action coincides with the speaker saying 'And if you don't want to put it on your face, but'?",
+        "Choice": [
+            "A. The woman is holding the closed package towards the camera.",
+            "B. The woman is opening the blue and white package.",
+            "C. The woman is touching her temple with her finger.",
+            "D. The woman is displaying the package with both hands."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio indicates someone speaking while the visual description notes the woman opening the package during the 0-10s timeframe.",
+        "video_id": "0ylr6p_m4p0"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action is the first man performing when he says 'Are you ready to rock?'?",
+        "Choice": [
+            "A. He is actively shooting the rifle.",
+            "B. He is pointing the rifle upwards.",
+            "C. He is looking directly at the camera.",
+            "D. He is reloading the black rifle."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio indicates he is speaking, and the visual shows him looking at the camera while speaking 'Are you ready to rock?' before aiming and shooting. The initial 'cutting' sound is separate from the speech event.",
+        "video_id": "0YTieIiZNN4"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might there be a clicking sound in the second segment(10-20s) before the sound of a gunshot?",
+        "Choice": [
+            "A. It's the sound of the bullet hitting the target.",
+            "B. It's the sound of the safety being engaged.",
+            "C. It's the sound of the magazine being inserted.",
+            "D. It's the sound of adjusting the scope on the rifle."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual shows the man inserting a magazine into the rifle right before the gunshot. The clicking sound likely corresponds to this action, while adjusting the scope is a quieter, more subtle movement and would likely not produce such an audible click.",
+        "video_id": "0YTieIiZNN4"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the likely setting or event taking place based on the combination of visual and audio cues in the first 10 seconds?",
+        "Choice": [
+            "A. A rehearsal for a play with improvised dialogue.",
+            "B. A live musical performance with stage instructions.",
+            "C. A recording session for a podcast with background music.",
+            "D. An interview with a band member on a brightly lit set."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description of a band on a dark stage, combined with the audio of speech that sounds like instructions ('read that for bucket') within a performance context ('We're going to survive'), strongly suggests a live musical performance.",
+        "video_id": "0zgffMTkGtU"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the overall context of the video based on the combined visual and audio information?",
+        "Choice": [
+            "A. It's a video about the history of cricket equipment.",
+            "B. It's an instructional video on how to hold a cricket bat.",
+            "C. It's a recording of a live cricket match.",
+            "D. It's an advertisement for a cricket coaching website."
+        ],
+        "Answer": "B",
+        "Explaination": "The visuals focus on hand placement and grip techniques, supported by audio instructions on checking 'Vs', hand positioning, and balance. The text 'Checklist for the Grip' and 'KEY POINTS' further reinforces this context.",
+        "video_id": "0ZN2HKsFg4A"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What is the woman doing while stating 'so we're gonna get started here'?",
+        "Choice": [
+            "A. Holding a blue hair clip.",
+            "B. Looking directly at the camera.",
+            "C. Looking down at a container of paintbrushes.",
+            "D. Picking up a container with both hands."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description at 0-10s mentions the woman looking directly at the camera holding paintbrushes, and the audio at 0-10s has her saying 'so we're gonna get started here'.",
+        "video_id": "0yxJzCQW5zI"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What visual element is present when the speaker mentions checking for 'Vs'?",
+        "Choice": [
+            "A. A red cricket ball with white text.",
+            "B. Three men standing on a green field.",
+            "C. Close-up view of hands holding a cricket bat.",
+            "D. Text on a black screen saying 'KEY POINTS'."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio mentions checking for 'Vs' which is visually demonstrated by the close-up view of the hands holding the cricket bat in the 0-10s section. The speaker says 'there's both the Vs we're looking at as a check there' while the close up shot is visible.",
+        "video_id": "0ZN2HKsFg4A"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action was occurring visually when the speaker said, 'I don't care which one it is'?",
+        "Choice": [
+            "A. The person was holding a bag of dried food.",
+            "B. The person was opening a translucent plastic bag.",
+            "C. The person was taking a pink item out of a bag.",
+            "D. The person was manipulating a tube-shaped object."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio of the person saying 'I don't care which one it is' aligns with the visual of the person's hands opening a translucent plastic bag filled with pink items.",
+        "video_id": "0_1BfYtffzg"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual cues, what might 'Number 93 has five today' refer to?",
+        "Choice": [
+            "A. The number of times the cat meowed that day.",
+            "B. The number of glasses the man with shoulder-length hair broke.",
+            "C. The number of glasses the man with chin-length hair shattered.",
+            "D. The number of tricks the man with shoulder-length hair performed."
+        ],
+        "Answer": "C",
+        "Explaination": "The man with chin-length hair shatters a glass visually, and immediately after, the audio says 'Number 93 has five today'. This implies he has broken five glasses today, and this was the last one (number 93).",
+        "video_id": "10lWpHyN0Ok"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happened visually and audibly after the camera zoomed in on the sticker sheet focusing on the 'Monster Jam' text?",
+        "Choice": [
+            "A. The sound of keys jingling and a green monster truck being placed.",
+            "B. The man saying \"I see the eyes of the dragon\" and the camera zooming in.",
+            "C. The man saying \"I see the eyes of the dragon\" and the camera zooming out.",
+            "D. The sound of someone handling stickers and a child saying \"A stone crusher\"."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description states the camera zoomed out to reveal the hand holding the sticker sheet again after focusing on the 'Monster Jam' text. The audio description mentions the man saying \"I see the\" after saying \"Stickers\" which aligns with the initial camera zoom.",
+        "video_id": "10DM6WINIS8"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What sound event occurred around the same time the train doors opened to reveal the station platform with blue support beams?",
+        "Choice": [
+            "A. The distinct sound of a car horn.",
+            "B. Two notes of a wind instrument.",
+            "C. The sound of a car door closing.",
+            "D. An automated voice announcing the next stop."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description indicates the blue support beams appear in the 0-10s segment. The audio description for 0-10s mentions a wind instrument playing a single note, aligning these events.",
+        "video_id": "2fi0m8ei_B4"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which event occurred immediately after the man said 'Pull it up. It's down to that motor.'?",
+        "Choice": [
+            "A. The fan was thrown into the air.",
+            "B. A brown, cylindrical object fell out.",
+            "C. The person displayed the broken outer casing.",
+            "D. The sound of paper being crumpled was heard."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio caption for 0-10s places the utterance 'Pull it up. It's down to that motor.' before 'Ooh, that's sharp'. The visual caption shows the person displaying the outer casing after showing the inner blades and making the 'sharp' comment.",
+        "video_id": "2sGnD9sd1xM"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the order in which the person interacted with the items on the counter while speaking about necessary ingredients?",
+        "Choice": [
+            "A. Picks up toothpaste, picks up shampoo, stirs slime.",
+            "B. Stirs slime, picks up shampoo, picks up toothpaste.",
+            "C. Picks up shampoo, stirs slime, picks up toothpaste.",
+            "D. Picks up toothpaste, stirs slime, picks up shampoo."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description (10-20s) shows the person stirring the slime, then picking up the blue shampoo bottle, and finally picking up the white toothpaste tube. The audio (10-20s) contains the speech about 'shampoo and some toothpaste' during this period.",
+        "video_id": "2jxgoUnZ8AI"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why does the mouse exclaim 'I can't see a thing'?",
+        "Choice": [
+            "A. Because the room behind the green door is too dark to see.",
+            "B. Because the small white cat is blocking its view.",
+            "C. Because the knight helmet's visor is obstructing its vision.",
+            "D. Because the two sheep are too tall in front of him."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual description in the 20-30s segment mentions the mouse has its knight helmet on, and it closes its eyes because it can't see due to the visor. This aligns with the audio where the mouse says 'I can't see a thing' (20-30s).",
+        "video_id": "34vzrZ2SlQo"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which of the following sequences accurately reflects the order of events involving train doors and distinct sounds?",
+        "Choice": [
+            "A. Train doors opened (black pillar) -> Car horn -> Train doors closed.",
+            "B. Wind instrument -> Train doors closed (blue beams) -> Playful music.",
+            "C. Train doors opened (man on platform) -> Car door closing -> Train doors opened (UNION STATION).",
+            "D. Playful music -> Train doors closed (light rail) -> Automated voice announcement."
+        ],
+        "Answer": "B",
+        "Explaination": "Visually, the train doors closing with blue beams is in the 0-10s section. Audibly, the wind instrument is in 0-10s, and the playful music in 10-20s, placing the door closing between these sounds.",
+        "video_id": "2fi0m8ei_B4"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action was being performed when the speaker mentioned aiming for a 'flush' result?",
+        "Choice": [
+            "A. Pressing a flat plastic piece onto the toy's side.",
+            "B. Sanding the edge of a rectangular model part.",
+            "C. Holding the corner of the model's side.",
+            "D. Scattering tools on the working table."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio mentions 'flush as possible with the rest of the body' (0-10s), which aligns with the visual description of hands using sanding material on the edge of a model car part to smooth it out (0-10s).",
+        "video_id": "2m9rVrVNa6A"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the likely context surrounding the police officer holding a white paddle with a blue circle?",
+        "Choice": [
+            "A. He is using it to direct traffic while casually chatting with bystanders.",
+            "B. He is using it as a tool during a tense interaction with a potentially armed individual.",
+            "C. He is demonstrating how to play ping pong to the other Lego figures.",
+            "D. He is using it as a toy to distract the woman while another officer approaches."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio has the officer questioning 'have to use this, what is this, a ping pong paddle with a light on it? Seriously, what is this, everybody?', suggesting uncertainty or unusual circumstances. Simultaneously, the visual shows him standing near the woman holding a sword, implying a potentially tense situation where he might need to use the paddle.",
+        "video_id": "2pHfgh_G1yo"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which action happens directly after the speaker says 'Hello, this is just a little bit higher'?",
+        "Choice": [
+            "A. The person starts wiping the metal with a cloth.",
+            "B. The person touches the metal surface with their bare hand.",
+            "C. The person picks up a green sanding tool.",
+            "D. The person rubs the sanding tool back and forth."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio at 10-20s begins with the speaker saying 'Hello, this is just a little bit higher' (audio), and the visual description for the same timeframe starts with the person touching the metal surface with their bare hand (visual).",
+        "video_id": "3oxbegouR_A"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "Compare the expressions of the first mouse near the door (0-10s) and when saying 'I can't see a thing' (20-30s).",
+        "Choice": [
+            "A. Both expressions are happy and cheerful.",
+            "B. The first expression is shocked, while the second is panicked.",
+            "C. Both expressions show confusion and uncertainty.",
+            "D. The first expression is angry, while the second is surprised."
+        ],
+        "Answer": "A",
+        "Explaination": "Visually, the first mouse has a 'shocked expression' near the door (0-10s). In the 20-30s segment, the audio indicates a 'panicked tone' when the mouse says 'I can't see a thing'. Therefore, the first expression is shocked, and the second is panicked.",
+        "video_id": "34vzrZ2SlQo"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why did the man mention the 'night before you got trash' while the freezer lid was open?",
+        "Choice": [
+            "A. To emphasize the inconvenience of cleaning.",
+            "B. Because the freezer appeared full of trash.",
+            "C. To suggest an optimal time to defrost before emptying.",
+            "D. Because the sound of trash trucks was audible."
+        ],
+        "Answer": "C",
+        "Explaination": "Visually, the freezer is being cleaned and is empty. Audibly, the man is suggesting a time to do this. Combining this, he's likely suggesting cleaning before trash day for easy disposal of any removed contents or frost.",
+        "video_id": "3fnVQT2TnJs"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the context of the statement 'You may be seated, Sir Binu'?",
+        "Choice": [
+            "A. It is said when the mouse is offering the purple mug to another character.",
+            "B. It is said when the mouse is standing in front of an empty blue background.",
+            "C. It is said when the main mouse is preparing to sit on top of two sheep.",
+            "D. It is said when the first mouse is surprised by something behind the green door."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio of the statement 'You may be seated, Sir Binu' occurs in the 10-20s segment. Visually, this aligns with the scene where the main mouse is about to get on top of the two sheep (10-20s).",
+        "video_id": "34vzrZ2SlQo"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "What is the difference in the actions involving the sticks in the first(0-10s) and third(20-30s) sections of the video?",
+        "Choice": [
+            "A. In both sections, the stick is used for pouring liquids while the speaker talks about containers.",
+            "B. In the first section, the stick is used for stirring while in the third section, it's only used for tapping.",
+            "C. In the first section, the stick is used for stirring while in the third section, it's used for both stirring and tapping, as the speaker mentions toothpaste.",
+            "D. In both sections, the stick is primarily used for tapping on the container while the speaker mentions specific product names."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual description of the first section mentions stirring with the stick. The third section describes both stirring and tapping the stick. The audio in both sections contains relevant speech, with the third section mentioning 'toothpaste'.",
+        "video_id": "2jxgoUnZ8AI"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the correct sequence of events involving the cat in the box during the first 20 seconds?",
+        "Choice": [
+            "A.  Cat is facing the camera, then bats at a red leash, then rolls around.",
+            "B. Cat sits calmly, then rolls around, then is pulled by the leash.",
+            "C. Cat is pulled by the leash, then bats at a red leash, then sits calmly.",
+            "D. Cat is facing the camera, then rolls around, then bats at a red leash."
+        ],
+        "Answer": "D",
+        "Explaination": "The video shows that the cat is facing the camera first, then rolls around in the box, and then bats at a stick. The audio doesn't present contradictory information about this sequence.",
+        "video_id": "2tXE7snh6Ak"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which of the following sequences accurately reflects the order of visual and audio events?",
+        "Choice": [
+            "A. Buzzing sound -> Woman examining honeycomb -> Greek speech about royal jelly.",
+            "B. Greek speech about royal jelly -> Buzzing sound -> Woman examining honeycomb.",
+            "C. Woman examining honeycomb -> Greek speech about royal jelly -> Buzzing sound.",
+            "D. Wind sound -> Person scraping honeycomb -> Greek speech about royal jelly."
+        ],
+        "Answer": "A",
+        "Explaination": "The video starts with the buzzing of insects (0-10s), followed by the woman examining the honeycomb (0-10s), and then the Greek speech about royal jelly (10-20s).",
+        "video_id": "2__T6Q8rCCA"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "Compare the visual focus when only instrumental rock music is playing to when vocals are introduced.",
+        "Choice": [
+            "A. The focus shifts from the drummer to the bassist.",
+            "B. The focus remains solely on the stage lighting.",
+            "C. The initial focus is on the woman, then includes her singing.",
+            "D. The focus shifts from a single guitarist to a full band shot."
+        ],
+        "Answer": "C",
+        "Explaination": "Initially (0-10s), the visual focus is on the woman and then a man with a guitar while instrumental music plays. When male vocals start (10-20s), the woman begins singing, making her the central visual focus alongside the audio.",
+        "video_id": "3dUo62RsD00"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the visual and audio cues, what can be inferred about the location of the video?",
+        "Choice": [
+            "A. It is likely an outdoor area with trains passing by.",
+            "B. It is likely a mechanical room inside a building.",
+            "C. It is likely a home with multiple fire alarms.",
+            "D. It is likely an office with a door closing."
+        ],
+        "Answer": "B",
+        "Explaination": "The presence of multiple control panels, fire alarms, and the sound of alarms suggest that this is likely a mechanical room or control room inside a building, and not somewhere like an outdoor area.",
+        "video_id": "3Ab0sgelCEw"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "In what state inside of the white chest freezer when the man makes the statement about trash day?",
+        "Choice": [
+            "A. Partially filled with wrapped bags.",
+            "B. Containing a visible christmas decoration.",
+            "C. Empty except for a defrosting device.",
+            "D. Showing signs of recent scrubbing."
+        ],
+        "Answer": "D",
+        "Explaination": "Visually, the freezer's interior is being cleaned, and the man speaks immediately after. While the defrosting device is present later, the speech is contextual to the cleaning action occurring visually and audibly (potentially the end of the scrubbing).",
+        "video_id": "3fnVQT2TnJs"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which of the following sequences accurately reflects the order of events presented in the video?",
+        "Choice": [
+            "A. Man talking about kite durability, then showing a flying kite, finally kite laid on grass for the first time.",
+            "B. Kite laid on grass for the first time, man showing the flying kite, then describing wing tip features.",
+            "C. Showing a flying kite, describing wing tip features, then talking about kite durability.",
+            "D. Describing wing tip features, kite laid on grass for the first time, then man showing the flying kite."
+        ],
+        "Answer": "B",
+        "Explaination": "The video starts with a kite portion on the grass (0-10s), then shows the man with a flying kite (0-10s and 10-20s), and finally focuses on him describing wing tip features (20-30s).",
+        "video_id": "3c-vZ4GpIKs"
+    },
+    {
+        "Type": "Inference",
+        "Question": "What can be inferred about the person's emotional state at the end of the video?",
+        "Choice": [
+            "A. He was frustrated with the difficulty of disassembling the fan.",
+            "B. He found the act of throwing the fan and its result amusing.",
+            "C. He was relieved that the task of disassembling the fan was over.",
+            "D. He was nervously laughing after almost cutting themselves on the fan."
+        ],
+        "Answer": "B",
+        "Explaination": "The laughter in the 20-30s audio, following the visual of the person throwing the fan, suggests amusement or a lighthearted reaction to the situation. The visual of 'THE END' further reinforces this interpretation.",
+        "video_id": "2sGnD9sd1xM"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action was visually aligned with the instruction to breathe deeply?",
+        "Choice": [
+            "A. The patient remained still while the sound faded out.",
+            "B. The doctor placed the stethoscope in the aortic area.",
+            "C. The doctor moved the stethoscope across the patient's chest.",
+            "D. The camera zoomed in on the stethoscope's circular shape."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio mentions the instruction \"please breathe deeper than normal\", and the visual caption for the same time frame (10-20s) describes the doctor moving the stethoscope across the patient's chest. This alignment of audio instruction and visual action confirms the correct answer.",
+        "video_id": "2aO0HKIP3vI"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "During the initial news broadcast, what was being discussed when the monitor screen showed the phrase '午後4時頃の'?",
+        "Choice": [
+            "A. A female speaker was saying they are prepared for any situation.",
+            "B. A male speaker was stating the impossibility of predicting outcomes.",
+            "C. A male speaker was describing different types of underwater faults.",
+            "D. A male speaker was explaining the danger of being near the water."
+        ],
+        "Answer": "A",
+        "Explaination": "The visual description shows the phrase '午後4時頃の' on a monitor screen during the initial news broadcast (0-10s). The audio description for this period indicates a female speaker saying they will be safe and prepared.",
+        "video_id": "2q4_wFFFG_U"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happens visually around the same time the audio mentions the baby 'trying to learn how right now try to how to climb up'?",
+        "Choice": [
+            "A. The baby is reaching out its arms and making sounds.",
+            "B. The woman is helping the baby stand briefly on the mat.",
+            "C. The woman is describing the baby's rolling abilities.",
+            "D. The baby is flailing its arms in the woman's lap."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio about learning to climb up occurs in the 10-20s section, which visually shows the woman helping the baby stand briefly on the mat. This aligns with the idea of the baby preparing for or attempting to climb.",
+        "video_id": "2mw1UMcc_Ys"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What sound event was heard while a dark-colored animal was observed moving within the translucent mesh?",
+        "Choice": [
+            "A. A male speaker discussing the clarity of the water.",
+            "B. The distinct sound of water splashing forcefully.",
+            "C. A male speaker commenting on the animal trying to escape.",
+            "D. The sound of bamboo stalks being adjusted or moved."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual of the animal moving within the mesh occurs in the 10-20s section, which aligns with the male speaker saying, 'See right down in this corner, going nuts, trying to get out I guess.'",
+        "video_id": "2XR54m3kvn8"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happened visually after the male speaker mentioned that a crescent-shaped beach would be the worst place?",
+        "Choice": [
+            "A. Two female news anchors were looking straight ahead at their desk.",
+            "B. The camera focused on a male news anchor in a striped shirt.",
+            "C. A man in a striped shirt gestured to indicate a wide area.",
+            "D. A man was shown against a background of the ocean and sky."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio of the male speaker mentioning the crescent-shaped beach occurs in the 10-20s segment. The visual description for the 10-20s segment details a man in a striped shirt gesturing to indicate a wide area.",
+        "video_id": "2q4_wFFFG_U"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happens when the man says, \"Look at all the crud that's coming off.\"?",
+        "Choice": [
+            "A. He wipes the windshield with a blue cloth.",
+            "B. He sprays the windshield with a bottle.",
+            "C. He holds up a cloth with dark spots.",
+            "D. He wipes the black wiper blade."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio and visual descriptions align where the man says, \"Look at all the crud that's coming off\" immediately after holding up the light blue cloth with dark brown spots.",
+        "video_id": "3AFdUihWPCk"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the visual actions and the audio of someone saying 'go ahead and add it in', what can be inferred about the 'it' being added?",
+        "Choice": [
+            "A. It is likely more spices being added to the vegetables.",
+            "B. It is likely the whisked eggs being added to the initial mixture.",
+            "C. It is likely cooked eggs being poured into a pan with browned food.",
+            "D. It is likely water being added to help the food cook."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio 'go ahead and add it in' occurs in the 10-20s segment, which visually shows scrambled eggs being poured from a container into a pan with existing browned food. While option B is plausible in the earlier segment, the audio cue aligns better with the action in the 10-20s segment.",
+        "video_id": "3IW7578PicA"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the combined audio and visual information, what can be inferred about the patient's position during the 'A2' and 'P2' explanation?",
+        "Choice": [
+            "A. The patient was likely sitting upright during this explanation.",
+            "B. The patient was probably standing for a breathing capacity test.",
+            "C. The patient was most likely lying down on the examination table.",
+            "D. The patient was perhaps walking around while the doctor listened."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual description in the 20-30s segment shows the man lying down while the audio in the 10-20s segment discusses A2 and P2. While not explicitly stated together, the continuity of the medical examination setting and the prone position suggest the patient remained lying down during the explanation.",
+        "video_id": "2aO0HKIP3vI"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What was the man doing visually around the time he declared the metal 'unbreakable'?",
+        "Choice": [
+            "A. He was actively hammering the metal piece.",
+            "B. He was removing the metal from the vise.",
+            "C. He was displaying the metal to the camera.",
+            "D. He was initially bending the metal."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio indicates he says 'That's that, unbreakable' right after the sound of wood breaking (likely from the vise action), and visually, he is then seen holding the metal up and displaying it to the camera while making this statement.",
+        "video_id": "3CnwUQZ6q78"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "Compare the focus of the audio in the first(stethoscope on the left) and second segments(stethoscope on the right).",
+        "Choice": [
+            "A. Both segments primarily focus on detailed medical explanations.",
+            "B. The first segment focuses on heartbeat sounds, the second on breathing instructions.",
+            "C. The first segment includes heartbeat sounds and breathing instructions, the second on specific heart components.",
+            "D. Both segments equally emphasize both breathing instructions and heart component details."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio in 0-10s includes heartbeat sounds and the instruction to breathe deeper. The audio in 10-20s shifts to explaining the specific components of heart sounds (A2 and P2). Thus, option C accurately compares the audio focus across the two segments.",
+        "video_id": "2aO0HKIP3vI"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "As someone says 'Yeah, that was, well, one more', what visual element is primarily visible?",
+        "Choice": [
+            "A. Lush green vegetation on the sides of a narrow channel.",
+            "B. Raindrops are visible on the camera lens.",
+            "C. A small vehicle near a tunnel exit.",
+            "D. Smooth, orange-brown sculpted walls."
+        ],
+        "Answer": "A",
+        "Explaination": "The speech 'Yeah, that was, well, one more' occurs in the 10-20s section, which visually shows the water ride moving through a narrow channel with green vegetation.",
+        "video_id": "3posAjJWEi4"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the immediate context surrounding the statement, \"pick the blades up and clean ...\"?",
+        "Choice": [
+            "A. The man is spraying cleaner onto the windshield and wiping it.",
+            "B. The man is holding up a dirty cloth and showing it to the camera.",
+            "C. The man is demonstrating how to wipe the wiper blade.",
+            "D. The man is explaining the importance of cleaning the blades to prevent damage."
+        ],
+        "Answer": "A",
+        "Explaination": "The audio description places this statement within an explanation about cleaning the part where the blades sit to prevent grit from damaging them. Visually, this occurs after the initial close-up demonstration and before the spraying action.",
+        "video_id": "3AFdUihWPCk"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "Which of the following visual and audio events happened simultaneously?",
+        "Choice": [
+            "A. The red hook dropped and the sound of speech.",
+            "B. The black train looks left and the sound of a crash.",
+            "C. The yellow construction vehicle speaks and the 'Sorry boss' line is said.",
+            "D. The gray train has a sad face when the steam whistle sound occurs."
+        ],
+        "Answer": "C",
+        "Explaination": "The yellow construction vehicle said 'Sorry boss' at the same time the audio of 'Sorry boss' was said.",
+        "video_id": "2zdYIRTUQYE"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What occurs visually and audibly before the purple-haired character's face is shown on a black panel with the text \"Yes, I was.\"?",
+        "Choice": [
+            "A. Visually, new characters appear, and audibly, someone asks \"Who could it be?\".",
+            "B. Visually, the dark-haired character asks about defeating Frieza, and audibly, a man discusses time travel.",
+            "C. Visually, the scene shows a desert landscape, and audibly, someone says \"He continues to be a jerk.\".",
+            "D. Visually, the black-haired character talks about Kakarot's kid, and audibly, someone cheerfully announces someone's arrival."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description states the dark-haired character asks, “When you defeated Frieza...”, before the purple-haired character's response. The audio in the 0-10s section, which overlaps with this visual event, features a man speaking about potential drastic changes due to time travel, fitting the conversational tone before the response.",
+        "video_id": "2t4CkOvERAI"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the sequence of audio and visual events?",
+        "Choice": [
+            "A.  'Sorry boss' speech -> train yard with various trains -> steam whistle sound -> crash sound",
+            "B.  'Right a little' speech -> crash sound ->  'Sorry boss' speech ->  'James chuffed' speech",
+            "C.  'James chuffed' speech ->  'It's the best' speech -> 'Right a little' speech-> yellow construction vehicle speaks",
+            "D.  Red train with happy face speaks -> 'Is it a good whistle' speech -> brown train with confused expression -> 'Right a little' speech."
+        ],
+        "Answer": "B",
+        "Explaination": "Based on the description, the 'right a little' was said, then the crash, then 'Sorry boss' then 'James chuffed' was said. ",
+        "video_id": "2zdYIRTUQYE"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the order of events when the person says, 'Strikes'?",
+        "Choice": [
+            "A. The dog sits up, then bites the covers, then a squeak is heard.",
+            "B. A squeak is heard, then the dog bites the covers, then the person speaks.",
+            "C. The person speaks, then the dog bites the covers, then no distinct sound is explicitly heard.",
+            "D. The dog looks at the camera, then the person speaks, then the dog barks loudly."
+        ],
+        "Answer": "C",
+        "Explaination": "The 10-20s visual caption shows the puppy aggressively biting the covers when the person says 'Strikes'. The audio caption for this timeframe doesn't explicitly mention a distinct sound at the exact moment 'Strikes' is uttered, although the biting action could produce some sound.",
+        "video_id": "30HtOudq2v8"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happens immediately after the chicken is rinsed under running water?",
+        "Choice": [
+            "A. The woman puts the chicken into a metal pot.",
+            "B. The woman stuffs herbs and spices inside the chicken.",
+            "C. The woman rubs salt on the chicken's skin.",
+            "D. The woman stuffs a spring onion and ginger into the chicken."
+        ],
+        "Answer": "D",
+        "Explaination": "Visually, after rinsing (0-10s), the description states (10-20s) that the person stuffs a spring onion and then ginger into the chicken. The audio also confirms this sequence by mentioning stuffing spring onion and ginger after the initial rinsing and rubbing.",
+        "video_id": "36E3XXqab40"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why are spring onion and ginger inserted into the chicken, according to the audio and visual context?",
+        "Choice": [
+            "A. To tenderize the meat before cooking in the pot.",
+            "B. To eliminate any remaining poultry smell during the cooking process.",
+            "C. To enhance the flavor of the chicken as it cooks.",
+            "D. To visually inspect the cavity of the chicken before adding water."
+        ],
+        "Answer": "C",
+        "Explaination": "The text overlay says 'for fragrance', and the audio explicitly states, 'This will add more flavor to the meat,' while visually these items are being inserted into the chicken's cavity.",
+        "video_id": "36E3XXqab40"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Considering the audio and visual content, what can be inferred about the relationship between the speaker in the 0-10s audio and the video game being shown?",
+        "Choice": [
+            "A. The speaker is likely a commentator providing background information on the game's lore, similar to the characters explaining Saiyan history.",
+            "B. The speaker is probably a player experiencing technical difficulties or reflecting on game mechanics, much like the in-game dialogue.",
+            "C. The speaker is definitively a character within the game, as evidenced by the direct quotes displayed in text boxes.",
+            "D. The speaker is likely someone unrelated to the game, simply making observations about time travel in general."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio in the 0-10s segment talks about 'not being able to tell them their name' and 'how time travel is', suggesting a meta-commentary that a player might make about game limitations or common tropes. This contrasts with the direct in-game dialogue, suggesting the audio isn't from a character but possibly a player reflecting on the game's narrative constraints or mechanics.",
+        "video_id": "2t4CkOvERAI"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "Compare the tone of the speech in the 0-10s audio segment with the visual expressions of the characters during that time.",
+        "Choice": [
+            "A. The conversational tone aligns with the angry expressions as both indicate conflict.",
+            "B. The conversational tone contrasts with the serious dialogue displayed in text boxes.",
+            "C. The cheerful tone in the audio matches the characters' friendly interactions.",
+            "D. The annoyed tone in the audio reflects the characters' calm and collected demeanor."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio in the 0-10s segment is described as a \"conversational tone.\" However, the visual content shows a serious discussion about someone's Saiyan status and a character expressing anger. Therefore, the conversational tone of the audio contrasts with the serious nature of the visual dialogue and expressions.",
+        "video_id": "2t4CkOvERAI"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action was the person doing when the video starts?",
+        "Choice": [
+            "A. Sitting silently on the chair.",
+            "B. Holding a book near the window.",
+            "C. Playing a harmonica.",
+            "D. Playing with his hand."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual description at 0-10s shows the person playing the harmonica, and the audio description at 0-10s states that brass instrument music started playing. Therefore, the person was playing the harmonica when the music began.",
+        "video_id": "3GtvLj8K1F4"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Considering both the visuals and audio, what could be inferred about the person speaking in the initial seconds?",
+        "Choice": [
+            "A. They are likely alone and observing the environment from a distance.",
+            "B. They are probably fishing and anticipating catching something in the river.",
+            "C. They are operating a boat and navigating through the muddy waters.",
+            "D. They are near a source of flowing water, possibly doing laundry."
+        ],
+        "Answer": "B",
+        "Explaination": "The phrases 'distribute, catch these real streams' and 'use it for go fishing' combined with the visual of an alligator in the river strongly suggest the person is likely fishing or observing fishing activity.",
+        "video_id": "3RZlNwEv3XI"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Considering the audio and visual content of the initial segment, what can be inferred about the sound in 10-20s?",
+        "Choice": [
+            "A. It was likely a part of the car, as the setting is a parking garage.",
+            "B. It could have been related to the dance demonstration, perhaps a shoe hitting the concrete.",
+            "C. It was the person's detailed explanation of the slow motion demonstration",
+            "D. It was likely a microphone being adjusted by the speaker."
+        ],
+        "Answer": "B",
+        "Explaination": "Since the person is demonstrating footwork on a concrete floor, a plausible inference is that the sound was related to the foot movements. This combines the visual of the action with the ambiguous sound event.",
+        "video_id": "3NwKXCGLjAk"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What is being described by the woman as water flows through it?",
+        "Choice": [
+            "A. A silver chain reflecting sunlight.",
+            "B. Copper containers gaining patina.",
+            "C. A plastic pipe collecting water.",
+            "D. Wooden barrels storing rainwater."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual shows water flowing through copper containers, and the audio mentions the rain chains are made of copper and will gain a patina over time. Both happen simultaneously.",
+        "video_id": "2t8rYnARZuI"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "After the sound of running water stops, what does the man say he will do, and what visual action does he perform immediately after speaking?",
+        "Choice": [
+            "A. He says he will do a test, then he picks up a bottle.",
+            "B. He says he will measure the pH, then he puts drops in a glass.",
+            "C. He says he will agitate the water, then he shakes the glass.",
+            "D. He says he will turn the machine on, then he presses a button."
+        ],
+        "Answer": "A",
+        "Explaination": "The audio at 0-10s indicates that after the water stops, he says, 'And what we'll do now is take the reagent and we'll do a test.' The visual caption at 0-10s shows him picking up a small white bottle right after turning off the faucet.",
+        "video_id": "3klIBnvMYhg"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual information, what is a likely subject of the music being played?",
+        "Choice": [
+            "A. A lively street parade happening outside the window.",
+            "B. A specific section of a video game.",
+            "C. A sad memory the person is reflecting on.",
+            "D. Background music for a cooking show."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio description mentions jazzy music, and in the 20-30s section, the person mentions 'Super Mario Brothers' and the 'underground level'. It's reasonable to infer that the music being played earlier could be related to the theme or atmosphere of that video game, especially the 'underground level' given the playful tone described.",
+        "video_id": "3GtvLj8K1F4"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action coincides with the speaker mentioning a specific smell?",
+        "Choice": [
+            "A. The camera focuses on bees flying around his mask.",
+            "B. The camera shows a close-up of the beekeeper's gloved hand.",
+            "C. The camera pans across a field of flowers.",
+            "D. The camera is directed towards the sky showing trees."
+        ],
+        "Answer": "A",
+        "Explaination": "The speaker mentions \"the smell of yellow jackets\" (audio) while the camera shows bees flying around a dirt area near a window (visual), implying they are investigating or reacting to a scent source near that location.",
+        "video_id": "36v-AEu7uAU"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which visual element immediately precedes the speaker comparing a smell to burnt maple syrup?",
+        "Choice": [
+            "A. A wide shot of the beekeeper in the suit.",
+            "B. A close-up of the bees on the beekeeper's face.",
+            "C. The camera focusing on the base of a building.",
+            "D. A view of trees against the sky."
+        ],
+        "Answer": "B",
+        "Explaination": "The speaker mentions the burnt maple syrup smell (audio) after the camera focuses on the beekeeper's face covered in bees (visual), and before it zooms out to show more of his suit.",
+        "video_id": "36v-AEu7uAU"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action was the game character performing visually when the distinct sound of a gun cocking was heard?",
+        "Choice": [
+            "A. Standing behind a broken barricade.",
+            "B. Speaking the phrase 'there's two of them'.",
+            "C. Standing in front of a wooden barricade.",
+            "D. Exploring a gray building through doorways."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio caption mentions the sound of a gun cocking occurring in the 10-20s section. The visual caption for 10-20s describes the character standing in front of a wooden barricade before moving. The speech 'there's two of them' happens after moving away from the barricade, and the broken barricade is before the gun cocking sound.",
+        "video_id": "2qZqgRg5E6o"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the music change to a more mysterious tone around the time the man with thinning brown hair appears?",
+        "Choice": [
+            "A. To emphasize the surprise on the man's face.",
+            "B. Because the man is speaking about audio and video.",
+            "C. To match the abstract blue face in the background.",
+            "D. To create a distinct artistic vibe."
+        ],
+        "Answer": "D",
+        "Explaination": "The description indicates the music transitions to a 'mysterious tone' in the 20-30s section, coinciding with the man's facial expression changing from serious to surprised. This suggests the change in audio aims to enhance the visual element of surprise.",
+        "video_id": "2hxIN0MTKbs"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "In what order do the following events occur within the video?",
+        "Choice": [
+            "A. The screen shows recent calls, then the male speaker laughs, then the webpage not available error shows.",
+            "B. The male speaker laughs, then the screen shows recent calls, then the webpage not available error shows.",
+            "C. The webpage not available error shows, then the male speaker laughs, then the screen shows recent calls.",
+            "D. The screen shows recent calls, then the webpage not available error shows, then the male speaker laughs."
+        ],
+        "Answer": "B",
+        "Explaination": "First, the male speaker laughs in the first audio section. Then, in the second visual section, the screen displays recent calls. Finally, the error message 'web page not available' is shown on the screen in the final visual section.",
+        "video_id": "3lsHs4MnL5w"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Considering the attire and the vocal style, what is being presented?",
+        "Choice": [
+            "A. A modern pop concert.",
+            "B. A rehearsal for a play.",
+            "C. A promotional segment for an opera.",
+            "D. A documentary about stage costumes."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual of a formally dressed man and woman on stage, combined with the audio of powerful male operatic singing with English lyrics and the later display of related merchandise, strongly suggests a promotional segment for an opera.",
+        "video_id": "3gwZdkjpPds"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the likely context of the cheering sound heard during the segment featuring a person near a drum set?",
+        "Choice": [
+            "A. The person near the drum set has just finished a drum solo.",
+            "B. The cheering is a reaction to the person speaking or singing on stage.",
+            "C. The cheering is directed towards someone off-stage making an announcement.",
+            "D. The cheering is due to a technical malfunction being resolved."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description of the 20-30s segment shows a person on stage appearing to speak or sing, and the corresponding audio description indicates 'a cheering sound, likely from a crowd,' suggesting the cheering is a response to the performance.",
+        "video_id": "3AJuHcjE31w"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "In what context does the sound of a chicken clucking first occur while a speaker is talking?",
+        "Choice": [
+            "A. When the speaker is gesturing towards the camera and describing his past.",
+            "B. While the speaker is explaining his experience with grain and feed percentages.",
+            "C. As the speaker mentions his company being bought out by a larger one.",
+            "D. After the speaker finishes describing the construction of the chicken coop."
+        ],
+        "Answer": "A",
+        "Explaination": "A chicken clucking is heard while the second speaker is talking about handling different grains and feeds.",
+        "video_id": "3EE5WKQMBek"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "How does the speaker's tone when describing the smell of \"yellow\" compare to the visual of the bees?",
+        "Choice": [
+            "A. The sarcastic tone matches the aggressive buzzing of the bees.",
+            "B. The conversational tone contrasts with the visual of many active insects.",
+            "C. The serious tone aligns with the static visual of the person.",
+            "D. The excited tone complements the colorful appearance of the bees."
+        ],
+        "Answer": "B",
+        "Explaination": "The speaker initially uses a slightly sarcastic/conversational tone (audio - \"I pretty well believe it\") before becoming more descriptive with a normal tone when mentioning \"yellow\" and comparing the smell to burnt maple syrup, while the visual shows numerous bees actively flying around and on the person, which implies a more active and potentially volatile situation than the speaker's initial casual tone suggests.",
+        "video_id": "36v-AEu7uAU"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "What is the relationship between the appearance of the mask and the ongoing audio?",
+        "Choice": [
+            "A. The mask appears as the singing stops.",
+            "B. The mask appearance is synchronized with a change in the song's tempo.",
+            "C. The mask appears while powerful operatic singing is present.",
+            "D. The mask appears after the spoken dialogue begins."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual description indicates the mask appears while the audio description confirms that powerful operatic singing is ongoing. There's no indication of the singing stopping or the introduction of spoken dialogue at this point.",
+        "video_id": "3gwZdkjpPds"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the audio mention 'don't forget about it'?",
+        "Choice": [
+            "A. To emphasize the need for constant high heat application.",
+            "B. To ensure the onions cook evenly and prevent sticking.",
+            "C. To remind the viewer to add a specific ingredient later.",
+            "D. To highlight the importance of using a metal utensil."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio of stirring and the reminder 'don't forget about it' (10-20s) align with the visual of someone stirring onions. This suggests the action is to prevent sticking and ensure even cooking, as neglected stirring could lead to burning or uneven cooking. While the audio mentions adding 'other stuff', it's not directly linked to forgetting.",
+        "video_id": "3Qli5msTyH8"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual cues in the first 10 seconds, what is the likely theme or genre of the video?",
+        "Choice": [
+            "A. A cooking tutorial with a playful animal.",
+            "B. A magic trick demonstration with a focus on card manipulation.",
+            "C. A dramatic movie introduction with suspenseful music.",
+            "D. A fitness guide with energetic background sounds."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual shows text related to cards and tricks ('SNEAKY CARD', 'CARD TRICK'), and the audio introduces 'Tricklandia', suggesting a theme around tricks or magic, particularly involving cards. The animal panting is less indicative of the overall theme compared to these elements.",
+        "video_id": "2YW7WBtqzzQ"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What sound event is occurring when shimmering particles in the sky visually form a question mark?",
+        "Choice": [
+            "A. A male choir is singing with a gentle tone.",
+            "B. A low-pitched, repetitive vocal harmony is present.",
+            "C. Upbeat synth music with a driving beat is playing.",
+            "D. Loud electronic music with a fast tempo begins."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual event of the shimmering particles forming a question mark occurs within the 0-10s timeframe, which is accompanied by a low-pitched, repetitive vocal harmony in the audio.",
+        "video_id": "2ZHLMmZB-HQ"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which event happens immediately before the speaker says \"At least on paper.\"",
+        "Choice": [
+            "A. He points towards the chicken coop.",
+            "B. A rooster crows in the background.",
+            "C. He describes working at a feed store.",
+            "D. A duck is seen inside the coop."
+        ],
+        "Answer": "B",
+        "Explaination": "The description indicates that the rooster crows and then the man says “At least on paper.”",
+        "video_id": "3EE5WKQMBek"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action is the dog performing after a male voice says 'Okay, you got a mouthful of fur there'?",
+        "Choice": [
+            "A. The dog is lying down on the snow, looking at the raccoon.",
+            "B. The dog is walking towards a pile of dried branches on the snow.",
+            "C. The dog is running with its tongue hanging out.",
+            "D. The dog is sniffing the ground and following ski poles."
+        ],
+        "Answer": "A",
+        "Explaination": "The audio indicates that the person is talking to the dog as it approaches the branches. The visual information at the same time shows the dog is walking towards the branches, not lying down, running or sniffing ground.",
+        "video_id": "2tBRn4xKmzM"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which event happened immediately after the player built a bridge of dirt blocks?",
+        "Choice": [
+            "A. The player expressed excitement by saying 'I do'.",
+            "B. The player gasped and then commented on safety.",
+            "C. The player said 'Nope, nope' in a low tone.",
+            "D. The player noted they wanted to see what was that way."
+        ],
+        "Answer": "C",
+        "Explaination": "Visually, the bridge building occurs at the end of the 10-20s segment. Audio-wise, 'Nope, nope' with a low tone is the last audio event in that same 10-20s segment, indicating it happened immediately after the bridge was built.",
+        "video_id": "2wIrHCaxBNU"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What was the primary action of the main dancer when the lyrics 'About a little tin box' were being sung?",
+        "Choice": [
+            "A. He was standing still with the other dancers on the boxes.",
+            "B. He was energetically dancing across the stage with a smile.",
+            "C. He was singing and dancing at the same time.",
+            "D. He was making synchronized hand gestures with the other dancers."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio indicates that the lyrics 'About a little tin box' were sung during the 0-10s segment. Visually, during this time, the main dancer was energetically dancing across the stage with a big smile.",
+        "video_id": "3dgg5f9CyP4"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action is the speaker performing while mentioning that he wishes the audience could mix the cards?",
+        "Choice": [
+            "A. Pointing towards the camera.",
+            "B. Shuffling the deck in his hands.",
+            "C. Fanning the cards out on the table.",
+            "D. Displaying the Ace of Spades."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio has the speaker saying he wishes the audience could mix the cards. Simultaneously, the visual shows him fanning the cards in a series of movements, demonstrating the state of the cards before any potential mixing.",
+        "video_id": "2YW7WBtqzzQ"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action is being performed while the speaker advises cleaning?",
+        "Choice": [
+            "A. Connecting an air compressor.",
+            "B. Adjusting a wired coil.",
+            "C. Pointing at the piston.",
+            "D. Showing the cylinder."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio of the speaker saying \"reassemble the cylinder. Make sure you've cleaned off any\" aligns with the visual of a hand pointing at the piston of the disassembled chainsaw.",
+        "video_id": "2rdTrQnl4c8"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Before the cylinder is shown individually, what visual action takes place while the speaker mentions getting a new gasket?",
+        "Choice": [
+            "A. The air compressor is connected to the hose.",
+            "B. Hands point at the gasket surrounding the crankcase.",
+            "C. The piston is moved away from the chainsaw.",
+            "D. The disassembled chainsaw is shown in a wide shot."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio of the speaker saying \"Get a new gasket if possible.\" occurs during the visual section where a pair of hands points at the gasket surrounding the crankcase, before the piston is moved and the cylinder is shown.",
+        "video_id": "2rdTrQnl4c8"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual information, what was the player likely trying to avoid when navigating the cavern in the last segment(20-30s)?",
+        "Choice": [
+            "A. A potential encounter with a sheep.",
+            "B. Falling into the dark, unexplored portion of the cave.",
+            "C. The flowing bright blue water stream.",
+            "D. The river of bright orange lava."
+        ],
+        "Answer": "D",
+        "Explaination": "Visually, the player is shown avoiding a river of lava in the 20-30s. The gasp sound in the same segment suggests a near miss or awareness of danger, which aligns with the presence of the lava. The comment about safety reinforces this inference.",
+        "video_id": "2wIrHCaxBNU"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "During the initial part of the video, which action coincides with the woman's statement about someone not being able to wait?",
+        "Choice": [
+            "A. The man covers his mouth with his hand.",
+            "B. The woman points towards the air.",
+            "C. Both individuals are laughing.",
+            "D. The man is gesturing with his hands."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description mentions the woman points to the man when she says \"Come on, not they can't wait,\" and the audio confirms she says \"Come on, now they can't wait\" in the 0-10s section.",
+        "video_id": "2VjbDttFK44"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "Considering both the visual appearance and the audio content in the final segment, what is the most likely mood being conveyed?",
+        "Choice": [
+            "A. Energetic and celebratory, with bright lights and upbeat music.",
+            "B. Somber and reflective, with dim lighting and melancholic music.",
+            "C. Tense and dramatic, with flashing lights and loud, distorted sounds.",
+            "D. Playful and lighthearted, with colorful visuals and cheerful singing."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description mentions a dark scene lit by a purple spotlight, and the audio describes slow and melancholic music, indicating a somber and reflective mood.",
+        "video_id": "2o1p83UjJFA"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What was happening visually when the woman said, 'the teachers are also continually working on themselves, and'?",
+        "Choice": [
+            "A. A sunset was visible with the sun reflecting on the water while a woman gestured.",
+            "B. A woman with blonde curly hair was gesturing while sitting down.",
+            "C. A smiling woman was shown in the middle of a group of people.",
+            "D. A close-up of a woman with short blond hair looking down was shown."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio indicates a woman speaking the mentioned phrase in the 0-10s segment. The visual description for 0-10s shows a cut to a woman with blonde, curly hair gesturing while speaking. The sunset imagery precedes the woman speaking.",
+        "video_id": "3Oa4oE3bQTY"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action was the person performing when they said 'project is pretty much done'?",
+        "Choice": [
+            "A. They were displaying the finished artwork.",
+            "B. They were applying heat to the crayons.",
+            "C. They were carving a name into wax.",
+            "D. They were showing the back of the canvas."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio indicates the 'project is pretty much done' while the visual shows the person using the hair dryer to melt the crayons.",
+        "video_id": "2o4-lEtFb2k"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action is Jin performing when he says '待っていろ(Wait for it)'?",
+        "Choice": [
+            "A. He is performing a fighting stance with 'WINS: 14' displayed.",
+            "B. He is standing among ruins with 'WINS: 7' displayed.",
+            "C. He is facing away from the viewer with 'WINS: 2' displayed.",
+            "D. He is making motions with a tiger statue in the background and 'WINS: 4'."
+        ],
+        "Answer": "B",
+        "Explaination": "Jin says '待っていろ(Wait for it)' between 0-10 seconds, which visually aligns with him standing among ruins while the text 'WINS: 7' is visible.",
+        "video_id": "2zKyMjBnL0Y"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the audio transition to a male voice speaking about the 'ideal format for the school'?",
+        "Choice": [
+            "A. Because the scene visually shifted to a sunset over a body of water.",
+            "B. Because the previous audio involved a woman talking about aligning intentions.",
+            "C. Because the visuals transitioned to show the scene of teaching in the school.",
+            "D. Because the preceding audio featured a woman mentioning activities lasting an entire lifetime."
+        ],
+        "Answer": "C",
+        "Explaination": "The male voice speaking occurs in the 20-30s audio segment. The visual description for this segment includes a scene with women around a massage table, suggesting a school related to wellness or therapy, aligning with the male voice discussing the 'ideal format for the school'.",
+        "video_id": "3Oa4oE3bQTY"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "Which action aligns with the speaker saying 'open your mouth'?",
+        "Choice": [
+            "A. The speaker is touching his chest.",
+            "B. The speaker is putting his hands on his face.",
+            "C. The speaker is gesturing with both hands open towards the camera.",
+            "D. The speaker is bringing his hand down to his mouth, cupping it."
+        ],
+        "Answer": "C",
+        "Explaination": "The speaker's action of cupping his hand to his mouth to suggest breathing from the mouth is synchronized with the audio of 'open your mouth'.",
+        "video_id": "3g_GUoCbzTc"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action is the man with a light green shirt performing when the audio plays 'exhale'?",
+        "Choice": [
+            "A. He's looking at the camera and has his hands raised.",
+            "B. He's gesturing with his hands while talking.",
+            "C. He's looking at the camera with a tilt of his head",
+            "D. He's lowering his hands and looking at the camera."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio of 'exhale' happens when the man with the light green shirt is lowering his hands in the second time segment.",
+        "video_id": "2TprtMP1RDo"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the sequence of actions and speech in the first 10 seconds?",
+        "Choice": [
+            "A. The speaker touches his chest, then makes breathing sounds, and then spreads his hands.",
+            "B. The speaker spreads his hands, then touches his chest, and then makes breathing sounds.",
+            "C. The speaker makes breathing sounds, then touches his chest, and then spreads his hands.",
+            "D. The speaker touches his chest, then spreads his hands, and then makes breathing sounds."
+        ],
+        "Answer": "A",
+        "Explaination": "The speaker initially touches his chest while speaking, then imitates breathing sounds, and finally spreads his hands outwards while talking about breathing patterns.",
+        "video_id": "3g_GUoCbzTc"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual cues, what could be inferred about the man's demeanor before he walks through the door?",
+        "Choice": [
+            "A. He was nervous and trying to avoid eye contact.",
+            "B. He was presenting information confidently and then leaving.",
+            "C. He was angry and stormed out of the room.",
+            "D. He was sad and walked away silently."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio describes his tone as confident while speaking, and visually he is facing the camera initially. This suggests he was presenting or stating something before leaving.",
+        "video_id": "32Wp1Qo1MaY"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What visual element is present when the initial greeting 'hello' is spoken?",
+        "Choice": [
+            "A. A gray landline phone with a flashing screen.",
+            "B. A still photo of a man in a black hat.",
+            "C. A woman with a high ponytail and blue dress.",
+            "D. A man wearing a gray shirt with red sleeves."
+        ],
+        "Answer": "C",
+        "Explaination": "The description states that a female voice says 'hello' while the visual shows a full frontal image of a woman with a high ponytail and a blue dress.",
+        "video_id": "2e0ZRe0x_nE"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action was occurring visually at the same time the speaker mentioned 'nice big deflection'?",
+        "Choice": [
+            "A. Water starts to drip from a thin tube.",
+            "B. A hand holding a balloon over a water stream.",
+            "C. A diagram showing charge symbols appearing.",
+            "D. A syringe resting on a green tray."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio mentions 'nice big deflection' while visually, a hand is positioning a pink balloon over the stream of water, causing the deflection.",
+        "video_id": "3Ev_k__U3Io"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "According to the descriptions, which audio event occurred immediately after the hippopotamus bellowed while walking on the dirt surface?",
+        "Choice": [
+            "A. Indistinct children's speech.",
+            "B. A person coughing.",
+            "C. A child saying 'Okay, I think we're done playing'.",
+            "D. The sound of farting."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description states the hippo bellowed at the end of the 10-20s section while walking on the dirt. The corresponding audio section for 10-20s lists a vehicle engine revving, then a person coughing, and finally short, indistinguishable speech. Therefore, the coughing sound occurred immediately after the bellow.",
+        "video_id": "3UEM541IenE"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Given the combination of visual text and audio content, what is the likely theme or topic being explored?",
+        "Choice": [
+            "A. A lighthearted pop song with abstract visual elements.",
+            "B. A scientific lecture on quantum physics illustrated with vocal performances.",
+            "C. A cooking tutorial accompanied by classical music.",
+            "D. A sports analysis with background singing."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual content includes scientific terms ('QUANTUM', 'NON RENORM ALIZ ABLE', 'Bohemian Gravity', 'QUANTA') paired with audio of singing, suggesting a possible connection between music and scientific concepts, likely in an explanatory context.",
+        "video_id": "2rjbtsX7twc"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action and sound event occurred simultaneously after the initial tap dancing performance concluded?",
+        "Choice": [
+            "A. The dancers bowed and an electronic beep was heard.",
+            "B. The dancers bowed and someone said 'nice job'.",
+            "C. A man approached and the sound of clapping ceased.",
+            "D. A woman walked forward and someone mentioned 'the air'."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description mentions the dancers bowing after their performance, and the audio description states that someone said 'nice job' around the same time, before the electronic beep.",
+        "video_id": "2zO-nlygkFo"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "Compare the vocalization of the hippopotamus in the first segment(0-10s) to the human speech present in the same segment.",
+        "Choice": [
+            "A. Both are distinct and clearly understandable.",
+            "B. The hippo's sound is clear, while the speech is indistinct.",
+            "C. The human speech is prominent, overshadowing the hippo's sound.",
+            "D. Both are equally loud and noticeable."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio description for the 0-10s section mentions indistinct human speech and a loud hippo roar. This indicates the hippo's vocalization is clear, while the speech is not.",
+        "video_id": "3UEM541IenE"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What action is being described in the audio while someone is working with a dead duck inside the wooden shed?",
+        "Choice": [
+            "A. Removing feathers from the duck's body.",
+            "B. Detaching the wings from the duck.",
+            "C. Placing the duck inside a container.",
+            "D. Preparing the duck for cooking."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio mentions \"remove the both of the wings\" while the visual shows someone inside a wooden shed using a small axe to remove the wings from a dead duck.",
+        "video_id": "3h8PzeGp2RQ"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which event occurred first in the video?",
+        "Choice": [
+            "A. A dog panting and a green stalk being held.",
+            "B. A person speaking cheerfully and chewing sounds.",
+            "C. Rustling sounds and the porcupine wearing earmuffs.",
+            "D. The porcupine eating pepper and someone saying 'Yeah'."
+        ],
+        "Answer": "B",
+        "Explaination": "The 0-10s audio describes a woman speaking cheerfully, followed by chewing sounds. The 0-10s visual shows a hand holding a green stalk, aligning with the audio's start.",
+        "video_id": "2vSF2Yh6o_k"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the person calling the porcupine 'a good boy'?",
+        "Choice": [
+            "A. Because the porcupine is eating its vegetables silently.",
+            "B. Because the porcupine is wearing earmuffs.",
+            "C. Because the porcupine is eating its vegetables and whimpering loudly.",
+            "D. Because the porcupine is looking at the camera."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio of someone saying 'What a good boy!' occurs during the 20-30s audio, which aligns with the 20-30s visual description of the porcupine chewing on vegetables.",
+        "video_id": "2vSF2Yh6o_k"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on their attire and the audio, what can be inferred about the individuals shown in 13-20s segment",
+        "Choice": [
+            "A. They are likely rebel soldiers.",
+            "B. They are in a position of authority.",
+            "C. They are concerned about a rescue mission.",
+            "D. They are preparing for an immediate attack."
+        ],
+        "Answer": "B",
+        "Explaination": "The dialogue \"Sir, separatist forces have escaped into the city\" (audio, 10-20s) suggests a report being given to a superior, and the response \"Okay, we'll just stay away from the city then\" (audio, 10-20s) indicates someone with the authority to make decisions. Visually, the characters are depicted as clone troopers inside a vehicle (10-20s), suggesting a military or structured organization.",
+        "video_id": "37UUg0fwzsw"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What sound event was playing when the three animated square icons with stick figures were visible?",
+        "Choice": [
+            "A. A loud fart sound.",
+            "B. Solemn a cappella choir.",
+            "C. Dramatic orchestral music.",
+            "D. Suspenseful brass music."
+        ],
+        "Answer": "C",
+        "Explaination": "The visual description states the animated icons appear in the 10-20s segment. The audio description for this segment mentions 'dramatic orchestral music playing'.",
+        "video_id": "2_kLD3IbF2c"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "In which visual setting does the dialogue 'Oh, crap. Gear up and let's go' occur?",
+        "Choice": [
+            "A. Inside the undercarriage of a large spaceship.",
+            "B. Amidst a battle scene with explosions.",
+            "C. On a green platform with a grey structure behind.",
+            "D. Inside a white and grey Lego vehicle."
+        ],
+        "Answer": "C",
+        "Explaination": "The dialogue 'Oh, crap. Gear up and let's go' is part of the audio in the 20-30s section. The corresponding visual description for this section shows 'two Lego characters standing on a green platform' with a 'gray Lego structure with blue accents' behind them.",
+        "video_id": "37UUg0fwzsw"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might someone mention the risk of fire?",
+        "Choice": [
+            "A. Because the lights are being placed near flammable objects visible in the background.",
+            "B. Because the lights are being twisted forcefully, potentially damaging the wires.",
+            "C. Because someone is concerned about the voltage of the lights being used.",
+            "D. Because the audio of a door closing might indicate someone leaving a dangerous situation."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio mentions 'and you'll light your house on fire,' implying a concern related to the electrical aspect of the lights. This aligns with the visual of handling and potentially mishandling the lights.",
+        "video_id": "3UWDo636wes"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which event happened immediately after the person mentioned turning down the lights?",
+        "Choice": [
+            "A. The person cracked open a yellow egg.",
+            "B. The background showed a collection of toy eggs.",
+            "C. The person held a brown finger puppet.",
+            "D. The green spiky ball started to glow."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description states that after the person said they would turn down the lights, the video showed a full shot of the table of toy eggs.",
+        "video_id": "2zAUcAhX5wQ"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why did the speaker mention turning down the lights?",
+        "Choice": [
+            "A. Because the yellow egg was difficult to see.",
+            "B. Because the pokey bouncy ball started to flash.",
+            "C. Because the horse head puppet was too bright.",
+            "D. Because the toy dogs in the background were making noise."
+        ],
+        "Answer": "B",
+        "Explaination": "The visual description says the ball started to flash, and the audio description has the speaker saying 'It flashes too, here, let's turn down the lights' immediately after this visual cue.",
+        "video_id": "2zAUcAhX5wQ"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the correct sequence of events combining both visual light changes on the rectangular device and audio announcements?",
+        "Choice": [
+            "A. Red light, 'carbon monoxide', blue light, alarm",
+            "B. Red light, alarm, blue light, 'Finishing up, just a moment'",
+            "C. Blue light, 'carbon monoxide', red light, alarm",
+            "D. Blue light, alarm, red light, 'Finishing up, just a moment'"
+        ],
+        "Answer": "B",
+        "Explaination": "The rectangular device first shows a red light, then an alarm sound. After that, the light changes to blue and the voice says 'Finishing up, just a moment'.",
+        "video_id": "2ofK2gAQue4"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the man be separating the rooster's tail feathers after lifting them up, according to the audio and visuals?",
+        "Choice": [
+            "A. Because he is preparing the rooster for a walk and demonstrating its plumage.",
+            "B. Because he wants to check the length and condition of each individual feather.",
+            "C. Because he is making sure the feathers are fluffy before showing them to the camera.",
+            "D. Because the shuffling sound indicates he is preparing to pull them through the wall."
+        ],
+        "Answer": "A",
+        "Explaination": "The audio says, \"He's ready to go for his walk,\" suggesting preparation, and visually, he is showing the separated tail feathers to the camera, implying a demonstration of its plumage before the walk.",
+        "video_id": "3V-q5MJSzAk"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual information, what can be inferred about the person's interaction with the yellow-green ball?",
+        "Choice": [
+            "A. They found it less interesting than the squeaky ball.",
+            "B. They were initially unsure if it would bounce.",
+            "C. They expected it to make a loud noise.",
+            "D. They were surprised by its texture and bouncing ability."
+        ],
+        "Answer": "D",
+        "Explaination": "The audio has the person saying 'Oh no way! Oh it's real pokey and it bounces. Bounce, bounce, bounce.' in an excited and surprised tone while holding the yellow-green ball, suggesting surprise about its texture and bounce.",
+        "video_id": "2zAUcAhX5wQ"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is happening in the video when the speaker mentions 'the effect does seem weaker'?",
+        "Choice": [
+            "A. The balloon is being moved closer to the water.",
+            "B. The diagram is showing an increase in charge.",
+            "C. The close-up shows the water stream and a balloon.",
+            "D. The water stream is becoming more turbulent."
+        ],
+        "Answer": "C",
+        "Explaination": "When the speaker says 'the effect does seem weaker', the visual shows a close-up of a syringe and a balloon, suggesting this observation is being made in that specific context.",
+        "video_id": "3Ev_k__U3Io"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What was being placed on the street when the speaker mentioned creating a 'gap of two'?",
+        "Choice": [
+            "A. White quartz slabs.",
+            "B. Black coal blocks.",
+            "C. Black wool blocks.",
+            "D. White quartz stairs."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio describes a 'gap of two' being created while the visual description in the 0-10s section shows black cobblestone blocks being placed with gaps in between.",
+        "video_id": "2ff27NC3YUc"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why were specific blocks mentioned as being placed 'upside down'?",
+        "Choice": [
+            "A. To form the base of the structure.",
+            "B. To create the front of the vehicle.",
+            "C. To add detail to the sides.",
+            "D. To complete the back of a structure."
+        ],
+        "Answer": "D",
+        "Explaination": "The audio mentions 'upside down stairs' while the visual shows 'white stair-like blocks' being placed at the back of the constructed object in the 10-20s section, indicating they are used to complete the back.",
+        "video_id": "2ff27NC3YUc"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which sequence accurately reflects the order of locations the girl cycles through along with her accompanying speech?",
+        "Choice": [
+            "A. Sidewalk with speech about Instagram -> Asphalt road with speech about Leah's bike ride -> Asphalt road with initial hill comment.",
+            "B. Asphalt road with initial hill comment -> Sidewalk with no described speech -> Asphalt road with speech about hoping viewers enjoyed the video.",
+            "C. Sidewalk with no described speech -> Asphalt road with speech about Leah's bike ride -> Asphalt road with like and subscribe request.",
+            "D. Asphalt road with speech about Leah's bike ride -> Sidewalk with initial hill comment -> Asphalt road with bye to viewers."
+        ],
+        "Answer": "B",
+        "Explaination": "The description first shows her on the asphalt road where the audio mentions 'There's a little hill there'. Then she transitions to the sidewalk. Finally, she's back on the asphalt road saying 'I hope you guys loved watching this video'.",
+        "video_id": "4AyEtCf3ND0"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What happened immediately after the statement 'show that by replacing the old resistor with a new one' was spoken?",
+        "Choice": [
+            "A. The AC button was pressed.",
+            "B. The fan speed was set to high.",
+            "C. An adjustment to the AC system was made.",
+            "D. The airflow direction was changed."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio mentions testing the AC after the statement, and the visual description in the same time frame shows a hand manipulating the knobs, indicating an adjustment to the AC system.",
+        "video_id": "33fqw0k_qkM"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which action immediately followed the child spreading the pink slime on the table?",
+        "Choice": [
+            "A. The baby giggling in the high chair.",
+            "B. The child trying to poke other slimes with the green slime.",
+            "C. The woman commenting on the baby.",
+            "D. The child saying the word 'bad book'."
+        ],
+        "Answer": "B",
+        "Explaination": "Visually, after the child spreads the pink slime (10-20s), they pick up the green slime and try to poke the other slimes. This occurs before any speech from the 20-30s section.",
+        "video_id": "2VuKP6zZDDc"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "What is the difference in the material being placed when the speaker says 'gap of two' compared to when they say 'and on the back three upside down stairs'?",
+        "Choice": [
+            "A. From wool to coal.",
+            "B. From coal to quartz.",
+            "C. Both are coal.",
+            "D. Both are quartz."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio 'gap of two' corresponds to the visual of placing cobblestone blocks in the 0-10s section, while 'upside down stairs' corresponds to the visual of placing white 'Quartz stairs' in the 10-20s section.",
+        "video_id": "2ff27NC3YUc"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Which of the following sequences accurately reflects the order of events in the video?",
+        "Choice": [
+            "A. Car passes, leaves kick up, woman speaks.",
+            "B. Woman drives, engine sound, car turns.",
+            "C. Car turns, man speaks, woman drives.",
+            "D. Engine sound, car passes, leaves kick up."
+        ],
+        "Answer": "A",
+        "Explaination": "The audio description starts with a car passing sound, which visually corresponds to the car kicking up leaves and debris, followed by a person saying \"I think\".",
+        "video_id": "4-DcTjFR4qw"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the initial speaker sound uncertain before the excited commentary?",
+        "Choice": [
+            "A. The car's speed was unexpectedly rapid.",
+            "B. The road conditions appeared dangerous.",
+            "C. The car's speed was still moderate then.",
+            "D. The car model was initially unidentifiable."
+        ],
+        "Answer": "A",
+        "Explaination": "The speaker says \"I think\" which suggests uncertainty, which aligns with the visual initially showing the car from different angles before clearly showing the BMW logo and license plate, making the model identifiable later.",
+        "video_id": "4-DcTjFR4qw"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "What sound occurred immediately before the player in the first-person perspective fell off the stairs in the initial part of the video?",
+        "Choice": [
+            "A. An explosion sound effect.",
+            "B. A male speaker saying numbers.",
+            "C. The sound of a gunshot.",
+            "D. A male speaker expressing frustration."
+        ],
+        "Answer": "C",
+        "Explaination": "Visually, the player falls off the stairs after a shot is fired. Audibly, a gunshot is heard right before the surprised exclamation 'No!'. Combining both confirms the gunshot preceded the fall.",
+        "video_id": "4DsPpi-2yTM"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why did the speaker mention needing to take money out after a receipt printed?",
+        "Choice": [
+            "A. To show the customer the printed details.",
+            "B. Because the transaction was a refund.",
+            "C. To demonstrate how to close the drawer.",
+            "D. Because the receipt showed a cash sale."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio in 10-20s mentions taking money out \"to refund the customer\". The visual of the receipt in 20-30s confirms it's a refund with \"RF\" printed on it, linking the speaker's reason to the visual evidence of a refund.",
+        "video_id": "4m5khG0emPE"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What was the order of events involving the woman with brown hair and the police?",
+        "Choice": [
+            "A. She held a sword, then the police arrived, then she raised her hands.",
+            "B. The police arrived, then she held a phone, then she held up two fingers.",
+            "C. She raised her hands, then the police arrived, then she held a sword.",
+            "D. She held a phone, then she held up two fingers, then the police arrived."
+        ],
+        "Answer": "B",
+        "Explaination": "Visually, the police car and motorcycle are present before the scene shifts to the woman with brown hair (0-10s). Subsequently, she is seen holding a phone and being asked to put her hands up (10-20s), and finally, she holds up two fingers (20-30s). The audio supports this sequence with the police sirens first (0-10s), followed by the command 'Alright Trixie, put your hands up' (10-20s), and then the statement 'hands are up' (20-30s).",
+        "video_id": "2pHfgh_G1yo"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual information, what can be inferred about the car's journey?",
+        "Choice": [
+            "A. It was driving through a busy urban area.",
+            "B. It was participating in a racing event.",
+            "C. It was being evaluated for its performance.",
+            "D. It was being driven for daily commuting."
+        ],
+        "Answer": "C",
+        "Explaination": "The excited commentary about the BMW M6's performance and the later remark about needing to go 'flat out' to appreciate the sound suggest the car is being evaluated or showcased for its capabilities, and the wooded road setting further supports this over urban commuting.",
+        "video_id": "4-DcTjFR4qw"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the likely activity being performed when the speaker mentions needing 'some black wool'?",
+        "Choice": [
+            "A. Laying the foundation of a building.",
+            "B. Detailing the side of a vehicle.",
+            "C. Creating the roof of a structure.",
+            "D. Building a pathway on the street."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio mentioning 'black wool' coincides with the visual description in the 20-30s section where 'black wool blocks are added to the side of the car for details'.",
+        "video_id": "2ff27NC3YUc"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "Compare the clarity of speech in the second and third audio segments.",
+        "Choice": [
+            "A. Speech is clearer in the second segment",
+            "B. Speech is clearer in the third segment",
+            "C. Speech is equally clear in both segments",
+            "D. There is no speech in the third segment"
+        ],
+        "Answer": "B",
+        "Explaination": "The audio description for the second segment mentions 'indistinct speech', implying it's not clear. The third segment explicitly quotes the speech, indicating it is clear enough to transcribe.",
+        "video_id": "4Rym4DqrhHM"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What followed the action of someone running their hands through short dark hair and a speaker mentioning going 'right down to the roots'?",
+        "Choice": [
+            "A. The hair was combed forward after being trimmed.",
+            "B. The hair was being tousled to distribute product.",
+            "C. The hair was messed up and pushed to the front.",
+            "D. Scissors were used to cut the dark brown hair."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio description of rubbing through the roots and messing up the hair directly corresponds to the visual of the person in the light-colored shirt and black vest messing up the hair in the 10-20s segment.",
+        "video_id": "3v93yDHV-KY"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the dog doing when the male voice says 'what are you saying about'?",
+        "Choice": [
+            "A. The dog is looking away from the camera.",
+            "B. The dog is wagging its tail and holding a bone.",
+            "C. The dog is lying down on the floor.",
+            "D. The dog is barking at something off-screen."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio description for 10-20s places the phrase \"what are you saying about\" within the segment where the visual description notes the dog is 'holding a white bone in its mouth, wagging its tail'.",
+        "video_id": "4qaJW0mvsoY"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "In the 10-20 second segment, what happened visually immediately after the player respawned with bloody hands, and what sound occurred around the same time?",
+        "Choice": [
+            "A. The player entered a grey warehouse, followed by the sound of an explosion.",
+            "B. The player walked through an outdoor alley with graffiti, followed by a male speaker expressing frustration.",
+            "C. The player approached a train track and white train car, while a calm male speaker talked about numbers.",
+            "D. The player got killed by a thrown knife, and there was the sound of a gunshot."
+        ],
+        "Answer": "B",
+        "Explaination": "Visually, after respawning with bloody hands, the player walks through a graffiti-filled alley. Audibly, in the 10-20 second segment, the male speaker expresses frustration. The visual of the player in the alley coincides with the speaker's frustrated comment.",
+        "video_id": "4DsPpi-2yTM"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What is the likely occupation or industry related to the website mentioned?",
+        "Choice": [
+            "A. Software development",
+            "B. Animal husbandry and farming",
+            "C. Construction and engineering",
+            "D. Retail sales of clothing"
+        ],
+        "Answer": "B",
+        "Explaination": "The visual elements include a cattle trailer, a grassy field, and a man working with fencing. The website 'ACKERMAN DISTRIBUTING.COM' likely relates to the distribution of agricultural or animal-related products, fitting the audio of cows and the visual context.",
+        "video_id": "4Rym4DqrhHM"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "Immediately before the sound of someone saying \"Pick this,\" what visual action was being performed with the cards?",
+        "Choice": [
+            "A. The person was shuffling a single deck of cards.",
+            "B. The person was holding two separate decks of cards.",
+            "C. The person was dealing cards onto a blue surface.",
+            "D. The person was fanning out a deck of cards."
+        ],
+        "Answer": "B",
+        "Explaination": "The description states that in the 20-30s segment, the person is holding two decks of cards before saying \"Like this.\"",
+        "video_id": "4KftZggyMsk"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual cues, what was the likely purpose of manipulating the fan and AC controls?",
+        "Choice": [
+            "A. To test different sound levels in the car.",
+            "B. To demonstrate the functionality after a repair.",
+            "C. To adjust the temperature for passenger comfort.",
+            "D. To familiarize oneself with the car's features."
+        ],
+        "Answer": "B",
+        "Explaination": "The audio explicitly mentions replacing a resistor to fix the lower AC settings, and the visual actions of manipulating the controls align with testing if the repair was successful.",
+        "video_id": "33fqw0k_qkM"
+    },
+    {
+        "Type": "Inference",
+        "Question": "Based on the audio and visual cues, what is the primary function being demonstrated on the cash register?",
+        "Choice": [
+            "A. Processing a standard cash sale.",
+            "B. Calculating the daily sales total.",
+            "C. Processing a cash refund transaction.",
+            "D. Printing promotional discount coupons."
+        ],
+        "Answer": "C",
+        "Explaination": "The audio explicitly mentions \"apply the refund\" and \"refund, you simply press the cash amount\", and the visual shows a receipt with \"RF\" indicating a refund. This strongly infers that the demonstrated function is processing a cash refund transaction.",
+        "video_id": "4m5khG0emPE"
+    }
+]

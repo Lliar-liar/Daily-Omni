@@ -1,0 +1,197 @@
+[
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the correct order of visual events after Sara's initial outdoor introduction?",
+        "Choice": [
+            "A. Binder close-up → Construction site → Indoor desk scene",
+            "B. Indoor desk scene → Binder close-up → Machinery action",
+            "C. Construction site → Indoor desk scene → Binder close-up",
+            "D. Machinery action → Indoor desk scene → Binder close-up"
+        ],
+        "Answer": "B",
+        "Explaination": "Per visual captions (10-30s), after outdoor shots, the sequence shows Sara indoors with binder (10-20s), then binder close-up (20-30s), followed by heavy machinery action. Audio confirms this progression with classroom preparation speech preceding equipment operation.",
+        "video_id": "d6b4OmUFt7I",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "When Sara mentions 'emailing Anderson', what visual context helps explain this reference?",
+        "Choice": [
+            "A. Outdoor construction site with excavators",
+            "B. Indoor desk with bulletin board notes",
+            "C. Program sign with Velocity Inc. branding",
+            "D. Binder table of contents page"
+        ],
+        "Answer": "C",
+        "Explaination": "The Velocity Inc. program sign (0-10s) establishes the training provider, while 'emailing Anderson' audio (10-20s) occurs during outdoor scenes showing program participation. This links Anderson to enrollment processes via the branded program.",
+        "video_id": "d6b4OmUFt7I",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "Which visual events occur simultaneously with Ircha stating, 'When it comes to Forspoken, we need to talk about Forspoken, and I feel so bad...'?",
+        "Choice": [
+            "A. Ircha holding a phone and Frey exploring misty mountains",
+            "B. Game menu options displayed and Frey running towards a refuge",
+            "C. Frey climbing rocks with purple energy and Ircha speaking",
+            "D. Expansive landscape with 'IRCHA GAMING' text"
+        ],
+        "Answer": "A",
+        "Explanation": "The audio quote from 0-10s aligns with Ircha holding a phone and transitioning to Frey's gameplay in a misty landscape.",
+        "video_id": "bswbQtOPk6E",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the correct sequence of events in the video?",
+        "Choice": [
+            "A. Company acquisition discussed -> Frey explores misty landscape -> 'soul culture' mentioned",
+            "B. Square Enix acquisition mentioned -> Frey climbs rocks -> Ircha feels bad",
+            "C. 'soul culture' commentary -> Frey glides with energy -> Game menu shown",
+            "D. Ircha defends Forspoken -> Frey runs towards refuge -> Expansive landscape displayed"
+        ],
+        "Answer": "A",
+        "Explanation": "The first event (0-10s) is the acquisition discussion, followed by Frey's exploration, then 'soul culture' in the 20-30s segment.",
+        "video_id": "bswbQtOPk6E",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why does the speaker suggest Square Enix was acquired?",
+        "Choice": [
+            "A. Due to strategic partnerships",
+            "B. As a result of Forspoken's sales",
+            "C. Because of negative reviews",
+            "D. To address the success of a game level"
+        ],
+        "Answer": "B",
+        "Explanation": "The audio directly states the acquisition was likely due to Forspoken's sales.",
+        "video_id": "bswbQtOPk6E",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "How does the environment differ when discussing sales versus defending the game?",
+        "Choice": [
+            "A. Grassy vs. Rocky terrain",
+            "B. Misty vs. Futuristic",
+            "C. Menu vs. UI elements",
+            "D. Day vs. Night"
+        ],
+        "Answer": "A",
+        "Explanation": "Sales discussion (grassy) and defense (rocky) show different environments.",
+        "video_id": "bswbQtOPk6E",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What context surrounds the mention of 'soul culture'?",
+        "Choice": [
+            "A. Frey exploring misty mountains",
+            "B. Frey climbing rocks and Ircha speaking",
+            "C. 'IRCHA GAMING' text overlay",
+            "D. Frey running towards refuge"
+        ],
+        "Answer": "B",
+        "Explanation": "The audio occurs alongside Frey navigating rocky terrain and Ircha speaking.",
+        "video_id": "bswbQtOPk6E",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    },
+    {
+        "Type": "AV Event Alignment",
+        "Question": "Which visual event occurs simultaneously with the male speaker saying 'And now 54, what is it?'?",
+        "Choice": [
+            "A. Two female officers practice shooting at targets",
+            "B. An individual practices CPR on a mannequin",
+            "C. A silver car drives around orange cones",
+            "D. Officers stand in formation during rain"
+        ],
+        "Answer": "B",
+        "Explaination": "The audio transcript explicitly aligns the speech 'And now 54...' with the CPR practice visual event in the 10-20s segment, while other choices involve unrelated timeframes or audio cues.",
+        "video_id": "G_VTkkb34gw",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the temporal order of starting pistol sounds and their corresponding visual events?",
+        "Choice": [
+            "A. Sparring → Pepper-spray → Silver car → White car",
+            "B. White car → Pepper-spray → Sparring → Silver car",
+            "C. Pepper-spray → Silver car → Sparring → White car",
+            "D. Silver car → White car → Pepper-spray → Sparring"
+        ],
+        "Answer": "A",
+        "Explaination": "The first pistol coincides with sparring in the dark room, the second with pepper-spray during track running, the third with the silver car, and the final pistol with the white car in rain, as per the 20-30s alignment.",
+        "video_id": "G_VTkkb34gw",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the police officer throw his arms up in celebration against a clear sky?",
+        "Choice": [
+            "A. He completed a shooting exercise",
+            "B. He finished a timed sprint test",
+            "C. He resolved a simulated crisis",
+            "D. He escaped a pepper-spray drill"
+        ],
+        "Answer": "B",
+        "Explaination": "The celebration occurs simultaneously with the speech 'And now 54...', which overlaps with the officer running along a sidewalk later in the same scene, suggesting a timed physical test completion.",
+        "video_id": "G_VTkkb34gw",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    },
+    {
+        "Type": "Inference",
+        "Question": "What is the most likely reason the helmeted man is escorted through the dark room?",
+        "Choice": [
+            "A. He is a suspect in custody",
+            "B. He is participating in night-vision training",
+            "C. He requires medical assistance",
+            "D. He is supervising new recruits"
+        ],
+        "Answer": "B",
+        "Explaination": "The blue-lit dark room and recurring appearance in training scenarios suggest specialized exercises, with 'escorting' being part of tactical training rather than criminal custody.",
+        "video_id": "G_VTkkb34gw",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "How does the silver car's driving scene differ from the white car's scene?",
+        "Choice": [
+            "A. One involves obstacle avoidance while the other focuses on speed",
+            "B. One occurs in daylight while the other is during rainfall",
+            "C. One shows straight-line acceleration while the other demonstrates braking",
+            "D. One has officers inside while the other is remotely controlled"
+        ],
+        "Answer": "B",
+        "Explaination": "The visual caption specifies the white car maneuvers on a wet track during rain, while the silver car drives on a regular track, requiring comparison of weather conditions.",
+        "video_id": "G_VTkkb34gw",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What activity surrounds the officers kneeling to examine a dummy?",
+        "Choice": [
+            "A. A CPR certification exercise",
+            "B. A crime scene investigation simulation",
+            "C. A medical emergency response drill",
+            "D. A physical endurance test"
+        ],
+        "Answer": "C",
+        "Explaination": "The event coincides with the 'Three, two, one' countdown audio, suggesting a timed medical response scenario rather than passive examination or certification.",
+        "video_id": "G_VTkkb34gw",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    }
+]

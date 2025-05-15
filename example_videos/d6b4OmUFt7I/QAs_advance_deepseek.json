@@ -1,0 +1,92 @@
+[
+    {
+        "Type": "AV Event Alignment",
+        "Question": "Which audio statement accompanies the first appearance of the 'Heavy Equipment Operator Training Centre' sign?",
+        "Choice": [
+            "A. 'emailed Anderson for about a year'",
+            "B. 'we get out'",
+            "C. 'we're in West Bank, BC... I'm part of this course'",
+            "D. 'last time, go through all that'"
+        ],
+        "Answer": "C",
+        "Explaination": "The visual caption explicitly states the program sign appears simultaneously with Sara's introductory speech about the course location and participation (0-10s). Other audio clips occur during indoor binder scenes or later equipment shots.",
+        "video_id": "d6b4OmUFt7I",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the correct order of visual events after Sara's initial outdoor introduction?",
+        "Choice": [
+            "A. Binder close-up → Construction site → Indoor desk scene",
+            "B. Indoor desk scene → Binder close-up → Machinery action",
+            "C. Construction site → Indoor desk scene → Binder close-up",
+            "D. Machinery action → Indoor desk scene → Binder close-up"
+        ],
+        "Answer": "B",
+        "Explaination": "Per visual captions (10-30s), after outdoor shots, the sequence shows Sara indoors with binder (10-20s), then binder close-up (20-30s), followed by heavy machinery action. Audio confirms this progression with classroom preparation speech preceding equipment operation.",
+        "video_id": "d6b4OmUFt7I",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why is Sara shown reviewing the binder with labeled tabs?",
+        "Choice": [
+            "A. To prepare for a written exam about safety protocols",
+            "B. To demonstrate classroom theory before practical equipment use",
+            "C. To compare different heavy equipment brands",
+            "D. To document daily construction site activities"
+        ],
+        "Answer": "B",
+        "Explaination": "Audio states 'go through all that... then get on the equipment' (20-30s), synchronized with binder visuals. This shows theoretical preparation precedes hands-on training, requiring integration of speech content and document close-ups.",
+        "video_id": "d6b4OmUFt7I",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    },
+    {
+        "Type": "Inference",
+        "Question": "What can be inferred about Sara's career influences?",
+        "Choice": [
+            "A. She chose this career due to parental pressure",
+            "B. Her childhood exposure to equipment sparked her interest",
+            "C. She switched careers after emailing Anderson",
+            "D. Mountainous terrain inspired her career choice"
+        ],
+        "Answer": "B",
+        "Explaination": "Audio mentions lifelong equipment exposure through her father (10-20s), while visuals show her engaged with training materials and machinery. Both modalities suggest early influences rather than geographical or external factors.",
+        "video_id": "d6b4OmUFt7I",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "How does the binder's role differ from the heavy machinery shown?",
+        "Choice": [
+            "A. Binder displays safety records; machinery demonstrates repairs",
+            "B. Binder organizes course materials; machinery enables practical application",
+            "C. Binder lists equipment specs; machinery tests speed limits",
+            "D. Binder tracks attendance; machinery shows grading criteria"
+        ],
+        "Answer": "B",
+        "Explaination": "Audio-visual synchronization shows binder pages with tabs (visual) during classroom preparation speech (audio: 'go through all that'), contrasting with machinery action shots during speech about hands-on practice. This comparison requires analyzing both content types.",
+        "video_id": "d6b4OmUFt7I",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "When Sara mentions 'emailing Anderson', what visual context helps explain this reference?",
+        "Choice": [
+            "A. Outdoor construction site with excavators",
+            "B. Indoor desk with bulletin board notes",
+            "C. Program sign with Velocity Inc. branding",
+            "D. Binder table of contents page"
+        ],
+        "Answer": "C",
+        "Explaination": "The Velocity Inc. program sign (0-10s) establishes the training provider, while 'emailing Anderson' audio (10-20s) occurs during outdoor scenes showing program participation. This links Anderson to enrollment processes via the branded program.",
+        "video_id": "d6b4OmUFt7I",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    }
+]

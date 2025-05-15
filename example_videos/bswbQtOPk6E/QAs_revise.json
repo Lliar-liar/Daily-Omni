@@ -1,0 +1,97 @@
+[
+    {
+        "Question": "Which audio statement accompanies the gameplay footage of a character being engulfed in a fiery red-orange glow during an upward propulsion?",
+        "Choice": [
+            "A. 'I feel so bad'",
+            "B. 'soul culture'",
+            "C. 'I want to call it that actually'",
+            "D. 'People were hating so much on the game'"
+        ],
+        "Answer": "C",
+        "Explanation": "The revision tightens specificity by adding 'engulfed in a fiery red-orange glow during upward propulsion' to mirror the visual caption's exact phrasing. Replacing the original choice D ('company got bought') with D ('People were hating...') introduces a plausible distractor from the same 20-30s gameplay segment. Now both B and D require differentiation: B aligns with general parkour movement, D with post-propulsion reflection on the structure, while C uniquely matches the fiery propulsion moment. This forces examinees to discern subtle temporal and contextual relationships rather than relying on obvious segment isolation.",
+        "video_id": "bswbQtOPk6E",
+        "Type": "AV Event Alignment",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    }
+][
+    {
+        "Question": "What in-game visual appears immediately after the creator discusses Square Enix's sales results?",
+        "Choice": [
+            "A. Character standing on a rocky landscape",
+            "B. Blonde woman analyzing sales charts",
+            "C. Sacred Peaks Refuge sign appearance",
+            "D. Character engulfed in fiery glow while jumping"
+        ],
+        "Answer": "C",
+        "Explanation": "The revision improves difficulty by: 1) Specifying 'in-game visual' to eliminate choice B (creator speaking, which is non-gameplay). 2) Replacing original choice D (generic horn structures) with a later-but-plausible fiery glow scene from 20-30s. 3) Introducing a new distractor (B) implying sales charts, which never occur. The original answer remains correct as the Sacred Peaks sign (C) directly follows the sales discussion, per audio-visual alignment where 'direct result of the account' audio pairs with this sign.",
+        "video_id": "bswbQtOPk6E",
+        "Type": "Event Sequence",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    }
+][
+    {
+        "Question": "Why does the video transition to a foggy landscape with dead trees as the creator says, 'I feel so bad'?",
+        "Choice": [
+            "A. To demonstrate the game's advanced weather effects",
+            "B. To metaphorically reflect the creator's emotional state",
+            "C. To establish the game's primary biome",
+            "D. To foreshadow an impending in-game conflict"
+        ],
+        "Answer": "B",
+        "Explanation": "The revision strengthens the question by using precise temporal language ('as the creator says') and replacing the original choices with more nuanced distractors. Option B reframes the answer using 'metaphorically reflect' instead of 'visually mirror,' requiring deeper symbolic interpretation. Choices A and C are upgraded from the original overly technical/gameplay-focused options to thematically adjacent concepts (weather effects, biome establishment), while D introduces a narrative-focused distractor. All incorrect choices remain plausible but lack direct audio-visual alignment, as the fog/dead trees explicitly coincide with the creator's emotional statement, not environmental mechanics or plot elements.",
+        "video_id": "bswbQtOPk6E",
+        "Type": "Reasoning",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    }
+][
+    {
+        "Question": "What is the primary intent behind the creator's direct address to the camera in the final transition?",
+        "Choice": [
+            "A. To explain the game's sales performance",
+            "B. To promote exclusive in-game content",
+            "C. To compare console versions of the game",
+            "D. To address widespread criticism of the game"
+        ],
+        "Answer": "D",
+        "Explanation": "This revision improves difficulty by (1) reframing the question to focus on 'intent' rather than 'stance,' requiring deeper analysis of context, (2) replacing the original implausible choices (e.g., DLC promotion/console comparison) with distractors tied to actual audio mentions (sales performance) and common gaming video tropes (exclusive content), and (3) using 'address widespread criticism' instead of 'defending,' which matches the creator's explicit audio statement about 'hating on the game' while requiring interpretation of subtext.",
+        "video_id": "bswbQtOPk6E",
+        "Type": "Inference",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    }
+][
+    {
+        "Question": "What distinguishes the environmental landmarks in the 'People were hating' and 'company got bought' segments?",
+        "Choice": [
+            "A. Ancient temples vs modern buildings",
+            "B. Dead trees vs lush vegetation",
+            "C. Rocky cliffs vs grassy hills",
+            "D. Distant cityscapes vs isolated stone structures"
+        ],
+        "Answer": "D",
+        "Explanation": "This revision improves difficulty by focusing on specific environmental landmarks rather than general scenery. The original answer (A) was incorrect, as both segments feature grassy elements. The correct distinction lies in the 'company got bought' segment showing a misty urban skyline in the distance, while 'People were hating' features prominent natural stone formations in wilderness. Choices C and A are plausible but inaccurate red herrings, while B is eliminated by consistent vegetation in both segments.",
+        "video_id": "bswbQtOPk6E",
+        "Type": "Comparative",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    }
+][
+    {
+        "Question": "What indicates the fiery propulsion is an intentional game feature rather than a contextual anomaly?",
+        "Choice": [
+            "A. Dynamic cape physics during aerial maneuvers",
+            "B. Recurring chromatic synchronization with abilities",
+            "C. Tutorial pop-ups about traversal mechanics",
+            "D. Visible controller vibration feedback"
+        ],
+        "Answer": "B",
+        "Explanation": "The revision improves ambiguity by (1) reframing the question to focus on intentional design validation rather than generic 'mechanics', requiring analysis of developer intent, (2) replacing vague 'glow color patterns' with 'chromatic synchronization' to emphasize deliberate audiovisual coding, (3) introducing plausible distractors like controller feedback (D) and tutorial elements (C) that were never shown, and (4) removing the obsolete 'menu options' reference since menus appeared 20+ seconds before the propulsion sequence. The alignment of fiery glows ONLY during ability execution (never in cutscenes/neutral states) makes B the uniquely valid clue.",
+        "video_id": "bswbQtOPk6E",
+        "Type": "Context Understanding",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    }
+]

@@ -1,0 +1,113 @@
+[
+    {
+        "Question": "Which audio-visual pair occurred simultaneously when Sara said 'we get out'?",
+        "Choice": [
+            "A. Sara reviewing documents in office -- 'we get out'",
+            "B. Excavator lifting dirt -- 'go on the equipment'",
+            "C. Sara flipping binder pages -- 'class time'",
+            "D. Wide shot of construction site -- 'exposed to equipment growing up'"
+        ],
+        "Answer": "A",
+        "Explanation": "This revision improves difficulty by: 1) Adding choice C which shares the office location but different action/audio pairing, requiring finer distinction between document review vs page-flipping contexts 2) Correcting choice D to show the actual wide equipment shot that accompanied 'exposed to equipment' audio rather than bulldozer footage 3) Removing dump truck reference (original C) that was too obviously mismatched with 'familiar' audio 4) Making B more precise with 'lifting dirt' to match excavator operation details 5) Tightening phrasing to eliminate redundant descriptors from original options.",
+        "video_id": "d6b4OmUFt7I",
+        "Type": "AV Event Alignment",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    }
+][
+    {
+        "Question": "Which visual-audio pair occurs at the very beginning of the video?",
+        "Choice": [
+            "A. Detailed sign graphic -- geographical location mention",
+            "B. Construction site overview -- training program name reference",
+            "C. Instructor in PPE -- personal equipment experience anecdote",
+            "D. Excavator movement -- hands-on training phase description"
+        ],
+        "Answer": "A",
+        "Explanation": "The revision improves difficulty by: 1) Using descriptive phrases rather than direct quotes ('geographical location mention' instead of 'West Bank BC'), requiring deeper content recall. 2) Equalizing choice structure with professional terminology (PPE, hands-on training). 3) Including plausible distractors: Choice B combines later elements (site pan + program name from 0-10s sign text), Choice C uses 10-20s elements (safety vest + dad's equipment story), and Choice D references 20-30s actions. 4) The correct answer requires matching the sign's visual complexity (detailed graphic) with the first audio location cue, while avoiding confusion with the subsequent program name mention paired with site panning.",
+        "video_id": "d6b4OmUFt7I",
+        "Type": "Event Sequence",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    }
+][
+    {
+        "Question": "What immediate task required Sara to review documents in the office before equipment operation?",
+        "Choice": [
+            "A. To prepare safety checklists for machinery",
+            "B. To finalize her course payment details",
+            "C. To complete classroom requirements stated in the audio",
+            "D. To analyze soil composition charts"
+        ],
+        "Answer": "C",
+        "Explanation": "The revision improves difficulty by (1) specifying the temporal relationship ('before equipment operation'), (2) introducing plausible distractors aligned with construction training contexts (A, D), and (3) tightening the link to audio evidence. The original answer C was correct as the audio explicitly pairs document review with 'class time' instructions, while new choice A mimics real-world training logistics but lacks audio-visual support. Choice D leverages the visual of dirt/terrain but contradicts actual content from the binder shown.",
+        "video_id": "d6b4OmUFt7I",
+        "Type": "Reasoning",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    }
+][
+    {
+        "Question": "What is the primary significance of Sara's childhood exposure to heavy equipment in relation to her training?",
+        "Choice": [
+            "A. It motivated her to seek administrative roles in construction",
+            "B. It enabled her to bypass the program's classroom requirements",
+            "C. It established foundational familiarity with operational principles",
+            "D. It revealed her natural talent for engineering design"
+        ],
+        "Answer": "C",
+        "Explanation": "This revision improves upon the original by (1) specifying the relationship to her training, requiring deeper contextual analysis, (2) introducing distractors that reference plausible alternative advantages (A=office work, B=program structure, D=engineering) all subtly contradicted by contextual clues, and (3) using precise terminology ('operational principles') that matches the audio mention of getting 'used to' equipment through exposure. The original answer about prior familiarity remains correct but is now framed as foundational understanding, while eliminating the weak original distractor about Velocity Inc. employment which had no visual/audio support.",
+        "video_id": "d6b4OmUFt7I",
+        "Type": "Inference",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    }
+][
+    {
+        "Question": "Which visual sequences correspond to the audio mentions of 'go on the equipment' versus 'familiar with the machines'?",
+        "Choice": [
+            "A. First shows an excavator lifting dirt, second shows a dump truck driving through mud",
+            "B. First shows a bulldozer moving earth, second shows a water tank in background",
+            "C. First shows binder review in office, second shows tractor parked on site",
+            "D. First shows safety vest demonstration, second shows mountain landscape"
+        ],
+        "Answer": "A",
+        "Explanation": "The original answer (C) was incorrect as document review occurs during unrelated 'we get out' audio. Revision aligns 'go on the equipment' (20-30s audio) with its actual visual counterpart (active excavator) and 'familiar with machines' with the dump truck motion shown during that exact audio cue. Distractors now use equipment from other scenes (water tank in 10-20s wide shot, parked tractor from 20-30s) while maintaining plausible machine-related contexts, requiring precise synchronization awareness.",
+        "video_id": "d6b4OmUFt7I",
+        "Type": "Comparative",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    }
+][
+    {
+        "Question": "What specific visual elements were present when Sara mentioned 'email Anderson'?",
+        "Choice": [
+            "A. Indoor office with binder and whiteboard",
+            "B. Excavator actively lifting dirt",
+            "C. Dirt field with construction equipment and trees",
+            "D. Yellow bulldozer parked in foreground"
+        ],
+        "Answer": "C",
+        "Explanation": "This revision increases difficulty by requiring precise recall of contextual details. While both C and D describe outdoor elements, the AV pairs confirm the 'email Anderson' audio aligns with a wide shot emphasizing the dirt field and equipment (C), whereas the parked bulldozer (D) appears in a different composition. B is temporally dislocated (occurs during later equipment operation audio), and A is clearly indoor. This forces finer distinction than the original's broad 'outdoor construction site' vs 'excavator' dichotomy.",
+        "video_id": "d6b4OmUFt7I",
+        "Type": "Context Understanding",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    }
+][
+    {
+        "Question": "Which visual event occurs simultaneously with the speaker mentioning becoming 'familiar with the machines' by the end of the day?",
+        "Choice": [
+            "A. Bulldozer emitting smoke while pushing dirt",
+            "B. Volvo dump truck navigating muddy terrain",
+            "C. Excavator suspended mid-air holding soil",
+            "D. CAT tractor stationary in foreground"
+        ],
+        "Answer": "B",
+        "Explanation": "This revision improves difficulty by 1) Adding temporal context ('by the end of the day') from the audio, 2) Replacing the easily eliminated safety vest option (D) with a parked tractor from the same operational sequence, 3) Specifying vehicle brands/actions (Volvo vs CAT, 'navigating' vs 'stationary') to require closer visual recall, 4) Using parallel construction terminology ('suspended mid-air' vs 'navigating') to reduce elimination through grammatical cues. All four choices now show heavy machinery from the same 20-30s segment, forcing precise synchronization analysis rather than simple equipment recognition.",
+        "video_id": "d6b4OmUFt7I",
+        "Type": "AV Event Alignment",
+        "content_parent_category": "Education",
+        "content_fine_category": "Engineering Projects"
+    }
+]

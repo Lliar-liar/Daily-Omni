@@ -1,0 +1,92 @@
+[
+    {
+        "Type": "AV Event Alignment",
+        "Question": "Which visual events occur simultaneously with Ircha stating, 'When it comes to Forspoken, we need to talk about Forspoken, and I feel so bad...'?",
+        "Choice": [
+            "A. Ircha holding a phone and Frey exploring misty mountains",
+            "B. Game menu options displayed and Frey running towards a refuge",
+            "C. Frey climbing rocks with purple energy and Ircha speaking",
+            "D. Expansive landscape with 'IRCHA GAMING' text"
+        ],
+        "Answer": "A",
+        "Explanation": "The audio quote from 0-10s aligns with Ircha holding a phone and transitioning to Frey's gameplay in a misty landscape.",
+        "video_id": "bswbQtOPk6E",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the correct sequence of events in the video?",
+        "Choice": [
+            "A. Company acquisition discussed -> Frey explores misty landscape -> 'soul culture' mentioned",
+            "B. Square Enix acquisition mentioned -> Frey climbs rocks -> Ircha feels bad",
+            "C. 'soul culture' commentary -> Frey glides with energy -> Game menu shown",
+            "D. Ircha defends Forspoken -> Frey runs towards refuge -> Expansive landscape displayed"
+        ],
+        "Answer": "A",
+        "Explanation": "The first event (0-10s) is the acquisition discussion, followed by Frey's exploration, then 'soul culture' in the 20-30s segment.",
+        "video_id": "bswbQtOPk6E",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why does the speaker suggest Square Enix was acquired?",
+        "Choice": [
+            "A. Due to strategic partnerships",
+            "B. As a result of Forspoken's sales",
+            "C. Because of negative reviews",
+            "D. To address the success of a game level"
+        ],
+        "Answer": "B",
+        "Explanation": "The audio directly states the acquisition was likely due to Forspoken's sales.",
+        "video_id": "bswbQtOPk6E",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    },
+    {
+        "Type": "Inference",
+        "Question": "What can be inferred about Ircha's opinion of Forspoken?",
+        "Choice": [
+            "A. She dislikes the storyline",
+            "B. She believes it's underappreciated",
+            "C. She finds gameplay too hard",
+            "D. She is indifferent"
+        ],
+        "Answer": "B",
+        "Explanation": "Ircha mentions being one of the few to defend the game, indicating she thinks it's underappreciated.",
+        "video_id": "bswbQtOPk6E",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "How does the environment differ when discussing sales versus defending the game?",
+        "Choice": [
+            "A. Grassy vs. Rocky terrain",
+            "B. Misty vs. Futuristic",
+            "C. Menu vs. UI elements",
+            "D. Day vs. Night"
+        ],
+        "Answer": "A",
+        "Explanation": "Sales discussion (grassy) and defense (rocky) show different environments.",
+        "video_id": "bswbQtOPk6E",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What context surrounds the mention of 'soul culture'?",
+        "Choice": [
+            "A. Frey exploring misty mountains",
+            "B. Frey climbing rocks and Ircha speaking",
+            "C. 'IRCHA GAMING' text overlay",
+            "D. Frey running towards refuge"
+        ],
+        "Answer": "B",
+        "Explanation": "The audio occurs alongside Frey navigating rocky terrain and Ircha speaking.",
+        "video_id": "bswbQtOPk6E",
+        "content_parent_category": "Entertainment",
+        "content_fine_category": "Game Reviews"
+    }
+]

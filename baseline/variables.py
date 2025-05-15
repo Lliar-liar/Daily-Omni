@@ -1,0 +1,9 @@
+base_path='./Videos'
+json_file_path = 'qa.json'
+fps=2
+segment_duration=20
+max_duration=7
+max_process=16
+dashscope_apikey="YOUR_API_KEY"
+openai_apikey="YOUR_API_KEY"
+openai_baseurl="YOUR_BASE_URL"

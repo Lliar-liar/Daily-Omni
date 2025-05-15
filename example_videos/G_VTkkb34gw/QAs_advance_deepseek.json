@@ -1,0 +1,92 @@
+[
+    {
+        "Type": "AV Event Alignment",
+        "Question": "Which visual event occurs simultaneously with the male speaker saying 'And now 54, what is it?'?",
+        "Choice": [
+            "A. Two female officers practice shooting at targets",
+            "B. An individual practices CPR on a mannequin",
+            "C. A silver car drives around orange cones",
+            "D. Officers stand in formation during rain"
+        ],
+        "Answer": "B",
+        "Explaination": "The audio transcript explicitly aligns the speech 'And now 54...' with the CPR practice visual event in the 10-20s segment, while other choices involve unrelated timeframes or audio cues.",
+        "video_id": "G_VTkkb34gw",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    },
+    {
+        "Type": "Event Sequence",
+        "Question": "What is the temporal order of starting pistol sounds and their corresponding visual events?",
+        "Choice": [
+            "A. Sparring → Pepper-spray → Silver car → White car",
+            "B. White car → Pepper-spray → Sparring → Silver car",
+            "C. Pepper-spray → Silver car → Sparring → White car",
+            "D. Silver car → White car → Pepper-spray → Sparring"
+        ],
+        "Answer": "A",
+        "Explaination": "The first pistol coincides with sparring in the dark room, the second with pepper-spray during track running, the third with the silver car, and the final pistol with the white car in rain, as per the 20-30s alignment.",
+        "video_id": "G_VTkkb34gw",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    },
+    {
+        "Type": "Reasoning",
+        "Question": "Why might the police officer throw his arms up in celebration against a clear sky?",
+        "Choice": [
+            "A. He completed a shooting exercise",
+            "B. He finished a timed sprint test",
+            "C. He resolved a simulated crisis",
+            "D. He escaped a pepper-spray drill"
+        ],
+        "Answer": "B",
+        "Explaination": "The celebration occurs simultaneously with the speech 'And now 54...', which overlaps with the officer running along a sidewalk later in the same scene, suggesting a timed physical test completion.",
+        "video_id": "G_VTkkb34gw",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    },
+    {
+        "Type": "Inference",
+        "Question": "What is the most likely reason the helmeted man is escorted through the dark room?",
+        "Choice": [
+            "A. He is a suspect in custody",
+            "B. He is participating in night-vision training",
+            "C. He requires medical assistance",
+            "D. He is supervising new recruits"
+        ],
+        "Answer": "B",
+        "Explaination": "The blue-lit dark room and recurring appearance in training scenarios suggest specialized exercises, with 'escorting' being part of tactical training rather than criminal custody.",
+        "video_id": "G_VTkkb34gw",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    },
+    {
+        "Type": "Comparative",
+        "Question": "How does the silver car's driving scene differ from the white car's scene?",
+        "Choice": [
+            "A. One involves obstacle avoidance while the other focuses on speed",
+            "B. One occurs in daylight while the other is during rainfall",
+            "C. One shows straight-line acceleration while the other demonstrates braking",
+            "D. One has officers inside while the other is remotely controlled"
+        ],
+        "Answer": "B",
+        "Explaination": "The visual caption specifies the white car maneuvers on a wet track during rain, while the silver car drives on a regular track, requiring comparison of weather conditions.",
+        "video_id": "G_VTkkb34gw",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    },
+    {
+        "Type": "Context understanding",
+        "Question": "What activity surrounds the officers kneeling to examine a dummy?",
+        "Choice": [
+            "A. A CPR certification exercise",
+            "B. A crime scene investigation simulation",
+            "C. A medical emergency response drill",
+            "D. A physical endurance test"
+        ],
+        "Answer": "C",
+        "Explaination": "The event coincides with the 'Three, two, one' countdown audio, suggesting a timed medical response scenario rather than passive examination or certification.",
+        "video_id": "G_VTkkb34gw",
+        "content_parent_category": "Sports",
+        "content_fine_category": "Career Highlights"
+    }
+]

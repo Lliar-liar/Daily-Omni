@@ -1,0 +1,13 @@
+# Need new caching abstraction from transformers 4.36.0
+# Later versions can hit incompatibilities with how we have setup generation
+transformers==v4.36.0
+numpy
+scipy
+tensorflow  # Some of our pre-processing code is still in tensorflow
+sentencepiece  # For the tokenizer
+einops
+protobuf==3.20.*  # Downgrade, new versions cannot load the tokenizer
+tqdm
+pillow  # For image processing
+librosa  # For audio processing
+scikit-video  # For video processing
