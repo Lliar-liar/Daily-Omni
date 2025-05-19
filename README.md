@@ -92,6 +92,10 @@ Then, launch the Qwen2-Audio server locally with running:
 ```python
 python baseline/qwen_audio.py
 ```
+Segment the video and audio clips:
+```python
+python baseline/segment_av.py
+```
 
 Run Daily-Omni Agent on Daily-Omni benchmark with the following command:
 
