@@ -1,3 +1,5 @@
+# run_pipeline.py
+
 import os
 import time
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor, as_completed
@@ -9,6 +11,7 @@ import utils       # Import utils
 import captioning
 import revision    # Import revision (now includes alignment)
 import qa_generation
+import question_optimize
 from qa_filter import filter_qa_list # Import the filtering function
 
 def process_single_directory(directory_path, run_flags, qa_metadata=None, file_lock=None):
@@ -180,7 +183,7 @@ def process_single_directory(directory_path, run_flags, qa_metadata=None, file_l
                     qa_folder_path=directory_path,
                     use_gemini=use_gemini_qa,
                     metadata=[this_video_meta] if this_video_meta else None,
-                    file_lock=file_lock
+                    file_lock=None
                 )
             except Exception as e:
                  print(f"Error during QA Generation for {directory_path}: {e}")
@@ -196,6 +199,17 @@ def process_single_directory(directory_path, run_flags, qa_metadata=None, file_l
          print("Skipping QA generation step.")
          success_flags['qa_generation'] = True # Mark as success if skipped
 
+    # --- Step 5: QA Optimization ---
+    if run_flags.get('qa_optimization', True) and success_flags.get('qa_generation', True):
+        try:
+            success_flags['qa_optimization'] = question_optimize.optimize_QA(
+                caption_path=directory_path,
+                file_lock=file_lock
+            )
+        except Exception as e:
+            print(f"Error during QA Optimization for {directory_path}: {e}")
+            success_flags['qa_optimization'] = False
+
     # --- Summary ---
     end_time = time.time()
     duration = end_time - start_time
@@ -204,7 +218,7 @@ def process_single_directory(directory_path, run_flags, qa_metadata=None, file_l
     # Calculate overall success based on requested steps finishing ok
     overall_success = True
     # Define the sequence of dependent blocks
-    pipeline_blocks = ['captioning', 'revision', 'alignment', 'qa_generation']
+    pipeline_blocks = ['captioning', 'revision', 'alignment', 'qa_generation', 'qa_optimization']
     current_step_success = True
     for block_name in pipeline_blocks:
         block_requested = run_flags.get(block_name, False)
@@ -270,19 +284,21 @@ if __name__ == "__main__":
 
     # --- Select Steps to Run ---
     run_pipeline_flags = {
-        'captioning': True,      # Master flag for captioning block
+        'captioning': False,      # Master flag for captioning block
         'video_caption': True,   # Generate initial video captions
         'audio_caption': True,   # Generate initial audio captions
         'use_gemini_audio': True, # Use Gemini for audio? (False for DashScope)
 
-        'revision': True,        # Master flag for revision block
+        'revision': False,        # Master flag for revision block
         'video_revision': True,  # Run video consistency revision
         'audio_revision': True,  # Run audio revision based on visual context
 
-        'alignment': True,       # Master flag for AV alignment (NEW)
+        'alignment': False,       # Master flag for AV alignment (NEW)
 
-        'qa_generation': True,    # Master flag for QA generation
+        'qa_generation': False,    # Master flag for QA generation
         'use_gemini_qa': False,   # Use Gemini for QA? (True for Gemini, False for DeepSeek/Volc)
+        
+        'qa_optimization':False,
 
         'aggregate_and_filter': True # Run final aggregation and filtering
     }
@@ -341,7 +357,7 @@ if __name__ == "__main__":
 
     elif execution_mode == 'processes':
         print("\n--- Running in Process Pool Mode (Use with caution due to potential step dependencies and locking) ---")
-        MAX_WORKERS_PROCESSES = 1# Use available cores
+        MAX_WORKERS_PROCESSES = 10
         if config.MAX_WORKERS_PROCESSES:
             MAX_WORKERS_PROCESSES = config.MAX_WORKERS_PROCESSES
         print(f"Using {MAX_WORKERS_PROCESSES} processes.")
@@ -378,7 +394,7 @@ if __name__ == "__main__":
         skipped_files = 0
 
         qa_gen_backend_flag = run_pipeline_flags.get('use_gemini_qa', True)
-        qa_filename = f"QAs_advance{'_deepseek' if not qa_gen_backend_flag else ''}.json"
+        qa_filename = f"QAs_revise_{config.SEGMENT_DURATION*config.MAX_SEGMENTS}s.json"
         print(f"Looking for QA file: '{qa_filename}' in processed directories...")
 
         for directory in directory_list:

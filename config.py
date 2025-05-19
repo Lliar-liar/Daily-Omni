@@ -10,7 +10,7 @@ GEMINI_API_KEY_AUDIO = 'YOUR_API_KEY' # Key used in original audio_caption.py
 GEMINI_API_KEY_REVISION = 'YOUR_API_KEY' # Key used in original audio_revision.py
 GEMINI_API_KEY_ALIGNMENT = 'YOUR_API_KEY'
 GEMINI_API_KEY_QA = 'YOUR_API_KEY' # Key used in original advance_QA_gen.py (Thinking)
-
+GEMINI_API_KEY_OPTIMIZATION='YOUR_API_KEY'
 
 
 # Keys for alternative QA generation API (DeepSeek/VolcEngine)
@@ -35,6 +35,7 @@ FILTER_MODEL_2_NAME="gpt-4o-ca"
 # --- Global Settings ---
 
 SEGMENT_DURATION = 10 
+MAX_SEGMENTS = 3
 BASE_DIR = "./example_videos" 
 CSV_PATH = "./example_metadata.csv" 
 MAX_WORKERS_THREADS=2
@@ -157,5 +158,19 @@ Your output should be in the following form:
 <audio_event1> -- <visual_event1>,
 <audio_event2> -- <visual_event2>,
 ...
+
+'''
+
+QA_OPTIMIZATION_SYSTEM_PROMPT='''
+You are a expert in optimizing the quality of audio-visual questions about a video that help human better understand the video.
+Given an audio-visual question about a video, its choices and answer, your task is to revise the question and choices to make it more difficult. You will also get the visual and audio description and a list of audio and visual event pairs that occurs at the same time for the related video to ensure you revision of the choice won't produce multiple correct choices or no correct choices.
+### Guidence for Revising Question-Answer Pairs:
+- Check whether the given answer is the correct one. If not, replace it with the correct answer.
+- Check whether there are multiple reasonable choices can be the answer. If two different choices describes the same event/oject etc., you should replace one of them with a distinctively different choice.
+- If other choice are clearly not plausible, you should revise them. You can use information of another segment to create a 'plausible' new choice. You can also make up new choices that is plausible. But you should always ensure that only one correct choice is provided.
+- Ensure that the question and choices are explicit and don't contain excessive information so that it's more difficult to infer the correct answer from the question and choices alone.
+### Format of Your Output:
+
+[{"Question": "<revised-question>", "Choice": ["A. <choice-1>", "B. <choice-2>", "C. <choice-3>", "D. <choice-4>"], "Answer": "<correct-choice>", "Explanation": "<explicitly explain why is your revision better than the original one>"]
 
 '''
