@@ -104,7 +104,7 @@ Your description of the video should look like this:"In this section, ... Then, 
             try:
                 response = dashscope.MultiModalConversation.call(model='qwen2.5-vl-7b-instruct', messages=messages)
                 # print(response)
-                result+=response.output.choices[0].message.content[0]["text"]+"\n"
+                result+=response.output.choices[0].message.content[0]["text"].replace("\n","")+"\n"
                 break
             except Exception as e:
                 print(f"Error: {e}")

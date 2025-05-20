@@ -41,8 +41,8 @@ async def audio_transcription(
                             sr=processor.feature_extractor.sampling_rate)[0]
                     )
 
-    inputs = processor(text=text, audios=audios, return_tensors="pt", padding=True,sampling_rate=16000)
-    inputs.input_ids = inputs.input_ids.to("cuda")
+    inputs = processor(text=text, audios=audios, return_tensors="pt", padding=True,sampling_rate=16000).to("cuda")
+    # inputs.input_ids = inputs.input_ids.to("cuda")
 
     generate_ids = model.generate(**inputs, max_length=1000)
     generate_ids = generate_ids[:, inputs.input_ids.size(1):]
