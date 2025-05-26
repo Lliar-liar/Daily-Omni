@@ -1,7 +1,8 @@
 
 # Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment across Modalities
 
-This is the official repository of Daily-Omni
+This is the official repository of Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment across Modalities
+<font size=3><div align='center' >  [[📖 arXiv Paper](https://arxiv.org/abs/2505.17862)] [[📊 Dataset](https://huggingface.co/datasets/liarliar/Daily-Omni)] </div></font>
 
 ![Examples of Daily-Omni Benchmark](assets/qa_example.drawio.png)
 
@@ -109,4 +110,15 @@ This script will automatically evaluate the performance of the model on the Dail
 ![](assets/model_evaluation_results.png)
 
 
-
+## Citation
+```bibtex
+@misc{zhou2025dailyomni,
+      title={Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment across Modalities}, 
+      author={Ziwei Zhou and Rui Wang and Zuxuan Wu},
+      year={2025},
+      eprint={2505.17862},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2505.17862}, 
+}
+```
