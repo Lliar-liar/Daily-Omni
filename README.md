@@ -2,7 +2,12 @@
 # Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment across Modalities
 
 This is the official repository of Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment across Modalities
-<font size=3><div align='center' >  [[📖 arXiv Paper](https://arxiv.org/abs/2505.17862)] [[📊 Dataset](https://huggingface.co/datasets/liarliar/Daily-Omni)] </div></font>
+<font size=3><div align='center' >
+  [[📖 arXiv Paper](https://arxiv.org/abs/2505.17862)] 
+  [[💻 Project Page](https://lliar-liar.github.io/Daily-Omni/)]
+  [[📊 Dataset](https://huggingface.co/datasets/liarliar/Daily-Omni)]
+  [[🏆 Leaderboard](https://lliar-liar.github.io/Daily-Omni/#leaderboard)]
+</div></font>
 
 ![Examples of Daily-Omni Benchmark](assets/qa_example.drawio.png)
 

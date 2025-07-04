@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment across Modalities</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            line-height: 1.6;
+            color: #24292e;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1, h2, h3 {
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: .3em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+        h1 { font-size: 2em; text-align: center; border-bottom: none;}
+        h2 { font-size: 1.5em; }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        pre {
+            background-color: #f6f8fa;
+            padding: 16px;
+            overflow: auto;
+            border-radius: 6px;
+        }
+        code {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 85%;
+        }
+        pre code {
+            font-size: 100%;
+        }
+        .caption {
+            text-align: center;
+            font-size: 0.9em;
+            color: #586069;
+            margin-top: 8px;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        /* --- Badge Styles --- */
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0 30px 0;
+        }
+        .badge-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: #3d444c;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 500;
+            transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+        }
+        .badge-link:hover {
+            background-color: #555c64;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+        .badge-link .badge-icon {
+            margin-right: 8px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .badge-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+        .badge-icon.emoji {
+            font-size: 1.2em;
+        }
+
+        /* --- Author Info Styles --- */
+        .author-container {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .authors {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        .author-name {
+            font-weight: bold;
+        }
+        .affiliations {
+            font-size: 1em;
+            color: #484f55;
+            margin: 4px 0;
+        }
+
+        /* --- Leaderboard Table Styles --- */
+        .table-container {
+            width: 100%;
+            overflow-x: auto; /* Makes table scrollable on small screens */
+            margin-bottom: 24px;
+        }
+        table.leaderboard {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+        }
+        .leaderboard th, .leaderboard td {
+            border: 1px solid #dfe2e5;
+            padding: 8px 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .leaderboard thead th {
+            background-color: #f6f8fa;
+            font-weight: 600;
+            border-top: 3px solid #ccc;
+            border-bottom: 3px solid #ccc;
+        }
+        .leaderboard .model-name {
+            text-align: left;
+            white-space: nowrap;
+        }
+        .leaderboard .section-header th {
+            background-color: #f1f1f1;
+            text-align: center;
+            font-weight: 600;
+            color: #333;
+            border-top: 1.5px solid #ccc;
+            border-bottom: 1.5px solid #ccc;
+        }
+        .leaderboard .best-score {
+            font-weight: bold;
+        }
+        .leaderboard .our-model {
+            background-color: #e6f7ff; /* A light blue highlight */
+        }
+        .leaderboard .our-model .model-name {
+            font-weight: bold;
+        }
+        .leaderboard .our-model td {
+            font-weight: bold;
+        }
+        .leaderboard .our-model .score-underline {
+             text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment across Modalities</h1>
+
+    <div class="author-container">
+        <div class="authors">
+            <span class="author-name">Ziwei Zhou<sup>1</sup></span>
+            <span class="author-name">Rui Wang<sup>1</sup></span>
+            <span class="author-name">Zuxuan Wu<sup>2,*</sup></span>
+        </div>
+        <div class="affiliations">
+            <sup>1</sup>Computation and Artificial Intelligence Innovative Collage, Fudan University
+        </div>
+        <div class="affiliations">
+            <sup>2</sup>Institute of Trustworthy Embodied AI, Fudan University
+        </div>
+    </div>
+
+    <div class="badge-container">
+        <a href="https://arxiv.org/abs/2505.17862" class="badge-link" target="_blank" rel="noopener noreferrer">
+            <span class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></span>
+            <span>Paper</span>
+        </a>
+        <a href="https://github.com/Lliar-liar/Daily-Omni" class="badge-link" target="_blank" rel="noopener noreferrer">
+            <span class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3.3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-23.3 2.6-57.5 0 0 21.1-7.1 69.2 25.8 20.1-5.6 41.6-8.4 63.1-8.4 21.6 0 43.1 2.8 63.1 8.4 48.1-33 69.2-25.8 69.2-25.8 13.6 34.2 5.2 51 2.6 57.5 16 17.6 23.6 31.4 23.6 58.9 0 96.5-58.7 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+            <span>GitHub</span>
+        </a>
+        <a href="https://huggingface.co/datasets/liarliar/Daily-Omni" class="badge-link" target="_blank" rel="noopener noreferrer">
+            <span class="badge-icon emoji">🤗</span>
+            <span>Dataset</span>
+        </a>
+        <a href="#leaderboard" class="badge-link">
+            <span class="badge-icon emoji">🏆</span>
+            <span>Leaderboard</span>
+        </a>
+    </div>
+
+    <h2>QA Examples</h2>
+    <img src="assets/qa_example.drawio.png" alt="Examples of Daily-Omni Benchmark">
+    <p class="caption">Examples from our Daily-Omni benchmark, showcasing diverse audio-visual reasoning questions.</p>
+
+    <h2>Generation Pipeline</h2>
+    <img src="assets/QA Pipeline.png" alt="Generation Pipeline">
+    <p class="caption">The Question-Answer generation pipeline of Daily-Omni.</p>
+    <img src="assets/annotation_detail (1).png" alt="Annotation Detail showing how we align audio and visual events.">
+    <p class="caption">Annotation Detail showing how we align audio and visual events.</p>
+
+    <h2>Daily-Omni Agent</h2>
+    <img src="assets/Baseline model (1).png" alt="Baseline model">
+    <p class="caption">Architecture of Daily-Omni Agent.</p>
+    
+    <h2>Model Performance</h2>
+    <img src="assets/visual_ablation_case (1).png" alt="Visual Ablation Case">
+    <p class="caption">A case study on the importance of temporal alignment for visual reasoning.</p>
+    
+    <!-- ===== Leaderboard Section ===== -->
+    <h2 id="leaderboard">Leaderboard</h2>
+    <div class="table-container">
+        <table class="leaderboard">
+            <thead>
+                <tr>
+                    <th>Methods</th>
+                    <th>AV Event<br>Alignment</th>
+                    <th>Comparative</th>
+                    <th>Context<br>Understanding</th>
+                    <th>Event<br>Sequence</th>
+                    <th>Inference</th>
+                    <th>Reasoning</th>
+                    <th>30s<br>Subset</th>
+                    <th>60s<br>Subset</th>
+                    <th>Avg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="section-header">
+                    <th colspan="10">Omni-Modal Language Models (With Visual and Audio)</th>
+                </tr>
+                <tr>
+                    <td class="model-name">Gemini 2.0 Flash</td>
+                    <td class="best-score">62.18</td><td class="best-score">73.28</td><td class="best-score">63.73</td><td class="best-score">63.72</td><td>76.62</td><td class="best-score">75.43</td><td class="best-score">67.23</td><td class="best-score">68.55</td><td class="best-score">67.84</td>
+                </tr>
+                <tr class="our-model">
+                    <td class="model-name">Daily-Omni (ours)</td>
+                    <td><span class="score-underline">51.68</span></td>
+                    <td><span class="score-underline">68.70</span></td>
+                    <td><span class="score-underline">60.10</span></td>
+                    <td><span class="score-underline">53.92</span></td>
+                    <td class="best-score">78.57</td>
+                    <td><span class="score-underline">71.43</span></td>
+                    <td><span class="score-underline">63.99</span></td>
+                    <td><span class="score-underline">59.27</span></td>
+                    <td><span class="score-underline">61.82</span></td>
+                </tr>
+                <tr>
+                    <td class="model-name">Gemini 2.0 Flash Lite</td>
+                    <td>55.04</td><td>64.89</td><td>58.03</td><td>54.25</td><td>74.03</td><td>72.00</td><td>62.44</td><td>60.00</td><td>61.32</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Ola (7B)</td>
+                    <td>40.34</td><td>61.07</td><td>40.41</td><td>43.46</td><td>63.64</td><td>69.71</td><td>51.47</td><td>49.82</td><td>50.71</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen2.5-Omni (7B)</td>
+                    <td>44.12</td><td>51.15</td><td>38.86</td><td>40.52</td><td>57.79</td><td>61.71</td><td>46.68</td><td>48.36</td><td>47.45</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen2.5-Omni (3B)</td>
+                    <td>38.66</td><td>48.09</td><td>33.68</td><td>33.99</td><td>54.55</td><td>44.00</td><td>42.35</td><td>38.36</td><td>40.52</td>
+                </tr>
+                <tr>
+                    <td class="model-name">VideoLLaMA2 (7B)</td>
+                    <td>35.71</td><td>35.88</td><td>35.75</td><td>31.70</td><td>40.91</td><td>34.29</td><td>38.02</td><td>31.82</td><td>35.17</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Unified-IO-2 XL (3B)</td>
+                    <td>30.25</td><td>30.53</td><td>25.39</td><td>29.08</td><td>33.12</td><td>21.71</td><td>28.13</td><td>28.55</td><td>28.32</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Unified-IO-2 XXL (8B)</td>
+                    <td>25.63</td><td>31.30</td><td>26.42</td><td>25.82</td><td>35.06</td><td>29.71</td><td>26.74</td><td>30.00</td><td>28.24</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Unified-IO-2 L (1B)</td>
+                    <td>27.31</td><td>22.90</td><td>26.42</td><td>27.78</td><td>29.87</td><td>29.14</td><td>27.67</td><td>27.09</td><td>27.40</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- ============================= -->
+
+    <h2>Citation</h2>
+    <pre><code>
+@misc{zhou2025dailyomni,
+      title={Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment across Modalities}, 
+      author={Ziwei Zhou and Rui Wang and Zuxuan Wu},
+      year={2025},
+      eprint={2505.17862},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2505.17862}, 
+}
+    </code></pre>
+
+</body>
+</html>
