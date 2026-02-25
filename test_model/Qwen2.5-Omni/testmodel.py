@@ -1,6 +1,7 @@
 import torch
 # Updated imports for Qwen2.5 Omni
-from transformers import Qwen2_5OmniModel, Qwen2_5OmniProcessor
+from transformers import Qwen2_5OmniProcessor
+from transformers import Qwen2_5OmniForConditionalGeneration
 # Assuming qwen_omni_utils contains process_mm_info
 # Make sure this import works in your environment
 try:
@@ -146,10 +147,12 @@ Your answer should be a capital letter representing your choice: A, B, C, or D. 
 """
         # Updated conversation structure for Omni
         conversation= [
-            {"role": "system", "content": 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'},
+            {"role": "system", "content": [
+                {"type": "text", "text": 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'},
+            ]},
             {"role": "user", "content": [
-                {"type":"text","text":prompt},
-                {"type":"video", "video": video_path}
+                {"type":"video", "video": video_path},
+                {"type":"text","text":prompt}
             ]},
         ]
         model_answer = None # Initialize model_answer
@@ -157,7 +160,7 @@ Your answer should be a capital letter representing your choice: A, B, C, or D. 
             text = processor.apply_chat_template(conversation, add_generation_prompt=True, tokenize=False)
             # Use use_audio_in_video from args
             audios, images, videos = process_mm_info(conversation, use_audio_in_video=args.use_audio_in_video)
-            inputs = processor(text=text, audios=audios, images=images, videos=videos, return_tensors="pt", padding=True)
+            inputs = processor(text=text, audio=audios, images=images, videos=videos, return_tensors="pt", padding=True, use_audio_in_video=args.use_audio_in_video)
             inputs = inputs.to(model.device).to(model.dtype)
 
             # Inference
@@ -361,7 +364,7 @@ if __name__ == "__main__":
     print(f"Enable audio output: {not args.disable_audio_output}")
 
     try:
-        model = Qwen2_5OmniModel.from_pretrained(
+        model = Qwen2_5OmniForConditionalGeneration.from_pretrained(
             args.model_name_or_path,
             device_map=args.device,
             torch_dtype=torch_dtype,
