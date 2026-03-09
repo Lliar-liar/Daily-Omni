@@ -21,6 +21,7 @@ import json
 import tqdm
 import os
 import re
+import time
 
 
 def load_json_data(file_path):
@@ -54,6 +55,39 @@ def evaluate_answer(model_answer, correct_answer):
         extracted_answer = match.group(1)
         return extracted_answer == correct_answer.upper()
     return False # If no valid answer format is found
+
+
+def get_effective_input_mode(requested_mode):
+    if requested_mode == "audio":
+        raise ValueError("Qwen2.5-VL does not support audio-only evaluation.")
+    if requested_mode == "all":
+        print("Warning: Qwen2.5-VL is visual-only. Falling back from --input_mode all to visual.")
+    return "visual"
+
+
+def extract_choice_letter(text):
+    if not text:
+        return None
+    match = re.match(r"\s*([A-D])", text.strip().upper())
+    if match:
+        return match.group(1)
+    return None
+
+
+def save_item_results_jsonl(results, output_path):
+    if not output_path:
+        return None
+    output_dir = os.path.dirname(output_path)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
+    sorted_results = sorted(
+        results,
+        key=lambda x: (x.get("item_index", 10**12), str(x.get("video_id", ""))),
+    )
+    with open(output_path, "w", encoding="utf-8") as f:
+        for record in sorted_results:
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    return output_path
 
 # Modified to use args for configuration
 def test_all_questions(model, processor, args):
@@ -102,12 +136,43 @@ def test_all_questions(model, processor, args):
     qa_duration_count={"30s":0, "60s":0}
     qa_duration_correct={"30s":0, "60s":0}
 
+    item_results = []
+
     print(f"Starting evaluation on {args.json_file_path}...")
     print(f"Using video base directory: {args.video_base_dir}")
+    print(f"Input mode: {args.input_mode}")
     print(f"Sampling FPS: {args.fps}")
-    # print(f"Use audio: {args.use_audio_in_video}") # Add back if audio logic is implemented
 
-    for item in tqdm.tqdm(data, desc="Evaluating Questions"):
+    def append_item_result(
+        item_meta,
+        *,
+        raw_output="",
+        is_correct=False,
+        api_call_failed=False,
+        skipped=False,
+        reason=None,
+    ):
+        record = {
+            "item_index": item_meta.get("idx"),
+            "video_id": item_meta.get("video_id"),
+            "question": item_meta.get("question"),
+            "choices": item_meta.get("choices"),
+            "correct_answer": item_meta.get("correct_answer"),
+            "predicted_answer": extract_choice_letter(raw_output),
+            "is_correct": bool(is_correct),
+            "api_call_failed": bool(api_call_failed),
+            "skipped": bool(skipped),
+            "reason": reason,
+            "qa_type": item_meta.get("qa_type"),
+            "video_category": item_meta.get("video_category"),
+            "video_duration": item_meta.get("video_duration"),
+            "input_mode": args.input_mode,
+        }
+        if args.save_raw_output:
+            record["raw_output"] = raw_output
+        item_results.append(record)
+
+    for idx, item in enumerate(tqdm.tqdm(data, desc="Evaluating Questions")):
         question = item.get('Question')
         choices = item.get('Choice')
         correct_answer = item.get('Answer')
@@ -115,10 +180,28 @@ def test_all_questions(model, processor, args):
         qa_type=item.get('Type')
         video_category=item.get('video_category')
         video_duration=item.get('video_duration')
+        item_meta = {
+            "idx": idx,
+            "video_id": video_id,
+            "question": question,
+            "choices": choices,
+            "correct_answer": correct_answer,
+            "qa_type": qa_type,
+            "video_category": video_category,
+            "video_duration": video_duration,
+        }
 
         if not all([question, choices, correct_answer, video_id, qa_type, video_category, video_duration]):
-            print(f"\nWarning: Skipping item due to missing fields. Item Index: {data.index(item)}, Video ID: {video_id or 'Unknown'}")
+            print(f"\nWarning: Skipping item due to missing fields. Item Index: {idx}, Video ID: {video_id or 'Unknown'}")
             failed += 1 # Count incomplete items as failures for tracking
+            append_item_result(
+                item_meta,
+                raw_output="",
+                is_correct=False,
+                api_call_failed=True,
+                skipped=True,
+                reason="missing_fields",
+            )
             continue
 
         try:
@@ -127,11 +210,27 @@ def test_all_questions(model, processor, args):
             if not os.path.exists(video_path):
                 print(f"\nWarning: Video file not found for ID {video_id} at path {video_path}. Skipping.")
                 failed += 1
+                append_item_result(
+                    item_meta,
+                    raw_output="",
+                    is_correct=False,
+                    api_call_failed=True,
+                    skipped=True,
+                    reason=f"video_not_found:{video_path}",
+                )
                 continue
 
         except ValueError as e:
              print(f"\nError constructing video path: {e}. Skipping item for video ID {video_id}")
              failed += 1
+             append_item_result(
+                 item_meta,
+                 raw_output="",
+                 is_correct=False,
+                 api_call_failed=True,
+                 skipped=True,
+                 reason=f"media_path_error:{e}",
+             )
              continue
 
         prompt = f"""
@@ -147,7 +246,6 @@ Your answer should be a capital letter representing your choice: A, B, C, or D. 
                 {"type":"text","text":prompt},
                 # Use fps from args
                 {"type":"video","video":video_path,"fps":args.fps,"max_pixels": 360 * 420}
-                # Add audio handling here if args.use_audio_in_video is True and implemented
             ]},
         ]
         try:
@@ -190,8 +288,16 @@ Your answer should be a capital letter representing your choice: A, B, C, or D. 
             )[0] # Get the string from the list
             # print(text) # Uncomment for debugging prompt
         except Exception as e:
-            print(f"\nError processing video {video_id} (Index: {data.index(item)}): {e}")
+            print(f"\nError processing video {video_id} (Index: {idx}): {e}")
             failed +=1 # increase failed counter.
+            append_item_result(
+                item_meta,
+                raw_output="",
+                is_correct=False,
+                api_call_failed=True,
+                skipped=False,
+                reason=f"inference_error:{e}",
+            )
             continue
 
         is_correct = evaluate_answer(model_answer, correct_answer)
@@ -219,6 +325,14 @@ Your answer should be a capital letter representing your choice: A, B, C, or D. 
 
         if is_correct:
             correct_answers += 1
+        append_item_result(
+            item_meta,
+            raw_output=model_answer,
+            is_correct=is_correct,
+            api_call_failed=False,
+            skipped=False,
+            reason=None,
+        )
 
     # --- Results Reporting ---
     print("\n--- Evaluation Summary ---")
@@ -258,6 +372,15 @@ Your answer should be a capital letter representing your choice: A, B, C, or D. 
              print(f"{duration} Duration: 0/0 = N/A")
 
     print(f"\nTotal items failed during processing: {failed}")
+    item_results_path = args.item_results_path
+    if not item_results_path:
+        ts = time.strftime("%Y%m%d_%H%M%S")
+        item_results_path = os.path.join(
+            "runs", "qwen2_5_vl", f"item_results_{args.input_mode}_{ts}.jsonl"
+        )
+    written_path = save_item_results_jsonl(item_results, item_results_path)
+    if written_path:
+        print(f"Per-item results written to: {written_path}")
     print("--- Evaluation Complete ---")
 
 
@@ -275,6 +398,13 @@ if __name__ == "__main__":
         type=str,
         default='qa.json', # Default value
         help='Path to the JSON file containing QA pairs.'
+    )
+    parser.add_argument(
+        '--input_mode',
+        type=str,
+        default='all',
+        choices=['all', 'visual', 'audio'],
+        help='Input modality for evaluation.'
     )
     parser.add_argument(
         '--fps',
@@ -314,9 +444,26 @@ if __name__ == "__main__":
         choices=['flash_attention_2', 'sdpa', 'eager', None],
         help='Attention implementation (requires compatible hardware/libraries).'
     )
+    parser.add_argument(
+        '--item_results_path',
+        type=str,
+        default=None,
+        help='Path to save per-item JSONL results.'
+    )
+    parser.add_argument(
+        '--save_raw_output',
+        action='store_true',
+        default=True,
+        help='Save raw model output text into per-item JSONL.'
+    )
 
 
     args = parser.parse_args()
+    try:
+        args.input_mode = get_effective_input_mode(args.input_mode)
+    except ValueError as e:
+        print(f"Error: {e}")
+        sys.exit(1)
 
     # Set processor path if not specified
     if args.processor_name_or_path is None:

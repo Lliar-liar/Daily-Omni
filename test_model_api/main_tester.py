@@ -15,12 +15,13 @@ import test_utils as utils
 MODEL_FUNCTION_MAP = {
     'gemini_av': utils.ask_gemini_av,
     'gemini_visual': utils.ask_gemini_visual,
+    'gemini_audio': utils.ask_gemini_audio,
     'gpt4o_visual': utils.ask_gpt4o_visual,
     'gpt4o_text': utils.ask_gpt4o_text,
     'deepseek_text': utils.ask_deepseek_text,
 }
 
-def process_single_item_worker(item_data, model_function):
+def process_single_item_worker(item_index, item_data, model_function):
     """
     Worker function for parallel processing. Calls the appropriate model function.
     Args:
@@ -41,17 +42,38 @@ def process_single_item_worker(item_data, model_function):
     if not all([question, choices, correct_answer_char, video_id, qa_type, video_category, video_duration]):
         # print(f"Warning: Skipping item due to missing fields. Item ID: {video_id if video_id else 'Unknown'}")
         return {
-            "skipped": True, "item_id": video_id, "reason": "Missing fields",
-            "qa_type": qa_type, "video_category": video_category, "video_duration": video_duration
+            "item_index": item_index,
+            "item_id": video_id,
+            "skipped": True,
+            "reason": "Missing fields",
+            "question": question,
+            "api_answer": "error_missing_fields",
+            "correct_answer": correct_answer_char,
+            "is_correct": False,
+            "api_call_failed": True,
+            "qa_type": qa_type,
+            "video_category": video_category,
+            "video_duration": video_duration,
         }
 
     video_path = utils.get_video_path(video_id)
 
-    # Check video existence *before* calling API, except for text-only models
-    if model_function not in [utils.ask_gpt4o_text, utils.ask_deepseek_text]:
+    # Check media existence *before* calling API, except for text-only models
+    if model_function == utils.ask_gemini_audio:
+        audio_path = utils.get_audio_path(video_id)
+        if not os.path.exists(audio_path) and not os.path.exists(video_path):
+            return {
+                "item_index": item_index,
+                "skipped": True, "item_id": video_id, "reason": "Audio/Video file not found",
+                "question": question, "api_answer": "error_audio_video_not_found", "correct_answer": correct_answer_char,
+                "is_correct": False, "api_call_failed": True,
+                "qa_type": qa_type, "video_category": video_category, "video_duration": video_duration
+            }
+    elif model_function not in [utils.ask_gpt4o_text, utils.ask_deepseek_text]:
         if not os.path.exists(video_path):
             # print(f"Warning: Video file not found for ID {video_id} at {video_path}")
             return {
+                "item_index": item_index,
                 "skipped": True, "item_id": video_id, "reason": "Video file not found",
                 "question": question, "api_answer": "error_video_not_found", "correct_answer": correct_answer_char,
                 "is_correct": False, "api_call_failed": True, # Treat missing video as a failure
@@ -68,6 +90,8 @@ def process_single_item_worker(item_data, model_function):
         is_correct = utils.evaluate_answer(api_answer, correct_answer_char)
 
     return {
+        "item_index": item_index,
+        "item_id": video_id,
         "skipped": False,
         "question": question,
         "api_answer": api_answer,
@@ -80,7 +104,7 @@ def process_single_item_worker(item_data, model_function):
     }
 
 
-def run_tests(model_type, execution_mode, qa_json_path, max_items=None):
+def run_tests(model_type, execution_mode, qa_json_path, max_items=None, item_results_path=None):
     """
     Main function to orchestrate loading data and running tests.
     """
@@ -120,8 +144,8 @@ def run_tests(model_type, execution_mode, qa_json_path, max_items=None):
 
     if execution_mode == 'sequential':
         print("Running in Sequential mode...")
-        for item in tqdm(data_to_process, desc="Processing Sequentially"):
-            result = process_single_item_worker(item, model_function_to_call)
+        for item_index, item in enumerate(tqdm(data_to_process, desc="Processing Sequentially")):
+            result = process_single_item_worker(item_index, item, model_function_to_call)
             all_results.append(result)
             # Optional: print intermediate result details
             if not result.get("skipped"):
@@ -140,7 +164,10 @@ def run_tests(model_type, execution_mode, qa_json_path, max_items=None):
 
         with ProcessPoolExecutor(max_workers=num_workers) as executor:
             # Submit tasks
-            futures = [executor.submit(worker_func_with_model, item) for item in data_to_process]
+            futures = [
+                executor.submit(worker_func_with_model, item_index, item)
+                for item_index, item in enumerate(data_to_process)
+            ]
 
             # Process results as they complete with tqdm progress bar
             for future in tqdm(as_completed(futures), total=len(futures), desc="Processing Parallel"):
@@ -155,7 +182,16 @@ def run_tests(model_type, execution_mode, qa_json_path, max_items=None):
                 except Exception as e:
                     print(f"\nError retrieving result from worker process: {e}")
                     # Append a generic failure result if needed
-                    all_results.append({"skipped": True, "reason": f"Worker error: {e}", "api_call_failed": True})
+                    all_results.append(
+                        {
+                            "item_index": None,
+                            "item_id": None,
+                            "skipped": True,
+                            "reason": f"Worker error: {e}",
+                            "api_call_failed": True,
+                            "is_correct": False,
+                        }
+                    )
     else:
         print(f"Error: Invalid execution_mode '{execution_mode}'. Use 'sequential' or 'parallel'.")
         return
@@ -166,6 +202,16 @@ def run_tests(model_type, execution_mode, qa_json_path, max_items=None):
 
     # Calculate and print statistics
     utils.print_statistics(all_results, total_items_requested)
+    if not item_results_path:
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
+        item_results_path = os.path.join(
+            "runs",
+            "test_model_api",
+            f"item_results_{model_type}_{execution_mode}_{timestamp}.jsonl",
+        )
+    written_path = utils.save_item_results_jsonl(all_results, item_results_path)
+    if written_path:
+        print(f"Per-item results written to: {written_path}")
 
 
 if __name__ == "__main__":
@@ -188,6 +234,10 @@ if __name__ == "__main__":
         "--max_items", type=int, default=None,
         help="Maximum number of QA items to process (for testing)."
     )
+    parser.add_argument(
+        "--item_results_path", type=str, default=None,
+        help="Path to save per-item JSONL results (for Bootstrap CI)."
+    )
 
     args = parser.parse_args()
 
@@ -196,6 +246,7 @@ if __name__ == "__main__":
     required_keys = {
         'gemini_av': ['GEMINI_API_KEY'],
         'gemini_visual': ['GEMINI_API_KEY'],
+        'gemini_audio': ['GEMINI_API_KEY'],
         'gpt4o_visual': ['GPT4O_API_KEY', 'GPT4O_BASE_URL'],
         'gpt4o_text': ['GPT4O_API_KEY', 'GPT4O_BASE_URL'],
         'deepseek_text': ['DEEPSEEK_API_KEY', 'DEEPSEEK_BASE_URL']
@@ -215,6 +266,8 @@ if __name__ == "__main__":
          # Check for external dependencies if needed
          if args.model == 'gemini_visual':
               print(f"Note: '{args.model}' requires ffmpeg to be installed and accessible at '{config.FFMPEG_PATH}'.")
+         if args.model == 'gemini_audio':
+              print(f"Note: '{args.model}' prefers pre-generated '*_audio.wav'; otherwise it falls back to ffmpeg extraction via '{config.FFMPEG_PATH}'.")
          if args.model == 'gpt4o_visual':
               print(f"Note: '{args.model}' requires opencv-python (cv2) to be installed.")
 
@@ -224,5 +277,6 @@ if __name__ == "__main__":
         model_type=args.model,
         execution_mode=args.mode,
         qa_json_path=args.qa_file,
-        max_items=args.max_items
+        max_items=args.max_items,
+        item_results_path=args.item_results_path,
     )

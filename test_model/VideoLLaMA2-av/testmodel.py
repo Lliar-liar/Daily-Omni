@@ -14,6 +14,7 @@ import json
 import tqdm
 import os
 import re # Import re for potentially refining answer evaluation
+import time
 
 # --- Removed Global Variables ---
 # video_base_dir='/data/Videos'
@@ -58,6 +59,40 @@ def evaluate_answer(model_answer, correct_answer):
     # return model_ans_processed.upper().startswith(correct_answer.strip().upper())
     print(f"Warning: Model answer '{model_ans_processed}' doesn't start with A, B, C, or D.")
     return False
+
+
+def get_modal_type(input_mode):
+    mapping = {
+        "audio": "a",
+        "visual": "v",
+        "all": "av",
+    }
+    return mapping[input_mode]
+
+
+def extract_choice_letter(text):
+    if not text:
+        return None
+    match = re.match(r"\s*([A-D])", text.strip().upper())
+    if match:
+        return match.group(1)
+    return None
+
+
+def save_item_results_jsonl(results, output_path):
+    if not output_path:
+        return None
+    output_dir = os.path.dirname(output_path)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
+    sorted_results = sorted(
+        results,
+        key=lambda x: (x.get("item_index", 10**12), str(x.get("video_id", ""))),
+    )
+    with open(output_path, "w", encoding="utf-8") as f:
+        for record in sorted_results:
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    return output_path
 
 
 # Modified to use args for configuration and removed file_path argument
@@ -106,15 +141,45 @@ def test_all_questions(model, processor, tokenizer, preprocess, args):
     failed = 0
     qa_duration_count={"30s":0, "60s":0}
     qa_duration_correct={"30s":0, "60s":0}
+    item_results = []
+    modal_type = get_modal_type(args.input_mode)
 
     print(f"\n--- Starting Evaluation ---")
     print(f"Dataset: {args.json_file_path}")
     print(f"Video Base Directory: {args.video_base_dir}")
     print(f"Model Path: {args.model_path}")
-    print(f"Modal Type: {args.modal_type}")
+    print(f"Input mode: {args.input_mode}")
     print(f"Total Questions: {total_questions}")
     print("-" * 30)
 
+    def append_item_result(
+        item_meta,
+        *,
+        raw_output="",
+        is_correct=False,
+        api_call_failed=False,
+        skipped=False,
+        reason=None,
+    ):
+        record = {
+            "item_index": item_meta.get("idx"),
+            "video_id": item_meta.get("video_id"),
+            "question": item_meta.get("question"),
+            "choices": item_meta.get("choices"),
+            "correct_answer": item_meta.get("correct_answer"),
+            "predicted_answer": extract_choice_letter(raw_output),
+            "is_correct": bool(is_correct),
+            "api_call_failed": bool(api_call_failed),
+            "skipped": bool(skipped),
+            "reason": reason,
+            "qa_type": item_meta.get("qa_type"),
+            "video_category": item_meta.get("video_category"),
+            "video_duration": item_meta.get("video_duration"),
+            "input_mode": args.input_mode,
+        }
+        if args.save_raw_output:
+            record["raw_output"] = raw_output
+        item_results.append(record)
 
     for item_index, item in enumerate(tqdm.tqdm(data, desc="Evaluating Questions")):
         question = item.get('Question')
@@ -124,11 +189,29 @@ def test_all_questions(model, processor, tokenizer, preprocess, args):
         qa_type=item.get('Type')
         video_category=item.get('video_category')
         video_duration=item.get('video_duration')
+        item_meta = {
+            "idx": item_index,
+            "video_id": video_id,
+            "question": question,
+            "choices": choices,
+            "correct_answer": correct_answer,
+            "qa_type": qa_type,
+            "video_category": video_category,
+            "video_duration": video_duration,
+        }
 
         # Stricter check for required fields
         if not all([question, choices, correct_answer, video_id, qa_type, video_category, video_duration]):
             print(f"\nWarning: Skipping item (Index: {item_index}) due to missing fields. Video ID: {video_id or 'Unknown'}")
             failed += 1
+            append_item_result(
+                item_meta,
+                raw_output="",
+                is_correct=False,
+                api_call_failed=True,
+                skipped=True,
+                reason="missing_fields",
+            )
             continue
 
         try:
@@ -137,28 +220,52 @@ def test_all_questions(model, processor, tokenizer, preprocess, args):
             if not os.path.exists(video_path):
                 print(f"\nWarning: Video file not found for ID {video_id} at path {video_path} (Index: {item_index}). Skipping.")
                 failed += 1
+                append_item_result(
+                    item_meta,
+                    raw_output="",
+                    is_correct=False,
+                    api_call_failed=True,
+                    skipped=True,
+                    reason=f"video_not_found:{video_path}",
+                )
                 continue
         except ValueError as e:
              print(f"\nError constructing video path: {e}. Skipping item for video ID {video_id} (Index: {item_index})")
              failed += 1
+             append_item_result(
+                 item_meta,
+                 raw_output="",
+                 is_correct=False,
+                 api_call_failed=True,
+                 skipped=True,
+                 reason=f"media_path_error:{e}",
+             )
              continue
 
         # --- Preprocessing based on modal_type ---
         try:
-            if args.modal_type == "a":
+            if modal_type == "a":
                 # Assuming preprocess expects only path for audio
                 audio_video_tensor = preprocess(video_path)
             else: # 'v' or 'av'
                 # Pass va=True only if modal_type is 'av'
-                audio_video_tensor = preprocess(video_path, va=(args.modal_type == "av"))
+                audio_video_tensor = preprocess(video_path, va=(modal_type == "av"))
         except Exception as e:
              print(f"\nError during preprocessing video {video_id} (Index: {item_index}): {e}")
              failed += 1
+             append_item_result(
+                 item_meta,
+                 raw_output="",
+                 is_correct=False,
+                 api_call_failed=True,
+                 skipped=False,
+                 reason=f"preprocess_error:{e}",
+             )
              continue
         # -----------------------------------------
 
         # --- Prompt Formatting ---
-        prompt = f"""Your task is to accurately answer multiple-choice questions based on the given {'audio' if args.modal_type == 'a' else 'video'}.
+        prompt = f"""Your task is to accurately answer multiple-choice questions based on the given {'audio' if modal_type == 'a' else 'video'}.
 Select the single most accurate answer from the given choices.
 Question: {question}
 Choices: {choices}
@@ -174,7 +281,7 @@ Your answer should be a capital letter representing your choice: A, B, C, or D. 
                 model=model,
                 processor=processor, # Pass processor if mm_infer needs it (check videollama2 docs)
                 tokenizer=tokenizer,
-                modal='audio' if args.modal_type == "a" else "video",
+                modal='audio' if modal_type == "a" else "video",
                 do_sample=False,
                 max_new_tokens=10 # Limit output length, expecting just a letter
             )
@@ -182,6 +289,14 @@ Your answer should be a capital letter representing your choice: A, B, C, or D. 
         except Exception as e:
             print(f"\nError during inference for video {video_id} (Index: {item_index}): {e}")
             failed +=1
+            append_item_result(
+                item_meta,
+                raw_output="",
+                is_correct=False,
+                api_call_failed=True,
+                skipped=False,
+                reason=f"inference_error:{e}",
+            )
             continue # Skip to the next item
 
         is_correct = evaluate_answer(model_answer, correct_answer)
@@ -208,6 +323,14 @@ Your answer should be a capital letter representing your choice: A, B, C, or D. 
 
         if is_correct:
             correct_answers += 1
+        append_item_result(
+            item_meta,
+            raw_output=model_answer,
+            is_correct=is_correct,
+            api_call_failed=False,
+            skipped=False,
+            reason=None,
+        )
         # ---------------------
 
     # --- Results Reporting ---
@@ -247,6 +370,15 @@ Your answer should be a capital letter representing your choice: A, B, C, or D. 
              print(f"{duration} Duration: 0/0 = N/A")
 
     print(f"\nTotal items failed during processing: {failed}")
+    item_results_path = args.item_results_path
+    if not item_results_path:
+        ts = time.strftime("%Y%m%d_%H%M%S")
+        item_results_path = os.path.join(
+            "runs", "videollama2_av", f"item_results_{args.input_mode}_{ts}.jsonl"
+        )
+    written_path = save_item_results_jsonl(item_results, item_results_path)
+    if written_path:
+        print(f"Per-item results written to: {written_path}")
     print("--- Evaluation Complete ---")
 
 
@@ -275,11 +407,23 @@ if __name__ == "__main__":
 
     # --- Processing Arguments ---
     parser.add_argument(
-        '--modal-type',
-        choices=["a", "v", "av"],
-        default='av', # Kept existing default
-        help='Modality to use: "a" (audio only), "v" (video only), "av" (audio-visual).'
+        '--input_mode',
+        choices=["all", "visual", "audio"],
+        default='all',
+        help='Input modality to use: "audio", "visual", or "all".'
         )
+    parser.add_argument(
+        '--item_results_path',
+        type=str,
+        default=None,
+        help='Path to save per-item JSONL results.'
+    )
+    parser.add_argument(
+        '--save_raw_output',
+        action='store_true',
+        default=True,
+        help='Save raw model output text into per-item JSONL.'
+    )
 
     # --- Optional: Add device argument if model_init supports it ---
     # parser.add_argument('--device', type=str, default='cuda', help='Device to run the model on (e.g., "cuda", "cpu").')
@@ -299,29 +443,30 @@ if __name__ == "__main__":
     # --------------------
 
     # --- Configure Model based on Modality ---
-    print(f"Configuring model for modal type: {args.modal_type}")
+    print(f"Configuring model for input mode: {args.input_mode}")
     # Ensure model attributes exist before setting to None
     try:
-        if args.modal_type == "a":
+        modal_type = get_modal_type(args.input_mode)
+        if modal_type == "a":
             if hasattr(model, 'model') and hasattr(model.model, 'vision_tower'):
                  model.model.vision_tower = None
                  print("Disabled vision tower.")
             else:
                  print("Warning: Could not find model.model.vision_tower to disable.")
-        elif args.modal_type == "v":
+        elif modal_type == "v":
             if hasattr(model, 'model') and hasattr(model.model, 'audio_tower'):
                 model.model.audio_tower = None
                 print("Disabled audio tower.")
             else:
                 print("Warning: Could not find model.model.audio_tower to disable.")
-        elif args.modal_type == "av":
+        elif modal_type == "av":
             print("Using both audio and video towers.")
             pass # Keep both active
         else:
              # This case should not be reached due to argparse choices, but good practice
-             raise NotImplementedError(f"Modal type '{args.modal_type}' not implemented for model configuration.")
+             raise NotImplementedError(f"Input mode '{args.input_mode}' not implemented for model configuration.")
 
-        preprocess_key = 'audio' if args.modal_type == "a" else "video"
+        preprocess_key = 'audio' if modal_type == "a" else "video"
         if preprocess_key in processor:
             preprocess = processor[preprocess_key]
             print(f"Using '{preprocess_key}' preprocessor.")
