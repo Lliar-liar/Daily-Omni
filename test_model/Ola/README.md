@@ -44,3 +44,28 @@ We provide our checkpoints at [Huggingface](https://huggingface.co/collections/T
 
 4. `--USE_SPEECH`参数在设置为`True`时测试audio_visual，设置为`False`
 
+## Local `inference/testmodel.py` parameters
+
+This folder uses `inference/testmodel.py`.
+
+Example:
+
+```bash
+python inference/testmodel.py \
+  --model_path THUdyh/Ola-7b \
+  --video_base_dir Videos \
+  --json_file_path qa.json
+```
+
+Main parameters:
+
+- `--model_path`: model or local checkpoint path.
+- `--video_base_dir`: video root directory.
+- `--json_file_path`: QA json path.
+- `--text`: prompt text for direct single-sample usage.
+- `--audio_path`: optional standalone audio path.
+- `--image_path`: optional image path.
+
+Note:
+
+- Ola currently uses its own script interface and has not been aligned to the unified `--input_mode {all,visual,audio}` CLI used by the other `test_model/*/testmodel.py` scripts.

@@ -9,7 +9,7 @@ git clone unified-io-2.pytorch
 cd unified-io-2.pytorch
 pip install -r requirements.txt
 ```
-Download the videos and revise the `video_base_dir` in `testmodel.py`
+Download the videos, then pass `--video_base_dir` and `--json_file_path` when running `testmodel.py`.
 ## Loading the model
 
 Load the model with 
@@ -32,6 +32,30 @@ Here "/path/to/tokenizer.model" needs to point to the LLaMa tokenizer file.
 ## Test the model
 Run `testmodel.py`. Adjust the `--model` parameter to test different model.
 
+Example:
 
+```bash
+python testmodel.py \
+  --model allenai/uio2-large \
+  --video_base_dir Videos \
+  --json_file_path qa.json \
+  --input_mode all
+```
+
+Unified CLI notes:
+
+- `--input_mode {all,visual,audio}` is exposed for consistency with other `test_model` scripts.
+- `unified-io-2.pytorch` currently only supports `--input_mode all`.
+- Raw model output is saved by default in per-item JSONL. If `--item_results_path` is omitted, output is written to `runs/unified_io_2/item_results_all_<timestamp>.jsonl`.
+
+Main parameters:
+
+- `--model`: model name, for example `allenai/uio2-large`.
+- `--gpu`: GPU id, use `-1` for CPU.
+- `--video_base_dir`: video root directory.
+- `--json_file_path`: QA json path.
+- `--input_mode`: keep this as `all`.
+- `--item_results_path`: optional JSONL output path.
+- `--save_raw_output`: raw output is saved by default.
 
 

@@ -4,7 +4,7 @@ import platform
 import os
 
 # --- Model Selection ---
-# Options: 'gemini_av', 'gemini_visual', 'gpt4o_visual', 'gpt4o_text', 'deepseek_text'
+# Options: 'gemini_av', 'gemini_visual', 'gemini_audio', 'gpt4o_visual', 'gpt4o_text', 'deepseek_text'
 DEFAULT_MODEL_TYPE = 'gemini_av'
 
 # --- Execution Mode ---
@@ -38,8 +38,9 @@ DEEPSEEK_BASE_URL = os.environ.get('DEEPSEEK_BASE_URL', 'YOUR_BASE_URL')
 DEEPSEEK_MODEL_NAME = "deepseek-chat"
 
 # --- Model Specific Settings ---
-GEMINI_AV_MODEL_NAME = 'gemini-2.0-flash'
-GEMINI_VISUAL_MODEL_NAME = 'gemini-2.0-flash' # Can be the same or different
+GEMINI_AV_MODEL_NAME = os.environ.get('GEMINI_AV_MODEL_NAME', 'gemini-2.5-flash')
+GEMINI_VISUAL_MODEL_NAME = os.environ.get('GEMINI_VISUAL_MODEL_NAME', 'gemini-2.5-flash') # Can be the same or different
+GEMINI_AUDIO_MODEL_NAME = os.environ.get('GEMINI_AUDIO_MODEL_NAME', GEMINI_AV_MODEL_NAME)
 
 # Settings for frame extraction (GPT-4o Visual)
 SECONDS_PER_FRAME_GPT4O = 2
@@ -50,7 +51,7 @@ BASE_DELAY = 4 # seconds
 
 # --- Parallel Processing ---
 # Use None to default to os.cpu_count() or set a specific number
-MAX_WORKERS = None
+MAX_WORKERS = 12
 
 # --- Gemini Safety Settings ---
 # Block harmful content minimally for testing, adjust as needed

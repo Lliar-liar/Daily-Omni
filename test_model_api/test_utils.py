@@ -35,6 +35,12 @@ def get_video_path(video_id, base_path=config.BASE_VIDEO_DIR):
     # Assumes video ID is the folder name and file is {video_id}_video.mp4
     return os.path.join(base_path, str(video_id), f'{str(video_id)}_video.mp4')
 
+
+def get_audio_path(video_id, base_path=config.BASE_VIDEO_DIR):
+    """Constructs the audio file path from a video ID."""
+    # Assumes audio file is {video_id}_audio.wav under the same folder as video.
+    return os.path.join(base_path, str(video_id), f'{str(video_id)}_audio.wav')
+
 # --- Evaluation ---
 
 def evaluate_answer(api_answer, correct_answer_char):
@@ -143,6 +149,23 @@ def print_statistics(results_data, total_items_requested):
     print("-" * 20)
 
 
+def save_item_results_jsonl(results_data, output_path):
+    """Save per-item test results as JSONL (one record per QA item)."""
+    if not output_path:
+        return None
+    output_dir = os.path.dirname(output_path)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
+    sorted_results = sorted(
+        results_data,
+        key=lambda x: (x.get("item_index", 10**12), str(x.get("item_id", ""))),
+    )
+    with open(output_path, "w", encoding="utf-8") as f:
+        for result in sorted_results:
+            f.write(json.dumps(result, ensure_ascii=False) + "\n")
+    return output_path
+
+
 # --- Video/Frame Processing ---
 
 def encode_video_base64(video_path):
@@ -155,6 +178,43 @@ def encode_video_base64(video_path):
         return None
     except Exception as e:
         print(f"Error encoding video {video_path}: {e}")
+        return None
+
+
+def encode_audio_base64(audio_path):
+    """Encodes an audio file to base64."""
+    try:
+        with open(audio_path, "rb") as audio_file:
+            return base64.b64encode(audio_file.read()).decode("utf-8")
+    except FileNotFoundError:
+        print(f"Error: Audio file not found for encoding: {audio_path}")
+        return None
+    except Exception as e:
+        print(f"Error encoding audio {audio_path}: {e}")
+        return None
+
+
+def extract_audio_from_video(video_path, ffmpeg_path=config.FFMPEG_PATH):
+    """Extracts audio from a video into a temporary wav file."""
+    temp_audio_path = f"temp_audio_{os.path.basename(video_path)}_{random.randint(1000,9999)}.wav"
+    try:
+        command = [
+            ffmpeg_path, '-i', video_path, '-vn', '-ac', '1', '-ar', '16000',
+            '-y', temp_audio_path, '-hide_banner', '-loglevel', 'error'
+        ]
+        subprocess.run(command, check=True, capture_output=True, text=True)
+        if not os.path.exists(temp_audio_path):
+            print(f"Error: ffmpeg completed but output file '{temp_audio_path}' not found.")
+            return None
+        return temp_audio_path
+    except FileNotFoundError:
+        print(f"Error: ffmpeg command '{ffmpeg_path}' not found.")
+        return None
+    except subprocess.CalledProcessError as e:
+        print(f"Error extracting audio with ffmpeg for {video_path}: {e.stderr}")
+        return None
+    except Exception as e:
+        print(f"Unexpected error extracting audio from {video_path}: {e}")
         return None
 
 def encode_video_without_audio(video_path, ffmpeg_path=config.FFMPEG_PATH):
@@ -370,7 +430,7 @@ def ask_gemini_visual(question, choices, video_path):
     system_prompt = f"""
     Your task is to accurately answer multiple-choice questions based on the given video.
     Select the single most accurate answer from the given choices. 
-    Your answer should be a capital letter representing your choice: A, B, C, or D. Don't generate any other text.
+    Your output should only be a capital letter representing your choice: A, B, C, or D. **Don't generate any other text**.
     """
     print(f"Processing (Gemini Visual): {os.path.basename(video_path)}")
     encoded_video_no_audio = encode_video_without_audio(video_path)
@@ -385,6 +445,47 @@ def ask_gemini_visual(question, choices, video_path):
         prompt
     ]
     return _call_gemini_api(config.GEMINI_VISUAL_MODEL_NAME, contents, system_prompt)
+
+
+def ask_gemini_audio(question, choices, video_path):
+    """Calls Gemini with audio only."""
+    system_prompt = """
+    Your task is to accurately answer multiple-choice questions based on the given audio.
+    Select the single most accurate answer from the given choices.
+    Your output should only be a capital letter representing your choice: A, B, C, or D. **Don't generate any other text**.
+    """
+    print(f"Processing (Gemini Audio): {os.path.basename(video_path)}")
+    video_id = os.path.basename(video_path).replace("_video.mp4", "")
+    candidate_audio_path = get_audio_path(video_id)
+
+    temp_audio_path = None
+    try:
+        if os.path.exists(candidate_audio_path):
+            audio_path = candidate_audio_path
+        else:
+            temp_audio_path = extract_audio_from_video(video_path)
+            if temp_audio_path is None:
+                return "error_audio_extraction"
+            audio_path = temp_audio_path
+
+        encoded_audio = encode_audio_base64(audio_path)
+        if encoded_audio is None:
+            return "error_audio_encoding"
+
+        prompt = f'''Given the audio, answer the question below.
+        Question: {question}
+        Choices: {choices}'''
+        contents = [
+            {"mime_type": "audio/wav", "data": encoded_audio},
+            prompt
+        ]
+        return _call_gemini_api(config.GEMINI_AUDIO_MODEL_NAME, contents, system_prompt)
+    finally:
+        if temp_audio_path and os.path.exists(temp_audio_path):
+            try:
+                os.remove(temp_audio_path)
+            except Exception as e_rem:
+                print(f"Warning: Could not remove temporary file {temp_audio_path}: {e_rem}")
 
 def _call_openai_compatible_api(client_config, model_name, messages, temperature=None, max_tokens=None):
     """Internal helper to call OpenAI-compatible APIs with retry logic."""
