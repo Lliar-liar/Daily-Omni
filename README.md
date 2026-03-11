@@ -11,6 +11,10 @@ This is the official repository of Daily-Omni: Towards Audio-Visual Reasoning wi
 
 ![Examples of Daily-Omni Benchmark](assets/qa_example.drawio.png)
 
+## News
+
+- 2026-03-11: Updated the arXiv paper and refreshed the Leaderboard with new results.
+
 ## Requirements
 
 To install requirements:
