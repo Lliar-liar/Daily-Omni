@@ -229,73 +229,285 @@
     
     <!-- ===== Leaderboard Section ===== -->
     <h2 id="leaderboard">Leaderboard</h2>
+    <p>Performance comparison of MLLMs on Daily-Omni. Random guess accuracy is 25%.</p>
+    <p>Abbreviations: <code>AV Align</code> = audio-visual alignment, <code>Comp.</code> = comparative, <code>Ctx. Und.</code> = context understanding, <code>Evt. Seq.</code> = event sequence, <code>Infer.</code> = inference, <code>Reas.</code> = reasoning.</p>
+    <p>Closed-source models are marked with <code>(Closed)</code> and open-source models with <code>(Open)</code>.</p>
+
+    <h3>Omni-Modal Language Models (With Visual and Audio)</h3>
     <div class="table-container">
         <table class="leaderboard">
             <thead>
                 <tr>
                     <th>Methods</th>
-                    <th>AV Event<br>Alignment</th>
-                    <th>Comparative</th>
-                    <th>Context<br>Understanding</th>
-                    <th>Event<br>Sequence</th>
+                    <th>AV Align</th>
+                    <th>Comparison</th>
+                    <th>Context Understanding</th>
+                    <th>Event Sequence</th>
                     <th>Inference</th>
                     <th>Reasoning</th>
-                    <th>30s<br>Subset</th>
-                    <th>60s<br>Subset</th>
+                    <th>30s</th>
+                    <th>60s</th>
                     <th>Avg</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="section-header">
-                    <th colspan="10">Omni-Modal Language Models (With Visual and Audio)</th>
+                <tr>
+                    <td class="model-name">Qwen3-Omni-30B-A3B-Thinking (Open)</td>
+                    <td>65.97</td><td>80.92</td><td>65.80</td><td>71.57</td><td>85.06</td><td>80.57</td><td>76.04</td><td>70.73</td><td>73.60</td>
                 </tr>
                 <tr>
-                    <td class="model-name">Gemini 2.0 Flash</td>
-                    <td class="best-score">62.18</td><td class="best-score">73.28</td><td class="best-score">63.73</td><td class="best-score">63.72</td><td>76.62</td><td class="best-score">75.43</td><td class="best-score">67.23</td><td class="best-score">68.55</td><td class="best-score">67.84</td>
+                    <td class="model-name">Gemini 2.5 Flash (Closed)</td>
+                    <td>73.82</td><td>66.41</td><td>72.04</td><td>68.03</td><td>78.67</td><td>81.87</td><td>69.86</td><td>77.09</td><td>73.06</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen3-Omni-30B-A3B-Instruct (Open)</td>
+                    <td>66.81</td><td>80.92</td><td>64.77</td><td>66.34</td><td>81.17</td><td>81.14</td><td>71.87</td><td>71.82</td><td>71.85</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Gemini 2.0 Flash (Closed)</td>
+                    <td>62.18</td><td>73.28</td><td>63.73</td><td>63.72</td><td>76.62</td><td>75.43</td><td>67.23</td><td>68.55</td><td>67.84</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen2.5-Omni-7B-Instruct (Open)</td>
+                    <td>48.32</td><td>69.47</td><td>58.55</td><td>58.17</td><td>76.62</td><td>73.14</td><td>64.61</td><td>59.09</td><td>62.07</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Gemini 2.5 Flash Lite (Closed)</td>
+                    <td>57.56</td><td>68.70</td><td>56.48</td><td>52.61</td><td>79.22</td><td>69.71</td><td>63.52</td><td>60.00</td><td>61.90</td>
                 </tr>
                 <tr class="our-model">
-                    <td class="model-name">Daily-Omni (ours)</td>
-                    <td><span class="score-underline">51.68</span></td>
-                    <td><span class="score-underline">68.70</span></td>
-                    <td><span class="score-underline">60.10</span></td>
-                    <td><span class="score-underline">53.92</span></td>
-                    <td class="best-score">78.57</td>
-                    <td><span class="score-underline">71.43</span></td>
-                    <td><span class="score-underline">63.99</span></td>
-                    <td><span class="score-underline">59.27</span></td>
-                    <td><span class="score-underline">61.82</span></td>
+                    <td class="model-name">Daily-Omni-Baseline-Qwen2.5 (Open)</td>
+                    <td>51.68</td><td>68.70</td><td>60.10</td><td>53.92</td><td>78.57</td><td>71.43</td><td>63.99</td><td>59.27</td><td>61.82</td>
                 </tr>
                 <tr>
-                    <td class="model-name">Gemini 2.0 Flash Lite</td>
+                    <td class="model-name">Gemini 2.0 Flash Lite (Closed)</td>
                     <td>55.04</td><td>64.89</td><td>58.03</td><td>54.25</td><td>74.03</td><td>72.00</td><td>62.44</td><td>60.00</td><td>61.32</td>
                 </tr>
                 <tr>
-                    <td class="model-name">Ola (7B)</td>
+                    <td class="model-name">Qwen2.5-Omni-3B-Instruct (Open)</td>
+                    <td>50.84</td><td>69.47</td><td>53.89</td><td>53.92</td><td>75.97</td><td>70.29</td><td>62.60</td><td>57.45</td><td>60.23</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Ola (7B) (Open)</td>
                     <td>40.34</td><td>61.07</td><td>40.41</td><td>43.46</td><td>63.64</td><td>69.71</td><td>51.47</td><td>49.82</td><td>50.71</td>
                 </tr>
                 <tr>
-                    <td class="model-name">Qwen2.5-Omni (7B)</td>
-                    <td>44.12</td><td>51.15</td><td>38.86</td><td>40.52</td><td>57.79</td><td>61.71</td><td>46.68</td><td>48.36</td><td>47.45</td>
-                </tr>
-                <tr>
-                    <td class="model-name">Qwen2.5-Omni (3B)</td>
-                    <td>38.66</td><td>48.09</td><td>33.68</td><td>33.99</td><td>54.55</td><td>44.00</td><td>42.35</td><td>38.36</td><td>40.52</td>
-                </tr>
-                <tr>
-                    <td class="model-name">VideoLLaMA2 (7B)</td>
+                    <td class="model-name">VideoLLaMA2 (7B) (Open)</td>
                     <td>35.71</td><td>35.88</td><td>35.75</td><td>31.70</td><td>40.91</td><td>34.29</td><td>38.02</td><td>31.82</td><td>35.17</td>
                 </tr>
                 <tr>
-                    <td class="model-name">Unified-IO-2 XL (3B)</td>
+                    <td class="model-name">Unified-IO-2 XL (3B) (Open)</td>
                     <td>30.25</td><td>30.53</td><td>25.39</td><td>29.08</td><td>33.12</td><td>21.71</td><td>28.13</td><td>28.55</td><td>28.32</td>
                 </tr>
                 <tr>
-                    <td class="model-name">Unified-IO-2 XXL (8B)</td>
+                    <td class="model-name">Unified-IO-2 XXL (8B) (Open)</td>
                     <td>25.63</td><td>31.30</td><td>26.42</td><td>25.82</td><td>35.06</td><td>29.71</td><td>26.74</td><td>30.00</td><td>28.24</td>
                 </tr>
                 <tr>
-                    <td class="model-name">Unified-IO-2 L (1B)</td>
+                    <td class="model-name">Unified-IO-2 L (1B) (Open)</td>
                     <td>27.31</td><td>22.90</td><td>26.42</td><td>27.78</td><td>29.87</td><td>29.14</td><td>27.67</td><td>27.09</td><td>27.40</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Omni-Modal Language Models (Visual Only)</h3>
+    <div class="table-container">
+        <table class="leaderboard">
+            <thead>
+                <tr>
+                    <th>Methods</th>
+                    <th>AV Align</th>
+                    <th>Comp.</th>
+                    <th>Ctx. Und.</th>
+                    <th>Evt. Seq.</th>
+                    <th>Infer.</th>
+                    <th>Reas.</th>
+                    <th>30s</th>
+                    <th>60s</th>
+                    <th>Avg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="model-name">Qwen3-Omni-30B-A3B-Instruct (Open)</td>
+                    <td>47.90</td><td>67.18</td><td>56.48</td><td>53.92</td><td>70.78</td><td>61.14</td><td>57.96</td><td>57.64</td><td>57.81<sub>-14.0</sub></td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen3-Omni-30B-A3B-Thinking (Open)</td>
+                    <td>44.96</td><td>64.89</td><td>55.96</td><td>59.48</td><td>67.53</td><td>60.00</td><td>56.26</td><td>59.45</td><td>57.73<sub>-15.9</sub></td>
+                </tr>
+                <tr>
+                    <td class="model-name">Gemini 2.0 Flash (Closed)</td>
+                    <td>39.08</td><td>64.12</td><td>56.48</td><td>56.21</td><td>67.53</td><td>62.29</td><td>56.57</td><td>55.45</td><td>56.06<sub>-11.8</sub></td>
+                </tr>
+                <tr>
+                    <td class="model-name">Gemini 2.0 Flash Lite (Closed)</td>
+                    <td>43.70</td><td>58.02</td><td>53.89</td><td>45.10</td><td>64.29</td><td>60.57</td><td>53.01</td><td>51.64</td><td>52.38<sub>-8.9</sub></td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen2.5-Omni-7B-Instruct (Open)</td>
+                    <td>34.45</td><td>58.78</td><td>47.67</td><td>49.67</td><td>62.99</td><td>54.86</td><td>48.69</td><td>51.09</td><td>49.79<sub>-12.3</sub></td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen2.5-Omni-3B-Instruct (Open)</td>
+                    <td>37.39</td><td>51.91</td><td>44.56</td><td>41.18</td><td>64.29</td><td>48.00</td><td>46.52</td><td>45.64</td><td>46.12<sub>-14.1</sub></td>
+                </tr>
+                <tr>
+                    <td class="model-name">Gemini 2.5 Flash (Closed)</td>
+                    <td>37.55</td><td>37.21</td><td>40.43</td><td>44.78</td><td>57.05</td><td>53.29</td><td>42.35</td><td>47.46</td><td>44.61<sub>-28.5</sub></td>
+                </tr>
+                <tr>
+                    <td class="model-name">Gemini 2.5 Flash Lite (Closed)</td>
+                    <td>36.97</td><td>45.80</td><td>37.31</td><td>39.54</td><td>59.74</td><td>47.43</td><td>44.67</td><td>41.27</td><td>43.11<sub>-18.8</sub></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Omni-Modal Language Models (Audio Only)</h3>
+    <div class="table-container">
+        <table class="leaderboard">
+            <thead>
+                <tr>
+                    <th>Methods</th>
+                    <th>AV Align</th>
+                    <th>Comp.</th>
+                    <th>Ctx. Und.</th>
+                    <th>Evt. Seq.</th>
+                    <th>Infer.</th>
+                    <th>Reas.</th>
+                    <th>30s</th>
+                    <th>60s</th>
+                    <th>Avg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="model-name">Qwen3-Omni-30B-A3B-Instruct (Open)</td>
+                    <td>54.20</td><td>69.47</td><td>51.81</td><td>51.63</td><td>74.03</td><td>78.86</td><td>63.37</td><td>58.18</td><td>60.99<sub>-10.9</sub></td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen3-Omni-30B-A3B-Thinking (Open)</td>
+                    <td>54.62</td><td>67.94</td><td>49.22</td><td>51.31</td><td>77.27</td><td>77.71</td><td>65.22</td><td>55.27</td><td>60.65<sub>-13.0</sub></td>
+                </tr>
+                <tr>
+                    <td class="model-name">Gemini 2.5 Flash (Closed)</td>
+                    <td>46.64</td><td>55.73</td><td>44.56</td><td>42.48</td><td>70.78</td><td>78.86</td><td>55.64</td><td>52.18</td><td>54.05<sub>-19.0</sub></td>
+                </tr>
+                <tr>
+                    <td class="model-name">Gemini 2.5 Flash Lite (Closed)</td>
+                    <td>42.02</td><td>61.83</td><td>41.97</td><td>45.10</td><td>68.83</td><td>65.14</td><td>54.25</td><td>48.91</td><td>51.80<sub>-10.1</sub></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Visual Language Models (Visual Only)</h3>
+    <div class="table-container">
+        <table class="leaderboard">
+            <thead>
+                <tr>
+                    <th>Methods</th>
+                    <th>AV Align</th>
+                    <th>Comp.</th>
+                    <th>Ctx. Und.</th>
+                    <th>Evt. Seq.</th>
+                    <th>Infer.</th>
+                    <th>Reas.</th>
+                    <th>30s</th>
+                    <th>60s</th>
+                    <th>Avg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="model-name">Qwen3-VL-30B-A3B-Instruct (Open)</td>
+                    <td>47.48</td><td>68.70</td><td>52.33</td><td>55.88</td><td>67.53</td><td>61.14</td><td>57.34</td><td>57.27</td><td>57.31</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen3-VL-8B-Instruct (Open)</td>
+                    <td>44.54</td><td>63.36</td><td>50.78</td><td>59.80</td><td>69.48</td><td>58.86</td><td>56.41</td><td>57.27</td><td>56.81</td>
+                </tr>
+                <tr>
+                    <td class="model-name">GPT-4o (Closed)</td>
+                    <td>47.90</td><td>62.60</td><td>52.33</td><td>52.61</td><td>66.23</td><td>66.29</td><td>55.64</td><td>57.45</td><td>56.47</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen3-VL-4B-Instruct (Open)</td>
+                    <td>43.70</td><td>61.07</td><td>54.40</td><td>53.27</td><td>68.18</td><td>58.86</td><td>54.40</td><td>56.00</td><td>55.14</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen2.5-VL-7B-Instruct (Open)</td>
+                    <td>36.97</td><td>46.56</td><td>33.68</td><td>37.91</td><td>51.95</td><td>44.00</td><td>39.26</td><td>42.36</td><td>40.68</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen2.5-VL-3B-Instruct (Open)</td>
+                    <td>35.71</td><td>43.51</td><td>34.72</td><td>33.66</td><td>43.51</td><td>39.43</td><td>37.71</td><td>37.09</td><td>37.43</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Audio Language Models (Audio Only)</h3>
+    <div class="table-container">
+        <table class="leaderboard">
+            <thead>
+                <tr>
+                    <th>Methods</th>
+                    <th>AV Align</th>
+                    <th>Comp.</th>
+                    <th>Ctx. Und.</th>
+                    <th>Evt. Seq.</th>
+                    <th>Infer.</th>
+                    <th>Reas.</th>
+                    <th>30s</th>
+                    <th>60s</th>
+                    <th>Avg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="model-name">Audio Flamingo 3 (7B) (Open)</td>
+                    <td>40.76</td><td>55.73</td><td>43.01</td><td>40.52</td><td>65.58</td><td>68.00</td><td>50.23</td><td>49.45</td><td>49.87</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen2-Audio (7B) (Open)</td>
+                    <td>28.99</td><td>35.88</td><td>27.46</td><td>32.03</td><td>33.77</td><td>33.14</td><td>31.22</td><td>31.82</td><td>31.50</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Textual Language Models (Without Visual and Audio)</h3>
+    <div class="table-container">
+        <table class="leaderboard">
+            <thead>
+                <tr>
+                    <th>Methods</th>
+                    <th>AV Align</th>
+                    <th>Comp.</th>
+                    <th>Ctx. Und.</th>
+                    <th>Evt. Seq.</th>
+                    <th>Infer.</th>
+                    <th>Reas.</th>
+                    <th>30s</th>
+                    <th>60s</th>
+                    <th>Avg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="model-name">GPT-4o (Closed)</td>
+                    <td>33.19</td><td>43.51</td><td>28.50</td><td>30.39</td><td>44.81</td><td>46.86</td><td>36.48</td><td>36.18</td><td>36.34</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Deepseek-V3 (671B) (Closed)</td>
+                    <td>31.93</td><td>41.22</td><td>29.02</td><td>29.41</td><td>44.81</td><td>46.29</td><td>35.24</td><td>36.00</td><td>35.59</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen2.5-14B-Instruct (Open)</td>
+                    <td>30.25</td><td>39.69</td><td>27.98</td><td>28.43</td><td>42.21</td><td>42.86</td><td>32.15</td><td>35.82</td><td>33.83</td>
                 </tr>
             </tbody>
         </table>
