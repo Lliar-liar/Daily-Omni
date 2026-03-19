@@ -251,7 +251,7 @@ Closed-source models are marked with `(Closed)` and open-source models with `(Op
 | Methods | AV Align | Comp. | Ctx. Und. | Evt. Seq. | Infer. | Reas. | 30s | 60s | Avg |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | GPT-4o (Closed) | 33.19 | 43.51 | 28.50 | 30.39 | 44.81 | 46.86 | 36.48 | 36.18 | 36.34 |
-| Deepseek-V3 (671B) (Closed) | 31.93 | 41.22 | 29.02 | 29.41 | 44.81 | 46.29 | 35.24 | 36.00 | 35.59 |
+| Deepseek-V3 (671B) (Open) | 31.93 | 41.22 | 29.02 | 29.41 | 44.81 | 46.29 | 35.24 | 36.00 | 35.59 |
 | Qwen2.5-14B-Instruct (Open) | 30.25 | 39.69 | 27.98 | 28.43 | 42.21 | 42.86 | 32.15 | 35.82 | 33.83 |
 
 
