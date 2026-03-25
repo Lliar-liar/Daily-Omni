@@ -257,10 +257,10 @@ Closed-source models are marked with `(Closed)` and open-source models with `(Op
 
 ## Citation
 ```bibtex
-@misc{zhou2025dailyomni,
+@misc{zhou2026dailyomniaudiovisualreasoningtemporal,
       title={Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment across Modalities}, 
-      author={Ziwei Zhou and Rui Wang and Zuxuan Wu},
-      year={2025},
+      author={Ziwei Zhou and Rui Wang and Zuxuan Wu and Yu-Gang Jiang},
+      year={2026},
       eprint={2505.17862},
       archivePrefix={arXiv},
       primaryClass={cs.AI},
