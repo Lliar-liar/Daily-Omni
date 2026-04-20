@@ -37,23 +37,6 @@ python testmodel.py \
   --item_results_path runs/results_all.jsonl
 ```
 
-### Reasoning with budget (two-phase)
-```bash
-python testmodel.py \
-  --model_name_or_path nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning \
-  --video_base_dir /path/to/Videos \
-  --json_file_path /path/to/qa.json \
-  --input_mode all \
-  --use_vllm \
-  --vllm_tensor_parallel_size 8 \
-  --vllm_temperature 0.8 \
-  --vllm_top_p 0.95 \
-  --max_new_tokens 16384 \
-  --reasoning \
-  --reasoning_budget 16384 \
-  --reasoning_budget_grace_period 1024 \
-  --item_results_path runs/results_all_budget.jsonl
-```
 
 ## Parameters
 
