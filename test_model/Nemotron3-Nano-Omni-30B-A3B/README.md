@@ -8,7 +8,7 @@ Evaluates `Nemotron3-Nano-Omni-30B-A3B` on the [Daily-Omni](https://huggingface.
 - **Architecture**: `NemotronH_Nano_VL_V2` (30B total, 3B active parameters)
 - **Modalities**: video + audio + text
 - **Inference**: `vllm serve` server + OpenAI-compatible API (`trust_remote_code=True`)
-- **Thinking control**: `/no_think` system prompt + `enable_thinking=False` (off) · `/think` + `enable_thinking=True` (on)
+- **Thinking control**: `/no_think` system prompt + `enable_thinking=False`
 
 
 ## Requirements
@@ -22,7 +22,7 @@ Key dependencies (included in the container): `vllm`, `openai`, `transformers`, 
 
 ## Usage
 
-### No reasoning (default)
+### Usage
 ```bash
 python testmodel.py \
   --model_name_or_path nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning \
@@ -47,16 +47,13 @@ python testmodel.py \
 | `--input_mode` | `all` | `all` (video+audio) / `visual` / `audio` |
 | `--model_name_or_path` | (default checkpoint above) | Model or local checkpoint path |
 | `--use_vllm` | off | Use vLLM server backend (recommended) |
-| `--reasoning` | off | Enable thinking mode (`/think`, `enable_thinking=True`) |
-| `--reasoning_budget` | `-1` | Max thinking tokens; `-1` = disabled |
-| `--reasoning_budget_grace_period` | `-1` | Extra answer tokens after budget; `-1` = disabled |
-| `--max_new_tokens` | `1024` (no_reasoning) / `16384` (reasoning) | Max generated tokens |
+| `--max_new_tokens` | `1024` | Max generated tokens |
 | `--vllm_tensor_parallel_size` | `0` (auto) | Number of GPUs for tensor parallelism |
 | `--vllm_max_model_len` | `32768` | vLLM max sequence length |
 | `--vllm_gpu_memory_utilization` | `0.95` | vLLM GPU memory fraction |
-| `--vllm_temperature` | `1.0` (no_reasoning) / `0.8` (reasoning_budget) | Sampling temperature |
-| `--vllm_top_p` | `1.0` (no_reasoning) / `0.95` (reasoning) | Top-p nucleus sampling |
-| `--vllm_top_k` | `1` (no_reasoning) / `-1` (reasoning) | Top-k (`-1` = disabled) |
+| `--vllm_temperature` | `1.0` | Sampling temperature |
+| `--vllm_top_p` | `1.0` | Top-p nucleus sampling |
+| `--vllm_top_k` | `1` | Top-k (`-1` = disabled) |
 | `--vllm_video_fps` | `2.0` | Video frame sampling rate |
 | `--vllm_long_video_fps` | `1.0` | Frame sampling override for 60s videos |
 | `--vllm_long_video_max_frames` | `128` | Max frames per video |
@@ -66,9 +63,7 @@ python testmodel.py \
 ## Output
 
 Per-item results saved as both JSONL and XLSX under `runs/`:
-- `item_results_all_<timestamp>.jsonl` / `.xlsx` — no reasoning
-- `item_results_all_reasoning_<timestamp>.jsonl` / `.xlsx` — reasoning on
-- `item_results_all_reasoning_budget<N>_grace<M>_<timestamp>.jsonl` / `.xlsx` — reasoning budget
+- `item_results_all_<timestamp>.jsonl` / `.xlsx`
 
 Each record includes: `video_id`, `question`, `choices`, `correct_answer`, `predicted_answer`, `is_correct`, `raw_output`, `qa_type`, `video_category`, `video_duration`, `input_mode`, `isl` (input tokens), `osl` (output tokens).
 
