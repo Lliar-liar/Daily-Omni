@@ -101,7 +101,7 @@ def get_video_sampling_overrides(args, video_duration):
     }
 
 
-def build_conversation(media_paths, question, choices, input_mode, video_overrides=None):
+def build_conversation(media_paths, question, choices, input_mode, video_overrides=None, reasoning=False):
     if input_mode == "audio":
         media_desc = "given audio"
         user_content = [{"type": "audio", "audio": media_paths["audio_path"]}]
@@ -133,7 +133,7 @@ def build_conversation(media_paths, question, choices, input_mode, video_overrid
         f"Your replies must contain only a single letter (either {all_but_last} or {last})."
     )
 
-    system_text = "/no_think"
+    system_text = "/think" if reasoning else "/no_think"
     return [
         {
             "role": "system",
@@ -225,29 +225,73 @@ def _conversation_to_openai_messages(conversation, input_mode):
     return messages
 
 
-def generate_answer_vllm(client, conversation, args):
-    """Call the vLLM OpenAI-compatible server."""
-    messages = _conversation_to_openai_messages(conversation, args.input_mode)
+_FORCED_THINK_STOP = (
+    "\n\nTime is limited, no more reasoning, "
+    "I have to answer the question directly now.\n"
+    "</think>\n\n"
+)
 
-    extra_body = {
-        "chat_template_kwargs": {"enable_thinking": False},
-        "skip_special_tokens": False,
-    }
-    if getattr(args, "vllm_top_k", -1) > 0:
-        extra_body["top_k"] = args.vllm_top_k
+
+def generate_answer_vllm(client, conversation, args):
+    """Call the vLLM OpenAI-compatible server.
+
+    When reasoning_budget > 0, uses a two-phase approach matching vlmevalkit:
+      Phase 1: cap tokens at budget + grace_period; if model finishes with </think>, done.
+      Phase 2: only if Phase 1 hit length limit without </think> — force-close the thinking
+               block and ask the model to answer concisely with grace_period tokens.
+    """
+    messages = _conversation_to_openai_messages(conversation, args.input_mode)
+    reasoning = getattr(args, "reasoning", False)
+    budget = getattr(args, "reasoning_budget", -1)
+    grace = getattr(args, "reasoning_budget_grace_period", -1)
+    use_budget = reasoning and budget > 0 and grace > 0
+
+    def _extra_body(enable_thinking, truncate_history=True):
+        body = {
+            "chat_template_kwargs": {"enable_thinking": enable_thinking},
+            "skip_special_tokens": False,
+        }
+        if not truncate_history:
+            body["chat_template_kwargs"]["truncate_history_thinking"] = False
+        if getattr(args, "vllm_top_k", -1) > 0:
+            body["top_k"] = args.vllm_top_k
+        return body
 
     try:
+        phase1_max = min(budget + grace, args.max_new_tokens) if use_budget else args.max_new_tokens
         response = client.chat.completions.create(
             model=args.model_name_or_path,
             messages=messages,
-            max_tokens=args.max_new_tokens,
+            max_tokens=phase1_max,
             temperature=args.vllm_temperature,
             top_p=args.vllm_top_p,
-            extra_body=extra_body,
+            extra_body=_extra_body(bool(reasoning)),
         )
         pred = response.choices[0].message.content or ""
+        finish_reason = response.choices[0].finish_reason
         isl = response.usage.prompt_tokens if response.usage else None
         osl = response.usage.completion_tokens if response.usage else None
+
+        # Phase 2: model hit token cap mid-thinking — force-close and re-ask
+        if use_budget and finish_reason == "length" and "</think>" not in pred:
+            phase1_text = pred if pred.startswith("<think>") else "<think>\n" + pred
+            phase2_messages = list(messages) + [
+                {"role": "assistant", "content": phase1_text + _FORCED_THINK_STOP},
+                {"role": "user", "content": "Based on your reasoning above, provide the answer directly and concisely."},
+            ]
+            response2 = client.chat.completions.create(
+                model=args.model_name_or_path,
+                messages=phase2_messages,
+                max_tokens=grace,
+                temperature=args.vllm_temperature,
+                top_p=args.vllm_top_p,
+                extra_body=_extra_body(False, truncate_history=False),
+            )
+            phase2_answer = response2.choices[0].message.content or ""
+            pred = phase1_text + _FORCED_THINK_STOP + phase2_answer
+            if response2.usage:
+                osl = (osl or 0) + response2.usage.completion_tokens
+
     except Exception as e:
         raise RuntimeError(f"OpenAI API call failed: {e}") from e
     return extract_choice_letter(pred), pred, isl, osl
@@ -494,6 +538,7 @@ def test_all_questions(model, processor, args, sampling_params=None):
             choices=choices,
             input_mode=effective_input_mode,
             video_overrides=get_video_sampling_overrides(args, video_duration),
+            reasoning=getattr(args, "reasoning", False),
         )
         model_answer = None
         decoded_text = ""
@@ -714,12 +759,21 @@ if __name__ == "__main__":
                         help='0 = auto-detect from CUDA_VISIBLE_DEVICES.')
     parser.add_argument('--vllm_max_num_seqs', type=int, default=1)
     parser.add_argument('--vllm_max_model_len', type=int, default=32768)
-    parser.add_argument('--vllm_temperature', type=float, default=1.0)
-    parser.add_argument('--vllm_top_p', type=float, default=1.0)
-    parser.add_argument('--vllm_top_k', type=int, default=1)
+    parser.add_argument('--vllm_temperature', type=float, default=1.0,
+                        help='Sampling temperature. no_reasoning: 1.0, reasoning_budget: 0.8.')
+    parser.add_argument('--vllm_top_p', type=float, default=1.0,
+                        help='Top-p. no_reasoning: 1.0 (topk=1), reasoning_budget: 0.95.')
+    parser.add_argument('--vllm_top_k', type=int, default=1,
+                        help='Top-k. no_reasoning: 1, reasoning modes: -1 (disabled).')
     parser.add_argument('--vllm_engine_restart_retries', type=int, default=1)
     parser.add_argument('--vllm_num_video_frames', type=int, default=128,
-                        help='Number of frames vLLM extracts from each video.')
+                        help='Number of frames vLLM extracts from each video (--num-video-frames).')
+    parser.add_argument('--reasoning', action='store_true', default=False,
+                        help='Enable reasoning/thinking mode (system=/think, enable_thinking=True, temp=0.6, top_p=0.95).')
+    parser.add_argument('--reasoning_budget', type=int, default=-1,
+                        help='Max tokens for thinking phase. -1 = disabled. Use with --reasoning.')
+    parser.add_argument('--reasoning_budget_grace_period', type=int, default=-1,
+                        help='Extra tokens for answer after thinking budget. -1 = disabled.')
     parser.add_argument('--vllm_video_fps', type=float, default=2.0,
                         help='Default video sampling fps for vLLM.')
     parser.add_argument('--vllm_long_video_fps', type=float, default=1.0,
