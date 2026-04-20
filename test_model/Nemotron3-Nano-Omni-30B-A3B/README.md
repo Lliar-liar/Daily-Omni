@@ -4,6 +4,7 @@ Evaluates `Nemotron3-Nano-Omni-30B-A3B` on the [Daily-Omni](https://huggingface.
 
 ## Model
 
+- **Model**: [nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning](https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning)
 - **Architecture**: `NemotronH_Nano_VL_V2` (30B total, 3B active parameters)
 - **Modalities**: video + audio + text
 - **Inference**: `vllm serve` server + OpenAI-compatible API (`trust_remote_code=True`)
@@ -12,14 +13,19 @@ Evaluates `Nemotron3-Nano-Omni-30B-A3B` on the [Daily-Omni](https://huggingface.
 
 ## Requirements
 
-Requires vLLM with `NemotronH_Nano_VL_V2` support. Key dependencies: `vllm`, `openai`, `transformers`, `soundfile`, `pandas`.
+A vLLM container with `NemotronH_Nano_VL_V2` support is available on NGC:
+```
+registry.ngc.nvidia.com/0767305323357365/n3-nano-omni/nemotron-3-nano-omni-reasoning-30b-a3b
+```
+
+Key dependencies (included in the container): `vllm`, `openai`, `transformers`, `soundfile`, `pandas`.
 
 ## Usage
 
 ### No reasoning (default)
 ```bash
 python testmodel.py \
-  --model_name_or_path <checkpoint_path> \
+  --model_name_or_path nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning \
   --video_base_dir /path/to/Videos \
   --json_file_path /path/to/qa.json \
   --input_mode all \
@@ -34,7 +40,7 @@ python testmodel.py \
 ### Reasoning with budget (two-phase)
 ```bash
 python testmodel.py \
-  --model_name_or_path <checkpoint_path> \
+  --model_name_or_path nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning \
   --video_base_dir /path/to/Videos \
   --json_file_path /path/to/qa.json \
   --input_mode all \
