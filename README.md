@@ -13,7 +13,7 @@ This is the official repository of Daily-Omni: Towards Audio-Visual Reasoning wi
 
 ## News
 - [2026-04-27] Added NVIDIA Nemotron 3 Nano Omni 30B A3B to the leaderboard as the current top evaluated open-weight omni-modal model.
-- 2026-03-11: Updated the arXiv paper and refreshed the Leaderboard with new results.
+- [2026-03-11] Updated the arXiv paper and refreshed the Leaderboard with new results.
 
 ## Leaderboard
 
