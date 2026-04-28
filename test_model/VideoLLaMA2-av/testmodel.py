@@ -42,23 +42,12 @@ def get_video_path(video_id, base_path):
     return os.path.join(base_path, video_id, f'{video_id}_video.mp4')
 
 def evaluate_answer(model_answer, correct_answer):
-    """Compares the model's answer with the correct answer (expecting single letter)."""
-    # Handle potential None or empty string from the model
-    if not model_answer:
+    extracted = extract_choice_letter(model_answer)
+    if extracted is None:
+        if model_answer:
+            print(f"Warning: Model answer '{model_answer.strip()}' doesn't contain a valid answer.")
         return False
-    # Extract the first non-whitespace character and compare
-    model_ans_processed = model_answer.strip()
-    if not model_ans_processed:
-        return False
-    # More robust check for single letter A, B, C, D
-    match = re.match(r"\s*([A-D])", model_ans_processed.upper())
-    if match:
-        extracted_answer = match.group(1)
-        return extracted_answer == correct_answer.strip().upper()
-    # Fallback to startswith for compatibility if needed, but less precise
-    # return model_ans_processed.upper().startswith(correct_answer.strip().upper())
-    print(f"Warning: Model answer '{model_ans_processed}' doesn't start with A, B, C, or D.")
-    return False
+    return extracted == correct_answer.strip().upper()
 
 
 def get_modal_type(input_mode):
@@ -73,9 +62,18 @@ def get_modal_type(input_mode):
 def extract_choice_letter(text):
     if not text:
         return None
-    match = re.match(r"\s*([A-D])", text.strip().upper())
-    if match:
-        return match.group(1)
+    s = text.strip()
+    if not s:
+        return None
+
+    first_char = s[0]
+    if first_char in "ABCD":
+        return first_char
+
+    first_standalone = re.search(r"\b([ABCD])\b", s)
+    if first_standalone:
+        return first_standalone.group(1)
+
     return None
 
 

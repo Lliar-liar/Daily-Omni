@@ -6,6 +6,7 @@ import time
 import random
 import base64
 import subprocess
+import re
 import cv2
 import google.generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
@@ -43,6 +44,23 @@ def get_audio_path(video_id, base_path=config.BASE_VIDEO_DIR):
 
 # --- Evaluation ---
 
+def extract_choice_letter(text):
+    if not text or not isinstance(text, str):
+        return None
+    s = text.strip()
+    if not s:
+        return None
+
+    first_char = s[0]
+    if first_char in "ABCD":
+        return first_char
+
+    first_standalone = re.search(r"\b([ABCD])\b", s)
+    if first_standalone:
+        return first_standalone.group(1)
+
+    return None
+
 def evaluate_answer(api_answer, correct_answer_char):
     """
     Compares API's answer with the correct answer character.
@@ -51,8 +69,10 @@ def evaluate_answer(api_answer, correct_answer_char):
     """
     if not api_answer or not isinstance(api_answer, str) or api_answer.startswith("error_"):
         return False
-    # Check if the first non-whitespace character matches the correct answer
-    return api_answer.strip().upper().startswith(correct_answer_char.strip().upper())
+    extracted = extract_choice_letter(api_answer)
+    if extracted is None:
+        return False
+    return extracted == correct_answer_char.strip().upper()
 
 # --- Statistics Printing ---
 

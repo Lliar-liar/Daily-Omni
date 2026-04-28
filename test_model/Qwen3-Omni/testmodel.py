@@ -48,45 +48,17 @@ def get_effective_use_audio_in_video(_args):
 def extract_choice_letter(text):
     if not text:
         return None
-    raw = text.strip()
-    if not raw:
+    s = text.strip()
+    if not s:
         return None
 
-    # For Thinking models, prefer the segment after the final </think>.
-    post_think = raw
-    think_end_matches = list(re.finditer(r"</think>", raw, flags=re.IGNORECASE))
-    if think_end_matches:
-        post_think = raw[think_end_matches[-1].end() :].strip()
+    first_char = s[0]
+    if first_char in "ABCD":
+        return first_char
 
-    # Also create a version with complete <think>...</think> blocks removed.
-    no_think_blocks = re.sub(r"(?is)<think>.*?</think>", " ", raw).strip()
-
-    candidates = []
-    for candidate in [post_think, no_think_blocks, raw]:
-        if candidate and candidate not in candidates:
-            candidates.append(candidate)
-
-    for candidate in candidates:
-        # Explicit answer tags/phrases first.
-        answer_tag = re.search(r"(?is)<answer>\s*([A-D])\s*</answer>", candidate)
-        if answer_tag:
-            return answer_tag.group(1).upper()
-
-        answer_phrase = re.search(
-            r"(?i)(?:^|[\n\r])\s*(?:final answer|answer|the answer is|答案)\s*[:：]?\s*([A-D])\b",
-            candidate,
-        )
-        if answer_phrase:
-            return answer_phrase.group(1).upper()
-
-        direct_match = re.match(r"(?i)^\s*([A-D])(?:[\s\.\):：]|$)", candidate)
-        if direct_match:
-            return direct_match.group(1).upper()
-
-        # Fallback: use the last standalone option letter in this candidate.
-        all_matches = re.findall(r"\b([A-D])\b", candidate.upper())
-        if all_matches:
-            return all_matches[-1]
+    first_standalone = re.search(r"\b([ABCD])\b", s)
+    if first_standalone:
+        return first_standalone.group(1)
 
     return None
 

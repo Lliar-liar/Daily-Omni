@@ -60,11 +60,28 @@ def get_video_path(video_id, base_path):
 
 
 def evaluate_answer(model_answer, correct_answer):
-    """Compares the model's answer with the correct answer."""
-    # Handle potential None or empty string from the model
-    if not model_answer:
+    extracted = extract_choice_letter(model_answer)
+    if extracted is None:
         return False
-    return model_answer.upper().startswith(correct_answer.upper())
+    return extracted == correct_answer.strip().upper()
+
+
+def extract_choice_letter(text):
+    if not text:
+        return None
+    s = text.strip()
+    if not s:
+        return None
+
+    first_char = s[0]
+    if first_char in "ABCD":
+        return first_char
+
+    first_standalone = re.search(r"\b([ABCD])\b", s)
+    if first_standalone:
+        return first_standalone.group(1)
+
+    return None
 
 
 

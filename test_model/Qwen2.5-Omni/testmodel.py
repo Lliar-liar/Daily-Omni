@@ -112,25 +112,19 @@ Your answer should be a capital letter representing your choice: A, B, C, or D. 
 
 
 def extract_choice_letter(text):
-    """Extract first valid choice letter A/B/C/D from model output."""
     if not text:
         return None
-    raw = text.strip()
-    if not raw:
+    s = text.strip()
+    if not s:
         return None
 
-    # Prefer the segment after assistant role marker when present.
-    match = re.search(r"assistant\s*([\s\S]*)$", raw, flags=re.IGNORECASE)
-    candidate = match.group(1).strip() if match else raw
+    first_char = s[0]
+    if first_char in "ABCD":
+        return first_char
 
-    direct = re.match(r"(?i)^\s*([A-D])(?:[\s\.\):：]|$)", candidate)
-    if direct:
-        return direct.group(1).upper()
-
-    # Fallback to the first standalone option letter.
-    fallback = re.search(r"\b([A-D])\b", candidate.upper())
-    if fallback:
-        return fallback.group(1)
+    first_standalone = re.search(r"\b([ABCD])\b", s)
+    if first_standalone:
+        return first_standalone.group(1)
 
     return None
 
@@ -223,12 +217,10 @@ def is_engine_dead_error(exc):
 
 
 def evaluate_answer(model_answer, correct_answer):
-    """Compares the model's answer with the correct answer."""
-    # Handle potential None or empty string from the model
-    if not model_answer:
+    extracted = extract_choice_letter(model_answer)
+    if extracted is None:
         return False
-    # Use a more robust check for a single capital letter answer
-    return model_answer.strip().upper() == correct_answer.strip().upper()
+    return extracted == correct_answer.strip().upper()
 
 
 def save_item_results_jsonl(results, output_path):
