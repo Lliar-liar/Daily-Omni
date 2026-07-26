@@ -12,6 +12,7 @@ This is the official repository of Daily-Omni: Towards Audio-Visual Reasoning wi
 ![Examples of Daily-Omni Benchmark](assets/qa_example.drawio.png)
 
 ## News
+- [2026-07-26] Added AGIBOT X-Lab WITA-Omni-Preview, Qwen3.5-Omni-Plus, Gemini 3.1 Pro Preview, and Doubao Seed 2.0 Lite to the audio-visual leaderboard.
 - [2026-04-27] Added NVIDIA Nemotron 3 Nano Omni 30B A3B to the leaderboard as the current top evaluated open-weight omni-modal model.
 - [2026-03-11] Updated the arXiv paper and refreshed the Leaderboard with new results.
 
@@ -35,6 +36,10 @@ Closed-source models are marked with `(Closed)` and open-source models with `(Op
 
 | Methods | AV Align | Comparison | Context Understanding | Event Sequence | Inference | Reasoning | 30s | 60s | Avg |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| AGIBOT X-Lab WITA-Omni-Preview (Closed) | 86.13 | 89.31 | 81.87 | 84.64 | 85.06 | 85.71 | 83.62 | 87.09 | 85.21 |
+| Qwen3.5-Omni-Plus (Closed)<sup>†</sup> | 84.42 | 88.55 | 82.72 | 83.67 | 84.67 | 86.05 | 83.44 | 86.20 | 84.68 |
+| Gemini 3.1 Pro Preview (Closed) | 83.61 | 86.26 | 79.79 | 82.35 | 81.17 | 84.57 | 81.76 | 84.00 | 82.79 |
+| Doubao Seed 2.0 Lite (Closed) | 81.51 | 83.97 | 79.79 | 83.33 | 80.52 | 83.43 | 80.37 | 84.18 | 82.12 |
 | NVIDIA Nemotron 3 Nano Omni 30B A3B (Open) | 67.65 | 83.21 | 65.80 | 73.53 | 83.77 | 80.57 | 74.81 | 74.18 | 74.52 |
 | Qwen3-Omni-30B-A3B-Thinking (Open) | 65.97 | 80.92 | 65.80 | 71.57 | 85.06 | 80.57 | 76.04 | 70.73 | 73.60 |
 | Gemini 2.5 Flash (Closed) | 73.82 | 66.41 | 72.04 | 68.03 | 78.67 | 81.87 | 69.86 | 77.09 | 73.06 |
@@ -50,6 +55,8 @@ Closed-source models are marked with `(Closed)` and open-source models with `(Op
 | Unified-IO-2 XL (3B) (Open) | 30.25 | 30.53 | 25.39 | 29.08 | 33.12 | 21.71 | 28.13 | 28.55 | 28.32 |
 | Unified-IO-2 XXL (8B) (Open) | 25.63 | 31.30 | 26.42 | 25.82 | 35.06 | 29.71 | 26.74 | 30.00 | 28.24 |
 | Unified-IO-2 L (1B) (Open) | 27.31 | 22.90 | 26.42 | 27.78 | 29.87 | 29.14 | 27.67 | 27.09 | 27.40 |
+
+<sup>†</sup> Qwen3.5-Omni-Plus returned valid answers for 1,175 of 1,197 samples. The remaining 22 samples could not be evaluated after repeated API attempts because of request-size limits (13) and content filtering (9). Its scores use the valid API responses in each subset as the denominator.
 
 ### Omni-Modal Language Models (Visual Only)
 

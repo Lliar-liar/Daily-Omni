@@ -9,9 +9,10 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
             line-height: 1.6;
             color: #24292e;
-            max-width: 800px;
+            max-width: 1320px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px 24px;
+            box-sizing: border-box;
         }
         h1, h2, h3 {
             border-bottom: 1px solid #eaecef;
@@ -128,11 +129,11 @@
         table.leaderboard {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.9em;
+            font-size: 0.86em;
         }
         .leaderboard th, .leaderboard td {
             border: 1px solid #dfe2e5;
-            padding: 8px 10px;
+            padding: 7px 8px;
             text-align: center;
             vertical-align: middle;
         }
@@ -141,10 +142,12 @@
             font-weight: 600;
             border-top: 3px solid #ccc;
             border-bottom: 3px solid #ccc;
+            white-space: nowrap;
         }
         .leaderboard .model-name {
             text-align: left;
             white-space: nowrap;
+            min-width: 260px;
         }
         .leaderboard .section-header th {
             background-color: #f1f1f1;
@@ -157,17 +160,295 @@
         .leaderboard .best-score {
             font-weight: bold;
         }
-        .leaderboard .our-model {
-            background-color: #e6f7ff; /* A light blue highlight */
+        .leaderboard tbody tr.open-model {
+            background-color: #edf8f0;
         }
-        .leaderboard .our-model .model-name {
-            font-weight: bold;
+        .leaderboard tbody tr.closed-model {
+            background-color: #eef4ff;
         }
-        .leaderboard .our-model td {
-            font-weight: bold;
+        .model-key {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
         }
-        .leaderboard .our-model .score-underline {
-             text-decoration: underline;
+        .model-key::before {
+            width: 11px;
+            height: 11px;
+            border: 1px solid;
+            content: "";
+        }
+        .model-key.closed-key::before {
+            background-color: #eef4ff;
+            border-color: #b8cdf2;
+        }
+        .model-key.open-key::before {
+            background-color: #edf8f0;
+            border-color: #b9ddc2;
+        }
+        .leaderboard-note {
+            margin: -12px 0 24px;
+            color: #57606a;
+            font-size: 0.86em;
+            line-height: 1.5;
+        }
+        .score-chart {
+            margin: 26px 0 34px;
+            padding: 20px 0 22px;
+            background-color: #fff;
+            border-top: 1px solid #d8dee4;
+            border-bottom: 1px solid #d8dee4;
+        }
+        .score-chart figcaption {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 18px;
+        }
+        .score-chart-title {
+            display: block;
+            font-size: 1.08em;
+            font-weight: 650;
+        }
+        .score-chart-subtitle {
+            display: block;
+            margin-top: 2px;
+            color: #57606a;
+            font-size: 0.86em;
+        }
+        .score-chart-legend {
+            display: flex;
+            gap: 16px;
+            color: #57606a;
+            font-size: 0.82em;
+        }
+        .score-chart-legend span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+        .score-chart-legend i {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+        }
+        .score-chart-legend .closed-swatch {
+            background-color: #456fb4;
+        }
+        .score-chart-legend .open-swatch {
+            background-color: #2f8f59;
+        }
+        .score-chart-axis,
+        .score-chart-row {
+            display: grid;
+            grid-template-columns: 30px minmax(290px, 360px) minmax(300px, 1fr) 58px;
+            gap: 10px;
+            align-items: center;
+        }
+        .score-chart-axis {
+            margin-bottom: 5px;
+            color: #6e7781;
+            font-size: 0.72em;
+        }
+        .score-chart-axis-scale {
+            grid-column: 3;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #afb8c1;
+            line-height: 1.6;
+        }
+        .score-chart-bars {
+            display: grid;
+            gap: 6px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .score-chart-row {
+            min-height: 32px;
+        }
+        .score-chart-rank {
+            color: #6e7781;
+            font-variant-numeric: tabular-nums;
+            text-align: right;
+        }
+        .score-chart-label {
+            display: flex;
+            min-width: 0;
+            align-items: center;
+            gap: 9px;
+            font-size: 0.86em;
+            line-height: 1.25;
+        }
+        .score-chart-name {
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .model-icon {
+            --icon-color: #57606a;
+            --icon-bg: #f0f2f4;
+            display: inline-grid;
+            width: 27px;
+            height: 27px;
+            flex: 0 0 27px;
+            place-items: center;
+            border: 1px solid rgb(31 35 40 / 10%);
+            border-radius: 7px;
+            background-color: var(--icon-bg);
+            color: var(--icon-color);
+            font-size: 0.62em;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .model-icon.has-logo img {
+            display: block;
+            width: 16px;
+            height: 16px;
+        }
+        .model-icon-qwen {
+            --icon-color: #6950ef;
+            --icon-bg: #f1efff;
+        }
+        .model-icon-gemini {
+            --icon-color: #725bc5;
+            --icon-bg: #f2effb;
+        }
+        .model-icon-doubao {
+            --icon-color: #2878d4;
+            --icon-bg: #eaf4ff;
+        }
+        .model-icon-nvidia {
+            --icon-color: #568600;
+            --icon-bg: #eef7df;
+        }
+        .model-icon-agibot {
+            --icon-color: #343b43;
+            --icon-bg: #eef1f4;
+        }
+        .model-icon-agibot.has-logo img {
+            width: 20px;
+            height: 20px;
+        }
+        .model-icon-daily-omni {
+            --icon-color: #087f8c;
+            --icon-bg: #e8f6f7;
+        }
+        .model-icon-ola {
+            --icon-color: #b44d32;
+            --icon-bg: #fff0eb;
+        }
+        .model-icon-videollama {
+            --icon-color: #087f8c;
+            --icon-bg: #eaf7f8;
+        }
+        .model-icon-videollama.has-logo img {
+            width: 22px;
+            height: 22px;
+        }
+        .model-icon-unified-io {
+            --icon-color: #386f99;
+            --icon-bg: #eaf3f8;
+        }
+        .score-chart-track {
+            height: 20px;
+            overflow: hidden;
+            border-radius: 999px;
+            background-color: #edf0f3;
+            box-shadow: inset 0 0 0 1px rgb(31 35 40 / 7%);
+        }
+        .score-chart-bar {
+            display: block;
+            width: var(--score);
+            height: 100%;
+            border-radius: inherit;
+        }
+        .score-chart-row.closed-model .score-chart-bar {
+            background-color: #456fb4;
+        }
+        .score-chart-row.open-model .score-chart-bar {
+            background-color: #2f8f59;
+        }
+        .score-chart-value {
+            font-size: 0.86em;
+            font-variant-numeric: tabular-nums;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        @media (min-width: 721px) and (max-width: 1100px) {
+            table.leaderboard {
+                font-size: 0.78em;
+            }
+            .leaderboard th, .leaderboard td {
+                padding: 6px 4px;
+            }
+            .leaderboard thead th {
+                white-space: normal;
+                line-height: 1.25;
+            }
+            .leaderboard .model-name {
+                min-width: 210px;
+                white-space: normal;
+                line-height: 1.3;
+            }
+            .score-chart-axis,
+            .score-chart-row {
+                grid-template-columns: 28px minmax(230px, 290px) minmax(240px, 1fr) 54px;
+                gap: 8px;
+            }
+        }
+
+        @media (max-width: 720px) {
+            body {
+                padding: 24px 14px;
+            }
+            table.leaderboard {
+                font-size: 0.84em;
+            }
+            .score-chart {
+                margin-top: 22px;
+                padding-top: 16px;
+            }
+            .score-chart figcaption {
+                display: block;
+            }
+            .score-chart-legend {
+                margin-top: 10px;
+            }
+            .score-chart-axis {
+                display: none;
+            }
+            .score-chart-bars {
+                gap: 11px;
+            }
+            .score-chart-row {
+                grid-template-columns: 24px minmax(0, 1fr) 52px;
+                gap: 5px 8px;
+            }
+            .score-chart-rank {
+                grid-row: 1 / 3;
+                align-self: center;
+            }
+            .score-chart-label {
+                grid-column: 2;
+            }
+            .score-chart-name {
+                overflow: visible;
+                text-overflow: clip;
+                white-space: normal;
+            }
+            .score-chart-track {
+                grid-column: 2 / 4;
+                height: 16px;
+            }
+            .score-chart-value {
+                grid-column: 3;
+                grid-row: 1;
+            }
         }
 
     </style>
@@ -234,11 +515,28 @@ in a vlog, and (3) Logical Inference in an educational video. Correct answers ar
     <h2 id="leaderboard">Leaderboard</h2>
     <p>Performance comparison of MLLMs on Daily-Omni. Random guess accuracy is 25%.</p>
     <p>Abbreviations: <code>AV Align</code> = audio-visual alignment, <code>Comp.</code> = comparative, <code>Ctx. Und.</code> = context understanding, <code>Evt. Seq.</code> = event sequence, <code>Infer.</code> = inference, <code>Reas.</code> = reasoning.</p>
-    <p>Closed-source models are marked with <code>(Closed)</code> and open-source models with <code>(Open)</code>.</p>
+    <p><span class="model-key closed-key">Closed-source models are marked with <code>(Closed)</code></span>; <span class="model-key open-key">open-source models are marked with <code>(Open)</code></span>.</p>
+
+    <figure class="score-chart" aria-labelledby="score-chart-title">
+        <figcaption>
+            <span>
+                <span id="score-chart-title" class="score-chart-title">Leaderboard at a Glance</span>
+                <span id="score-chart-subtitle" class="score-chart-subtitle">All omni-modal models · visual + audio · average accuracy (%)</span>
+            </span>
+            <span class="score-chart-legend" aria-label="Model availability">
+                <span><i class="closed-swatch" aria-hidden="true"></i>Closed</span>
+                <span><i class="open-swatch" aria-hidden="true"></i>Open</span>
+            </span>
+        </figcaption>
+        <div class="score-chart-axis" aria-hidden="true">
+            <span class="score-chart-axis-scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></span>
+        </div>
+        <ol id="score-chart-bars" class="score-chart-bars"></ol>
+    </figure>
 
     <h3>Omni-Modal Language Models (With Visual and Audio)</h3>
     <div class="table-container">
-        <table class="leaderboard">
+        <table class="leaderboard" aria-describedby="qwen-api-note">
             <thead>
                 <tr>
                     <th>Methods</th>
@@ -254,6 +552,22 @@ in a vlog, and (3) Logical Inference in an educational video. Correct answers ar
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td class="model-name">AGIBOT X-Lab WITA-Omni-Preview (Closed)</td>
+                    <td>86.13</td><td>89.31</td><td>81.87</td><td>84.64</td><td>85.06</td><td>85.71</td><td>83.62</td><td>87.09</td><td>85.21</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen3.5-Omni-Plus (Closed)<sup>†</sup></td>
+                    <td>84.42</td><td>88.55</td><td>82.72</td><td>83.67</td><td>84.67</td><td>86.05</td><td>83.44</td><td>86.20</td><td>84.68</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Gemini 3.1 Pro Preview (Closed)</td>
+                    <td>83.61</td><td>86.26</td><td>79.79</td><td>82.35</td><td>81.17</td><td>84.57</td><td>81.76</td><td>84.00</td><td>82.79</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Doubao Seed 2.0 Lite (Closed)</td>
+                    <td>81.51</td><td>83.97</td><td>79.79</td><td>83.33</td><td>80.52</td><td>83.43</td><td>80.37</td><td>84.18</td><td>82.12</td>
+                </tr>
                 <tr>
                     <td class="model-name">NVIDIA Nemotron 3 Nano Omni 30B A3B (Open)</td>
                     <td>67.65</td><td>83.21</td><td>65.80</td><td>73.53</td><td>83.77</td><td>80.57</td><td>74.81</td><td>74.18</td><td>74.52</td>
@@ -282,7 +596,7 @@ in a vlog, and (3) Logical Inference in an educational video. Correct answers ar
                     <td class="model-name">Gemini 2.5 Flash Lite (Closed)</td>
                     <td>57.56</td><td>68.70</td><td>56.48</td><td>52.61</td><td>79.22</td><td>69.71</td><td>63.52</td><td>60.00</td><td>61.90</td>
                 </tr>
-                <tr class="our-model">
+                <tr>
                     <td class="model-name">Daily-Omni-Baseline-Qwen2.5 (Open)</td>
                     <td>51.68</td><td>68.70</td><td>60.10</td><td>53.92</td><td>78.57</td><td>71.43</td><td>63.99</td><td>59.27</td><td>61.82</td>
                 </tr>
@@ -317,6 +631,7 @@ in a vlog, and (3) Logical Inference in an educational video. Correct answers ar
             </tbody>
         </table>
     </div>
+    <p id="qwen-api-note" class="leaderboard-note"><sup>†</sup> Qwen3.5-Omni-Plus returned valid answers for 1,175 of 1,197 samples. The remaining 22 samples could not be evaluated after repeated API attempts because of request-size limits (13) and content filtering (9). Scores use the valid API responses in each subset as the denominator.</p>
 
     <h3>Omni-Modal Language Models (Visual Only)</h3>
     <div class="table-container">
@@ -523,16 +838,99 @@ in a vlog, and (3) Logical Inference in an educational video. Correct answers ar
 
     <h2>Citation</h2>
     <pre><code>
-@misc{zhou2025dailyomni,
+@misc{zhou2026dailyomniaudiovisualreasoningtemporal,
       title={Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment across Modalities}, 
-      author={Ziwei Zhou and Rui Wang and Zuxuan Wu},
-      year={2025},
+      author={Ziwei Zhou and Rui Wang and Zuxuan Wu and Yu-Gang Jiang},
+      year={2026},
       eprint={2505.17862},
       archivePrefix={arXiv},
       primaryClass={cs.AI},
       url={https://arxiv.org/abs/2505.17862}, 
-}
+    }
     </code></pre>
+
+    <script>
+        const modelCells = document.querySelectorAll(".leaderboard tbody .model-name");
+        modelCells.forEach((cell) => {
+            const row = cell.closest("tr");
+            if (cell.textContent.includes("(Closed)")) {
+                row.classList.add("closed-model");
+            } else if (cell.textContent.includes("(Open)")) {
+                row.classList.add("open-model");
+            }
+        });
+
+        const avTable = document.querySelector('table[aria-describedby="qwen-api-note"]');
+        const chartBars = document.getElementById("score-chart-bars");
+        const chartRows = Array.from(avTable.tBodies[0].rows);
+        document.getElementById("score-chart-subtitle").textContent = `All ${chartRows.length} omni-modal models · visual + audio · average accuracy (%)`;
+
+        const iconFamilies = [
+            { pattern: /^AGIBOT/, key: "agibot", src: "assets/model-icons/agibot.png", title: "AGIBOT X-Lab" },
+            { pattern: /^Qwen/, key: "qwen", src: "assets/model-icons/qwen.svg", title: "Qwen" },
+            { pattern: /^Gemini/, key: "gemini", src: "assets/model-icons/google-gemini.svg", title: "Google Gemini" },
+            { pattern: /^Doubao/, key: "doubao", src: "assets/model-icons/bytedance.svg", title: "ByteDance Doubao" },
+            { pattern: /^NVIDIA/, key: "nvidia", src: "assets/model-icons/nvidia.svg", title: "NVIDIA" },
+            { pattern: /^Daily-Omni/, key: "daily-omni", label: "DO", title: "Daily-Omni" },
+            { pattern: /^Ola/, key: "ola", label: "O", title: "Ola" },
+            { pattern: /^VideoLLaMA/, key: "videollama", src: "assets/model-icons/videollama2.png", title: "VideoLLaMA2" },
+            { pattern: /^Unified-IO/, key: "unified-io", label: "UI", title: "Unified-IO" }
+        ];
+
+        chartRows.forEach((row, index) => {
+            const name = row.cells[0].textContent.replace("†", "").trim();
+            const displayName = name.replace(/\s+\((?:Closed|Open)\)$/, "");
+            const score = Number.parseFloat(row.cells[row.cells.length - 1].textContent);
+            const iconFamily = iconFamilies.find(({ pattern }) => pattern.test(displayName)) || {
+                key: "generic",
+                label: displayName.slice(0, 2).toUpperCase(),
+                title: displayName
+            };
+            const item = document.createElement("li");
+            item.className = `score-chart-row ${row.classList.contains("closed-model") ? "closed-model" : "open-model"}`;
+            item.setAttribute("aria-label", `${index + 1}. ${name}: ${score.toFixed(2)} percent`);
+
+            const rank = document.createElement("span");
+            rank.className = "score-chart-rank";
+            rank.textContent = index + 1;
+
+            const label = document.createElement("span");
+            label.className = "score-chart-label";
+
+            const icon = document.createElement("span");
+            icon.className = `model-icon model-icon-${iconFamily.key}${iconFamily.src ? " has-logo" : ""}`;
+            if (iconFamily.src) {
+                const iconImage = document.createElement("img");
+                iconImage.src = iconFamily.src;
+                iconImage.alt = "";
+                icon.appendChild(iconImage);
+            } else {
+                icon.textContent = iconFamily.label;
+            }
+            icon.title = iconFamily.title;
+            icon.setAttribute("aria-hidden", "true");
+
+            const modelName = document.createElement("span");
+            modelName.className = "score-chart-name";
+            modelName.textContent = displayName;
+            label.append(icon, modelName);
+
+            const track = document.createElement("span");
+            track.className = "score-chart-track";
+            track.setAttribute("aria-hidden", "true");
+            const bar = document.createElement("span");
+            bar.className = "score-chart-bar";
+            bar.style.setProperty("--score", `${score}%`);
+            track.appendChild(bar);
+
+            const value = document.createElement("span");
+            value.className = "score-chart-value";
+            value.textContent = `${score.toFixed(2)}%`;
+
+            item.append(rank, label, track, value);
+            chartBars.appendChild(item);
+        });
+    </script>
 
 </body>
 </html>
