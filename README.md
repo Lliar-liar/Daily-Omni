@@ -12,7 +12,7 @@ This is the official repository of Daily-Omni: Towards Audio-Visual Reasoning wi
 ![Examples of Daily-Omni Benchmark](assets/qa_example.drawio.png)
 
 ## News
-- [2026-07-26] Added AGIBOT X-Lab WITA-Omni-Preview, Qwen3.5-Omni-Plus, Gemini 3.1 Pro Preview, and Doubao Seed 2.0 Lite to the audio-visual leaderboard.
+- [2026-07-26] Added AGIBOT X-Lab WITA-Omni Preview, Qwen3.5-Omni-Plus, Gemini 3.1 Pro Preview, and Doubao Seed 2.0 Lite to the audio-visual leaderboard. We thank AGIBOT for providing the evaluation results for Gemini, Doubao, and Qwen, and congratulate AGIBOT X-Lab WITA-Omni Preview on achieving the best performance on Daily-Omni!
 - [2026-04-27] Added NVIDIA Nemotron 3 Nano Omni 30B A3B to the leaderboard as the current top evaluated open-weight omni-modal model.
 - [2026-03-11] Updated the arXiv paper and refreshed the Leaderboard with new results.
 
@@ -36,7 +36,7 @@ Closed-source models are marked with `(Closed)` and open-source models with `(Op
 
 | Methods | AV Align | Comparison | Context Understanding | Event Sequence | Inference | Reasoning | 30s | 60s | Avg |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| AGIBOT X-Lab WITA-Omni-Preview (Closed) | 86.13 | 89.31 | 81.87 | 84.64 | 85.06 | 85.71 | 83.62 | 87.09 | 85.21 |
+| AGIBOT X-Lab WITA-Omni Preview (Closed) | 86.13 | 89.31 | 81.87 | 84.64 | 85.06 | 85.71 | 83.62 | 87.09 | 85.21 |
 | Qwen3.5-Omni-Plus (Closed)<sup>†</sup> | 84.42 | 88.55 | 82.72 | 83.67 | 84.67 | 86.05 | 83.44 | 86.20 | 84.68 |
 | Gemini 3.1 Pro Preview (Closed) | 83.61 | 86.26 | 79.79 | 82.35 | 81.17 | 84.57 | 81.76 | 84.00 | 82.79 |
 | Doubao Seed 2.0 Lite (Closed) | 81.51 | 83.97 | 79.79 | 83.33 | 80.52 | 83.43 | 80.37 | 84.18 | 82.12 |
