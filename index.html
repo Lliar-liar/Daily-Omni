@@ -536,7 +536,7 @@ in a vlog, and (3) Logical Inference in an educational video. Correct answers ar
 
     <h3>Omni-Modal Language Models (With Visual and Audio)</h3>
     <div class="table-container">
-        <table class="leaderboard" aria-describedby="qwen-api-note">
+        <table class="leaderboard" aria-describedby="qwen-api-note qwen38-agibot-note">
             <thead>
                 <tr>
                     <th>Methods</th>
@@ -553,8 +553,16 @@ in a vlog, and (3) Logical Inference in an educational video. Correct answers ar
             </thead>
             <tbody>
                 <tr>
+                    <td class="model-name">AGIBOT WITA-Omni 1.0 (Closed)</td>
+                    <td>89.08</td><td>90.08</td><td>83.94</td><td>84.31</td><td>84.42</td><td>86.86</td><td>84.85</td><td>87.82</td><td>86.22</td>
+                </tr>
+                <tr>
                     <td class="model-name">AGIBOT X-Lab WITA-Omni Preview (Closed)</td>
                     <td>86.13</td><td>89.31</td><td>81.87</td><td>84.64</td><td>85.06</td><td>85.71</td><td>83.62</td><td>87.09</td><td>85.21</td>
+                </tr>
+                <tr>
+                    <td class="model-name">Qwen3.8-Omni-Flash (thinking / xhigh) (Closed)<sup>‡</sup></td>
+                    <td>84.50</td><td>88.50</td><td>85.00</td><td>83.00</td><td>87.00</td><td>85.70</td><td>82.40</td><td>88.40</td><td>85.10</td>
                 </tr>
                 <tr>
                     <td class="model-name">Qwen3.5-Omni-Plus (Closed)<sup>†</sup></td>
@@ -632,6 +640,7 @@ in a vlog, and (3) Logical Inference in an educational video. Correct answers ar
         </table>
     </div>
     <p id="qwen-api-note" class="leaderboard-note"><sup>†</sup> Qwen3.5-Omni-Plus returned valid answers for 1,175 of 1,197 samples. The remaining 22 samples could not be evaluated after repeated API attempts because of request-size limits (13) and content filtering (9). Scores use the valid API responses in each subset as the denominator.</p>
+    <p id="qwen38-agibot-note" class="leaderboard-note"><sup>‡</sup> Results for Qwen3.8-Omni-Flash (thinking / xhigh) were provided by AGIBOT.</p>
 
     <h3>Omni-Modal Language Models (Visual Only)</h3>
     <div class="table-container">
@@ -860,7 +869,7 @@ in a vlog, and (3) Logical Inference in an educational video. Correct answers ar
             }
         });
 
-        const avTable = document.querySelector('table[aria-describedby="qwen-api-note"]');
+        const avTable = document.querySelector('table[aria-describedby~="qwen-api-note"]');
         const chartBars = document.getElementById("score-chart-bars");
         const chartRows = Array.from(avTable.tBodies[0].rows);
         document.getElementById("score-chart-subtitle").textContent = `All ${chartRows.length} omni-modal models · visual + audio · average accuracy (%)`;
@@ -878,7 +887,7 @@ in a vlog, and (3) Logical Inference in an educational video. Correct answers ar
         ];
 
         chartRows.forEach((row, index) => {
-            const name = row.cells[0].textContent.replace("†", "").trim();
+            const name = row.cells[0].textContent.replace(/[†‡]/g, "").trim();
             const displayName = name.replace(/\s+\((?:Closed|Open)\)$/, "");
             const score = Number.parseFloat(row.cells[row.cells.length - 1].textContent);
             const iconFamily = iconFamilies.find(({ pattern }) => pattern.test(displayName)) || {

@@ -12,6 +12,7 @@ This is the official repository of Daily-Omni: Towards Audio-Visual Reasoning wi
 ![Examples of Daily-Omni Benchmark](assets/qa_example.drawio.png)
 
 ## News
+- [2026-10-26] Added [AGIBOT WITA-Omni 1.0](https://www.agibot.com/) and Qwen3.8-Omni-Flash (thinking / xhigh) to the audio-visual leaderboard. We thank AGIBOT for providing the Qwen3.8-Omni-Flash results.
 - [2026-07-26] Added AGIBOT X-Lab WITA-Omni Preview, Qwen3.5-Omni-Plus, Gemini 3.1 Pro Preview, and Doubao Seed 2.0 Lite to the audio-visual leaderboard. We thank AGIBOT for providing the evaluation results for Gemini, Doubao, and Qwen, and congratulate AGIBOT X-Lab WITA-Omni Preview on achieving the best performance on Daily-Omni!
 - [2026-04-27] Added NVIDIA Nemotron 3 Nano Omni 30B A3B to the leaderboard as the current top evaluated open-weight omni-modal model.
 - [2026-03-11] Updated the arXiv paper and refreshed the Leaderboard with new results.
@@ -36,7 +37,9 @@ Closed-source models are marked with `(Closed)` and open-source models with `(Op
 
 | Methods | AV Align | Comparison | Context Understanding | Event Sequence | Inference | Reasoning | 30s | 60s | Avg |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| AGIBOT WITA-Omni 1.0 (Closed) | 89.08 | 90.08 | 83.94 | 84.31 | 84.42 | 86.86 | 84.85 | 87.82 | 86.22 |
 | AGIBOT X-Lab WITA-Omni Preview (Closed) | 86.13 | 89.31 | 81.87 | 84.64 | 85.06 | 85.71 | 83.62 | 87.09 | 85.21 |
+| Qwen3.8-Omni-Flash (thinking / xhigh) (Closed)<sup>‡</sup> | 84.50 | 88.50 | 85.00 | 83.00 | 87.00 | 85.70 | 82.40 | 88.40 | 85.10 |
 | Qwen3.5-Omni-Plus (Closed)<sup>†</sup> | 84.42 | 88.55 | 82.72 | 83.67 | 84.67 | 86.05 | 83.44 | 86.20 | 84.68 |
 | Gemini 3.1 Pro Preview (Closed) | 83.61 | 86.26 | 79.79 | 82.35 | 81.17 | 84.57 | 81.76 | 84.00 | 82.79 |
 | Doubao Seed 2.0 Lite (Closed) | 81.51 | 83.97 | 79.79 | 83.33 | 80.52 | 83.43 | 80.37 | 84.18 | 82.12 |
@@ -57,6 +60,8 @@ Closed-source models are marked with `(Closed)` and open-source models with `(Op
 | Unified-IO-2 L (1B) (Open) | 27.31 | 22.90 | 26.42 | 27.78 | 29.87 | 29.14 | 27.67 | 27.09 | 27.40 |
 
 <sup>†</sup> Qwen3.5-Omni-Plus returned valid answers for 1,175 of 1,197 samples. The remaining 22 samples could not be evaluated after repeated API attempts because of request-size limits (13) and content filtering (9). Its scores use the valid API responses in each subset as the denominator.
+
+<sup>‡</sup> Results for Qwen3.8-Omni-Flash (thinking / xhigh) were provided by AGIBOT.
 
 ### Omni-Modal Language Models (Visual Only)
 
@@ -143,6 +148,11 @@ python run_pipeline.py
 python test_model_api/test_model.py --model <model_name> --mode <Execution_mode> --max_items <Maximum number of QA items to process (for testing)>
 ```
 You can check the model options in `test_model_api/test_config.py`
+
+For AGIBOT WITA-Omni 1.0, use the [WITA API evaluator](test_model_api/README_WITA.md),
+which uploads the original MP4 with audio and supports resumable evaluation and
+`Retry-After` handling.
+
 ### Model running locally
 >📋To test the benchmark on third party models(Qwen2.5-Omni, Qwen2.5-VL, VideoLLaMA2, Ola, Unified-IO 2) with local machines, check the code in `test_model/`
 
